@@ -18,7 +18,6 @@ DESCRIPTION
 -----------
 
 `marked-man` wraps `marked` to extend it with groff output support.
-Using it will make output defaults to groff.
 
 
 OPTIONS
@@ -26,7 +25,7 @@ OPTIONS
 
 `marked-man` adds a single option to `marked` existing options:
 
-* format
-  Sets the output format. Values are `roff`, `html`.
+* format  
+  Sets the output format. Values are `roff`, `html`.  
   Defaults to `roff`.
 

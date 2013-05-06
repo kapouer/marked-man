@@ -1,0 +1,23 @@
+{
+  "name": "marked-man",
+  "version": "0.0.1",
+  "description": "marked plugin for manpage output, inspired by ronn.",
+  "main": "lib/marked-man.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kapouer/marked-man.git"
+  },
+  "keywords": [
+    "markdown",
+    "roff",
+    "ronn"
+  ],
+  "author": "Jérémy Lal <kapouer@melix.org>",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "0.2.x"
+  }
+}

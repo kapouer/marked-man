@@ -7,7 +7,6 @@ TODO
 * Test suite
 * Insert version, author, date, manualname from options object and
   from command-line options.
-* advertise marked-man on ronnjs README and description.
 
 
 SYNOPSIS

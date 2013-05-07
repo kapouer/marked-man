@@ -1,8 +1,5 @@
-THIS IS WORK IN PROGRESS
-========================
-
-marked-man(3)
-=============
+marked-man(1) -- markdown to roff
+=================================
 
 SYNOPSIS
 --------

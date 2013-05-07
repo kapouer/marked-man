@@ -1,8 +1,14 @@
 {
   "name": "marked-man",
   "version": "0.0.1",
-  "description": "marked plugin for manpage output, inspired by ronn.",
+  "description": "wrapper adding manpage output to 'marked', inspired by 'ronn'",
   "main": "lib/marked-man.js",
+  "bin": {
+    "marked-man": "./bin/marked-man"
+  },
+  "man": [
+    "./man/marked-man.1"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,29 @@
+.TH "MARKED\-MAN" "1" "May 2013" "1.0"
+.SH "NAME"
+\fBmarked-man\fR \- markdown to roff
+.SH SYNOPSIS
+.RS 2
+.EX
+var marked = require(\'marked\-man\');
+.EE
+.RE
+.P
+See 
+.UR https://github\.com/chjj/marked
+marked README
+.UE
+ for documentation
+about how to use marked\.
+.SH DESCRIPTION
+.P
+\fBmarked\-man\fR wraps \fBmarked\fR to extend it with groff output support\.
+.SH OPTIONS
+.P
+\fBmarked\-man\fR adds a single option to \fBmarked\fR existing options:
+.RS 2
+.IP \(bu 2
+format
+Sets the output format\. Values are \fBroff\fR, \fBhtml\fR\|\.
+Defaults to \fBroff\fR\|\.
+
+.RE

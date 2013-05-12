@@ -1,11 +1,6 @@
 marked-man(1) -- markdown to roff
 =================================
 
-TODO
-----
-
-* Test suite
-
 SYNOPSIS
 --------
 

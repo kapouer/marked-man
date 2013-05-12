@@ -10,7 +10,7 @@
     "./man/marked-man.1"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/compare"
   },
   "repository": {
     "type": "git",

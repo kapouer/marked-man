@@ -1,1 +1,4 @@
 node_modules
+test/files/*.roff
+test/files/*.err
+

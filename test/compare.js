@@ -19,7 +19,7 @@ var convert = function(filename, str, cb) {
 		return cb(e);
 	}
 	exec('man --warnings -E UTF-8 ' + roffpath, {env: {"LANG":"C"}}, function(err, stdout, stderr) {
-		console.error(stderr);
+		if (stderr) console.error(stderr);
 		cb(err, stdout);
 	});
 };

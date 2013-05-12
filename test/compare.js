@@ -8,8 +8,8 @@ var srcExt = ".ronn";
 var dstExt = ".roff";
 var errExt = ".err";
 
-var convert = function(str) {
-	return marked.parse(str, {format: "roff"});
+var convert = function(filename, str) {
+	return marked.parse(str, {format: "roff", name: filename, date:'1979-01-01'});
 };
 // ******
 
@@ -44,8 +44,9 @@ fs.readdir(testdir, function(err, files) {
 
 function compare(path) {
 	var buf = fs.readFileSync(Path.join(testdir, path));
-	var dest = Path.join(testdir, Path.basename(path, Path.extname(path)) + dstExt);
-	var output = convert(buf.toString());
+	var filename = Path.basename(path, Path.extname(path));
+	var dest = Path.join(testdir, filename + dstExt);
+	var output = convert(filename, buf.toString());
 	var status = 0;
 	try {
 		var expect = fs.readFileSync(dest);

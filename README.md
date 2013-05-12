@@ -27,10 +27,31 @@ OPTIONS
   Sets the output format. Outputs html if different from `roff`.
   Defaults to `roff`.
 
-* version
-  The version shown in the manpage header.
+* name  
+  The name shown in the manpage header, if it isn't given in the ronn
+  header like in this README.  
   Defaults to empty string.
 
-* manual
-  The MANUAL string shown in the manpage header.
+* section  
+  The section shown in the manpage header, if it isn't given in the ronn
+  header like in this README.  
   Defaults to empty string.
+
+* version  
+  The version shown in the manpage header.  
+  Defaults to empty string.
+
+* manual  
+  The MANUAL string shown in the manpage header.  
+  Defaults to empty string.
+
+* date  
+  The date shown in the manpage header.  
+  Defaults to now, must be acceptable by new Date(string).
+
+
+REPORTING BUGS
+--------------
+
+See [marked-man repository](https://github.com/kapouer/marked-man).
+

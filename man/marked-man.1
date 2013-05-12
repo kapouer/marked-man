@@ -1,29 +1,63 @@
-.TH "MARKED\-MAN" "1" "May 2013" "1.0"
+.TH "MARKED\-MAN" "1" "May 2013" "" ""
 .SH "NAME"
 \fBmarked-man\fR \- markdown to roff
 .SH SYNOPSIS
+.P
 .RS 2
 .EX
 var marked = require(\'marked\-man\');
 .EE
 .RE
 .P
-See 
-.UR https://github\.com/chjj/marked
-marked README
-.UE
- for documentation
+See marked README \fIhttps://github\.com/chjj/marked\fR for documentation
 about how to use marked\.
 .SH DESCRIPTION
 .P
 \fBmarked\-man\fR wraps \fBmarked\fR to extend it with groff output support\.
 .SH OPTIONS
 .P
-\fBmarked\-man\fR adds a single option to \fBmarked\fR existing options:
+\fBmarked\-man\fR adds a some options to \fBmarked\fR existing options:
 .RS 2
 .IP \(bu 2
 format
-Sets the output format\. Values are \fBroff\fR, \fBhtml\fR\|\.
+.br
+Sets the output format\. Outputs html if different from \fBroff\fR\|\.
 Defaults to \fBroff\fR\|\.
+.IP \(bu 2
+name
+.br
+The name shown in the manpage header, if it isn\'t given in the ronn
+header like in this README\.
+.br
+Defaults to empty string\.
+.IP \(bu 2
+section
+.br
+The section shown in the manpage header, if it isn\'t given in the ronn
+header like in this README\.
+.br
+Defaults to empty string\.
+.IP \(bu 2
+version
+.br
+The version shown in the manpage header\.
+.br
+Defaults to empty string\.
+.IP \(bu 2
+manual
+.br
+The MANUAL string shown in the manpage header\.
+.br
+Defaults to empty string\.
+.IP \(bu 2
+date
+.br
+The date shown in the manpage header\.
+.br
+Defaults to now, must be acceptable by new Date(string)\.
 
 .RE
+.SH REPORTING BUGS
+.P
+See marked\-man repository \fIhttps://github\.com/kapouer/marked\-man\fR\|\.
+

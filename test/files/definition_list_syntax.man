@@ -1,0 +1,20 @@
+DEFITION_LIST_SYNTAX(5)                                DEFITION_LIST_SYNTAX(5)
+
+
+
+NAME
+       defition_list_syntax - hiya
+
+       Definition lists look like unordered lists:
+
+         · term: definition
+
+         · another  one: The definition may span multiple lines and even start
+           new paragraphs
+
+         · --somearg=<VALUE>: We can do that too.
+
+
+
+
+                                 January 1979          DEFITION_LIST_SYNTAX(5)

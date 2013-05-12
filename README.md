@@ -5,11 +5,13 @@ SYNOPSIS
 --------
 
 ```
-var marked = require('marked-man');
+marked-man README.md > doc/marked-man.1
 ```
 
 See [marked README](https://github.com/chjj/marked) for documentation
 about how to use marked.
+
+Note that `marked-man --format=html` is the same as `marked`.
 
 
 DESCRIPTION

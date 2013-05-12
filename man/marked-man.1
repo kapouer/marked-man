@@ -5,12 +5,14 @@
 .P
 .RS 2
 .EX
-var marked = require(\'marked\-man\');
+marked\-man README\.md > doc/marked\-man\.1
 .EE
 .RE
 .P
 See marked README \fIhttps://github\.com/chjj/marked\fR for documentation
 about how to use marked\.
+.P
+Note that \fBmarked\-man \-\-format=html\fR is the same as \fBmarked\fR\|\.
 .SH DESCRIPTION
 .P
 \fBmarked\-man\fR wraps \fBmarked\fR to extend it with groff output support\.
@@ -60,4 +62,3 @@ Defaults to now, must be acceptable by new Date(string)\.
 .SH REPORTING BUGS
 .P
 See marked\-man repository \fIhttps://github\.com/kapouer/marked\-man\fR\|\.
-

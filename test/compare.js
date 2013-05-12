@@ -4,7 +4,7 @@ var Path = require('path');
 
 // params
 var testdir = Path.join(__dirname, "files");
-var srcExt = ".md";
+var srcExt = ".ronn";
 var dstExt = ".roff";
 var errExt = ".err";
 

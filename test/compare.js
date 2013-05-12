@@ -11,7 +11,6 @@ var errExt = ".err";
 var convert = function(filename, str) {
 	return marked.parse(str, {format: "roff", name: filename, date:'1979-01-01'});
 };
-// ******
 
 
 

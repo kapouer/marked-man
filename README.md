@@ -23,7 +23,7 @@ DESCRIPTION
 OPTIONS
 -------
 
-`marked-man` adds a some options to `marked` existing options:
+`marked-man` adds some options to `marked` existing options:
 
 * format  
   Sets the output format. Outputs html if different from `roff`.

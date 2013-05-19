@@ -3,7 +3,6 @@
 require('../'); // force bin/marked to require marked-man
 
 var main = require('marked/bin/marked');
-process.title = 'marked-man';
 
 main(process.argv.slice(), function(err, code) {
 	if (err) throw err;

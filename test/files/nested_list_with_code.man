@@ -1,0 +1,19 @@
+A(1)                                                                      A(1)
+
+
+
+NAME
+       a
+
+         · toggle_status
+
+           · Toggle the display of the status bar.
+
+
+         · spawn <executable> <additional args> TODO explain path-alike expan‐
+           sion
+
+
+
+
+                                 January 1979                             A(1)

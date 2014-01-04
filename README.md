@@ -51,6 +51,9 @@ OPTIONS
   The date shown in the manpage header.  
   Defaults to now, must be acceptable by new Date(string).
 
+`marked-man` also inherits all options of `marked`, especially
+`--gfm`, `--breaks`, and so on.
+
 
 REPORTING BUGS
 --------------

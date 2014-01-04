@@ -56,11 +56,3 @@ REPORTING BUGS
 --------------
 
 See [marked-man repository](https://github.com/kapouer/marked-man).
-
-
-TODO
-----
-
-* When https://github.com/chjj/marked/issues/89 is fixed, implement it
-on the roff side.
-

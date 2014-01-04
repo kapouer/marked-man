@@ -5,8 +5,8 @@ DOTS_AT_LINE_START_TEST()                            DOTS_AT_LINE_START_TEST()
 NAME
        dots_at_line_start_test
 
-       There´s  a  weird  issue where dots at the beginning of a line generate
-       troff warnings due to escaping.
+       There´s a weird issue where dots at the beginning of a line
+       generate troff warnings due to escaping.
 
        .. let´s see what happens.
 

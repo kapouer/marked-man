@@ -1,0 +1,22 @@
+THIS()                                                                  THIS()
+
+
+
+NAME
+       This
+
+       · -S text, search text:
+          Performs a substring search of formula names for text.
+
+       · -O <text>, other <text>:
+          Does something else.
+
+
+       Should space text properly.
+
+       <!-- this is a comment -->
+
+
+
+
+                                 January 1979                           THIS()

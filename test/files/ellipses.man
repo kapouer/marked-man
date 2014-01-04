@@ -1,0 +1,15 @@
+ELLIPSES(7)                                                        ELLIPSES(7)
+
+
+
+NAME
+       ellipses - testing ellipses
+
+       Ellipses should be replaced...
+
+       ...also, they shouldn´t interfere with regular dots at the beginning
+       of a line.
+
+
+
+                                 January 1979                      ELLIPSES(7)

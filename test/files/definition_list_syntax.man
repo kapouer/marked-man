@@ -7,12 +7,17 @@ NAME
 
        Definition lists look like unordered lists:
 
-         · term: definition
+       · term:
+         definition
 
-         · another  one: The definition may span multiple lines and even start
-           new paragraphs
+       · another one:
+         The definition may span
+         multiple lines and even
+         start
+         new paragraphs
 
-         · --somearg=<VALUE>: We can do that too.
+       · --somearg=<VALUE>:
+         We can do that too.
 
 
 

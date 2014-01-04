@@ -1,0 +1,13 @@
+T(1)                                                                      T(1)
+
+
+
+NAME
+       t - test
+
+test
+         [ "$11" ]
+
+
+
+                                 January 1979                             T(1)

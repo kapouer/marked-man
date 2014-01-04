@@ -25,30 +25,28 @@ OPTIONS
 
 `marked-man` adds some options to `marked` existing options:
 
-* format  
+* format
   Sets the output format. Outputs html if different from `roff`.
   Defaults to `roff`.
 
-* name  
-  The name shown in the manpage header, if it isn't given in the ronn
-  header like in this README.  
+* name
+  The name shown in the manpage header, if it isn't given in the ronn header like in this README.
   Defaults to empty string.
 
-* section  
-  The section shown in the manpage header, if it isn't given in the ronn
-  header like in this README.  
+* section
+  The section shown in the manpage header, if it isn't given in the ronn header like in this README.
   Defaults to empty string.
 
-* version  
-  The version shown in the manpage header.  
+* version
+  The version shown in the manpage header.
   Defaults to empty string.
 
-* manual  
-  The MANUAL string shown in the manpage header.  
+* manual
+  The MANUAL string shown in the manpage header.
   Defaults to empty string.
 
-* date  
-  The date shown in the manpage header.  
+* date
+  The date shown in the manpage header.
   Defaults to now, must be acceptable by new Date(string).
 
 `marked-man` also inherits all options of `marked`, especially

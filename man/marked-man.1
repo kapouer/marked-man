@@ -9,9 +9,7 @@ marked\-man README\.md > doc/marked\-man\.1
 .EE
 .RE
 .P
-See marked README \fIhttps://github\.com/chjj/marked\fR for documentation
-.br
-about how to use marked\.
+See marked README \fIhttps://github\.com/chjj/marked\fR for documentation about how to use marked\.
 .P
 Note that \fBmarked\-man \-\-format=html\fR is the same as \fBmarked\fR\|\.
 .SH DESCRIPTION
@@ -60,16 +58,10 @@ Defaults to now, must be acceptable by new Date(string)\.
 
 .RE
 .P
-\fBmarked\-man\fR also inherits all options of \fBmarked\fR, especially
-.br
-\fB\-\-gfm\fR, \fB\-\-breaks\fR, and so on\.
+\fBmarked\-man\fR invokes \fBmarked \-\-gfm \-\-breaks \-\-sanitize\fR to match default \fBronn\fR behavior\.
 .SH SEE ALSO
 .P
 Ryan Tomayko \fIhttps://github\.com/rtomayko/ronn\fR
-.br
-To achieve closer compatibility with ronn format,
-.br
-please use \fBmarked\-man \-\-gfm \-\-breaks\fR\|\.
 .SH REPORTING BUGS
 .P
 See marked\-man repository \fIhttps://github\.com/kapouer/marked\-man\fR\|\.

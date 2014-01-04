@@ -11,7 +11,13 @@ var dstExt = ".man";
 var errExt = ".err";
 
 var convert = function(filename, str, cb) {
-	var roff = marked.parse(str, {format: "roff", name: filename, date:'1979-01-01'});
+	var roff = marked.parse(str, {
+		format: "roff",
+		name: filename,
+		date:'1979-01-01',
+		gfm: true,
+		breaks: true
+	});
 	var roffpath = Path.join(testdir, filename + roffExt);
 	try {
 		fs.writeFileSync(roffpath, roff);

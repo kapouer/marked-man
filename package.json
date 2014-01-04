@@ -24,6 +24,6 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "Expat",
   "dependencies": {
-    "marked": "0.2.x"
+    "marked": "~0.3.0"
   }
 }

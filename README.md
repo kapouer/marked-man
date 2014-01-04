@@ -48,7 +48,8 @@ OPTIONS
   The date shown in the manpage header.
   Defaults to now, must be acceptable by new Date(string).
 
-`marked-man` invokes `marked --gfm --breaks --sanitize` to match default `ronn` behavior.
+`marked-man` invokes `marked --gfm --sanitize`.
+The --breaks option can be helpful to match default `ronn` behavior.
 
 
 SEE ALSO

@@ -53,6 +53,14 @@ OPTIONS
 `--gfm`, `--breaks`, and so on.
 
 
+SEE ALSO
+--------
+
+[Ryan Tomayko](https://github.com/rtomayko/ronn)
+To achieve closer compatibility with ronn format,
+please use `marked-man --gfm --breaks`.
+
+
 REPORTING BUGS
 --------------
 

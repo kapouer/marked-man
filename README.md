@@ -49,16 +49,13 @@ OPTIONS
   The date shown in the manpage header.
   Defaults to now, must be acceptable by new Date(string).
 
-`marked-man` also inherits all options of `marked`, especially
-`--gfm`, `--breaks`, and so on.
+`marked-man` invokes `marked --gfm --breaks --sanitize` to match default `ronn` behavior.
 
 
 SEE ALSO
 --------
 
 [Ryan Tomayko](https://github.com/rtomayko/ronn)
-To achieve closer compatibility with ronn format,
-please use `marked-man --gfm --breaks`.
 
 
 REPORTING BUGS

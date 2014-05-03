@@ -22,7 +22,7 @@
     "ronn"
   ],
   "author": "Jérémy Lal <kapouer@melix.org>",
-  "license": "Expat",
+  "license": "MIT",
   "dependencies": {
     "marked": "~0.3.0"
   }

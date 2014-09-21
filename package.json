@@ -24,6 +24,6 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "dependencies": {
-    "marked": "~0.3.0"
+    "marked": "^0.3.2"
   }
 }

@@ -7,7 +7,7 @@ NAME
 
        Ellipses should be replaced...
 
-       ...also, they shouldn´t interfere with regular dots at the beginning
+       ...also, they shouldn't interfere with regular dots at the beginning
        of a line.
 
 

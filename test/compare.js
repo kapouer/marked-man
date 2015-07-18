@@ -18,7 +18,7 @@ function convert(name, str, cb) {
 	});
 	var manPath = Path.join(manDir, name);
 	var status = writeOrCompare(roff, manPath);
-	if (status < 0) return cb(true);
+	if (status < 0) manPath += '.err';
 	exec('man --warnings -E UTF-8 ' + manPath, {env: {
 		LANG:"C",
 		MAN_KEEP_FORMATTING: '1'

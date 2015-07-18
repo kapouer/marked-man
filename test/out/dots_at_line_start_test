@@ -2,8 +2,8 @@ DOTS_AT_LINE_START_TEST()                            DOTS_AT_LINE_START_TEST()
 
 
 
-NAME
-       dots_at_line_start_test
+NNAAMMEE
+       ddoottss__aatt__lliinnee__ssttaarrtt__tteesstt
 
        There's a weird issue where dots at the beginning of a line
        generate troff warnings due to escaping.

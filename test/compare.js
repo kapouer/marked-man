@@ -4,44 +4,41 @@ var Path = require('path');
 var exec = require('child_process').exec;
 
 // params
-var testdir = Path.join(__dirname, "files");
-var srcExt = ".ronn";
-var roffExt = ".roff";
-var dstExt = ".man";
-var errExt = ".err";
+var ronnDir = Path.join(__dirname, "md");
+var manDir = Path.join(__dirname, "man");
+var outDir = Path.join(__dirname, "out");
 
-var convert = function(filename, str, cb) {
+function convert(name, str, cb) {
 	var roff = marked.parse(str, {
 		format: "roff",
-		name: filename,
+		name: name,
 		date:'1979-01-01',
 		gfm: true,
 		breaks: true
 	});
-	var roffpath = Path.join(testdir, filename + roffExt);
-	try {
-		fs.writeFileSync(roffpath, roff);
-	} catch(e) {
-		return cb(e);
-	}
-	exec('man --warnings -E UTF-8 ' + roffpath, {env: {"LANG":"C"}}, function(err, stdout, stderr) {
+	var manPath = Path.join(manDir, name);
+	var status = writeOrCompare(roff, manPath);
+	if (status < 0) return cb(true);
+	exec('man --warnings -E UTF-8 ' + manPath, {env: {
+		LANG:"C",
+		MAN_KEEP_FORMATTING: '1'
+	}}, function(err, stdout, stderr) {
 		if (stderr) console.error(stderr);
 		cb(err, stdout);
 	});
-};
+}
 
 
 
-fs.readdir(testdir, function(err, files) {
+fs.readdir(ronnDir, function(err, files) {
 	if (err) throw err;
 	var fails = 0,
 			works = 0,
 			news = 0;
 	var launched = 0;
 	files.forEach(function(path) {
-		if (Path.extname(path) != srcExt) return;
 		launched++;
-		compare(path, function(err, status) {
+		check(path, function(err, status) {
 			if (err) console.error(err);
 			launched--;
 			switch (status) {
@@ -66,27 +63,30 @@ fs.readdir(testdir, function(err, files) {
 	});
 });
 
-function compare(path, cb) {
-	var buf = fs.readFileSync(Path.join(testdir, path));
-	var filename = Path.basename(path, Path.extname(path));
-	var dest = Path.join(testdir, filename + dstExt);
-	var output = convert(filename, buf.toString(), function(err, output) {
-		var status = 0;
-		if (err) return cb(err, 0);
-		try {
-			var expect = fs.readFileSync(dest);
-			if (expect != output) {
-				var errpath = dest + errExt;
-				console.error("Test failure, result written in", errpath);
-				fs.writeFileSync(errpath, output);
-				status = -1;
-			} else {
-				fs.unlinkSync(Path.join(testdir, filename + roffExt));
-			}
-		} catch(e) {
-			fs.writeFileSync(dest, output);
-			status = 1;
+function writeOrCompare(str, path) {
+	var status = 0;
+	try {
+		var expect = fs.readFileSync(path);
+		if (expect != str) {
+			var errpath = path + '.err';
+			console.error("Test failure, result written in", errpath);
+			fs.writeFileSync(errpath, str);
+			status = -1;
 		}
+	} catch(e) {
+		fs.writeFileSync(path, str);
+		status = 1;
+	}
+	return status;
+}
+
+function check(filename, cb) {
+	var ronnBuf = fs.readFileSync(Path.join(ronnDir, filename));
+	var name = Path.basename(filename, Path.extname(filename));
+	var destPath = Path.join(outDir, name);
+	convert(name, ronnBuf.toString(), function(err, output) {
+		if (err) return cb(err, 0);
+		var status = writeOrCompare(output, destPath);
 		cb(null, status);
 	});
 }

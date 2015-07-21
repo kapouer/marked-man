@@ -29,27 +29,27 @@ The `--breaks` option, which retains intra-paragraph line breaks, can be helpful
 
 `marked-man` adds some options to `marked`'s existing options:
 
-##### `--format <format>`
+* `--format <format>`  
 Sets the output format. Outputs html if different from `roff`.  
 Defaults to `roff`.
 
-##### `--name <name>`
+* `--name <name>`  
 The name shown in the manpage header, if it isn't given in the ronn header like in this README.  
 Defaults to empty string.
 
-##### `--section <section>`
+* `--section <section>`  
 The section number shown in the manpage header, if it isn't given in the ronn header like in this README.  
 Defaults to empty string.
 
-##### `--version <version>`
+* `--version <version>`  
 The version shown in the manpage footer.  
 Defaults to empty string.
 
-##### `--manual <manual>`
+* `--manual <manual>`  
 The manual-group name shown in the manpage header.  
 Defaults to empty string.
 
-##### `--date <date>`
+* `--date <date>`  
 The date shown in the manpage header.  
 Defaults to now, must be acceptable to `new Date(string)`.
 

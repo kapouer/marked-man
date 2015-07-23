@@ -16,46 +16,68 @@ Note that `marked-man --format=html` is the same as `marked`.
 DESCRIPTION
 -----------
 
-`marked-man` wraps `marked` to extend it with groff output support.
+`marked-man` wraps `marked` to extend it with groff output support in order to
+create Unix manual pages for use with `man`.
 
 
 OPTIONS
 -------
 
-`marked-man` adds some options to `marked` existing options:
+`marked-man` invokes `marked --gfm --sanitize`, and you can pass additional
+options through.  
+The `--breaks` option, which retains intra-paragraph line breaks, can be helpful to match default ronn behavior.
 
-* format
-  Sets the output format. Outputs html if different from `roff`.
-  Defaults to `roff`.
+`marked-man` adds some options to `marked`'s existing options:
 
-* name
-  The name shown in the manpage header, if it isn't given in the ronn header like in this README.
-  Defaults to empty string.
+* `--format <format>`  
+Sets the output format. Outputs html if different from `roff`.  
+Defaults to `roff`.
 
-* section
-  The section shown in the manpage header, if it isn't given in the ronn header like in this README.
-  Defaults to empty string.
+* `--name <name>`  
+The name shown in the manpage header, if it isn't given in the ronn header like in this README.  
+Defaults to empty string.
 
-* version
-  The version shown in the manpage header.
-  Defaults to empty string.
+* `--section <section>`  
+The section number shown in the manpage header, if it isn't given in the ronn header like in this README.  
+Defaults to empty string.
 
-* manual
-  The MANUAL string shown in the manpage header.
-  Defaults to empty string.
+* `--version <version>`  
+The version shown in the manpage footer.  
+Defaults to empty string.
 
-* date
-  The date shown in the manpage header.
-  Defaults to now, must be acceptable by new Date(string).
+* `--manual <manual>`  
+The manual-group name shown in the manpage header.  
+Defaults to empty string.
 
-`marked-man` invokes `marked --gfm --sanitize`.
-The --breaks option can be helpful to match default `ronn` behavior.
+* `--date <date>`  
+The date shown in the manpage header.  
+Defaults to now, must be acceptable to `new Date(string)`.
 
+
+INSTALLATION
+------------
+
+From the [npm registry](https://npmjs.com):
+
+* locally (`--save`, `--save-dev`, or `--save-optional` add `marked-man` to your `package.json` file as a runtime, development-time, or optional runtime dependency, respectively)
+
+        npm install marked-man [--save|--save-dev|--save-optional]
+    
+* globally (puts `marked-man` in your system's path):
+
+        [sudo] npm install marked-man -g
+
+EXAMPLE
+-------
+
+To view this README as a man page, run something like the following:
+
+    marked-man --version v0.1.0 --manual 'Man Utilities' README.md > /tmp/mm$$.1 && man /tmp/mm$$.1
 
 SEE ALSO
 --------
 
-[Ryan Tomayko](https://github.com/rtomayko/ronn)
+[Ronn](https://github.com/rtomayko/ronn)
 
 
 REPORTING BUGS

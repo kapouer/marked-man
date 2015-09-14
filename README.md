@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/marked-man.png?downloads=true)](https://nodei.co/npm/marked-man/)
+
 marked-man(1) -- markdown to roff
 =================================
 

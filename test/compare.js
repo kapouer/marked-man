@@ -21,7 +21,8 @@ function convert(name, str, cb) {
 	if (status < 0) manPath += '.err';
 	exec('man --warnings -E UTF-8 ' + manPath, {env: {
 		LANG:"C",
-		MAN_KEEP_FORMATTING: '1'
+		MAN_KEEP_FORMATTING: '1',
+		MANWIDTH: "80"
 	}}, function(err, stdout, stderr) {
 		if (stderr) console.error(stderr);
 		cb(err, stdout);

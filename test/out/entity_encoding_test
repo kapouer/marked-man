@@ -1,7 +1,5 @@
 HELLO(1)                                                              HELLO(1)
 
-
-
 NNAAMMEE
        hheelllloo - hello world
 
@@ -38,10 +36,7 @@ NNAAMMEE
 
        · &plusmn;     ±
 
-
        Here's a line that uses non-breaking spaces to force the
        last few words to wrap together.
-
-
 
                                  January 1979                         HELLO(1)

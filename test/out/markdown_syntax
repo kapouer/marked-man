@@ -1,7 +1,5 @@
 MARKDOWN(5)                                                        MARKDOWN(5)
 
-
-
 NNAAMMEE
        mmaarrkkddoowwnn - humane markup syntax
 
@@ -569,7 +567,6 @@ SSPPAANN EELLEEMMEENNTTSS
        · optionally followed by a title attribute for the link, enclosed
          in double or single quotes, or enclosed in parentheses.
 
-
        The following three link definitions are equivalent:
 
          [foo]: http://example.com/  "Optional Title Here"
@@ -789,7 +786,6 @@ SSPPAANN EELLEEMMEENNTTSS
          the image, and an optional ttiittllee attribute enclosed in double
          or single quotes.
 
-
        Reference-style image syntax looks like this:
 
          ![Alt text][id]
@@ -874,7 +870,5 @@ AAUUTTHHOORR
 SSEEEE AALLSSOO
        ronn(5)
        http://daringfireball.net/projects/markdown/
-
-
 
                                  January 1979                      MARKDOWN(5)

@@ -1,7 +1,5 @@
 ELLIPSES(7)                                                        ELLIPSES(7)
 
-
-
 NNAAMMEE
        eelllliippsseess - testing ellipses
 
@@ -9,7 +7,5 @@ NNAAMMEE
 
        ...also, they shouldn't interfere with regular dots at the beginning
        of a line.
-
-
 
                                  January 1979                      ELLIPSES(7)

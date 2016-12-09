@@ -142,5 +142,5 @@ T{1|2
 REPORTING BUGS
 --------------
 
-<c34031328@mail.ncku.edu.tw>
+<xxxxx@xxxx.xxxx.xxxx.xx>
 

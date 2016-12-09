@@ -67,7 +67,7 @@ fs.readdir(ronnDir, function(err, files) {
 function writeOrCompare(str, path) {
 	var status = 0;
 	try {
-		var expect = fs.readFileSync(path);
+		var expect = fs.readFileSync(path).toString();
 		if (expect != str) {
 			var errpath = path + '.err';
 			console.error("Test failure, result written in", errpath);

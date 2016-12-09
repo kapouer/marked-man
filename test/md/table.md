@@ -1,5 +1,3 @@
-
-
 table(7) -- test data for table format
 ======================================
 

@@ -1,4 +1,4 @@
-.TH "TABLE" "7" "December 2016" "" ""
+.TH "TABLE" "7" "January 1979" "" ""
 .SH "NAME"
 \fBtable\fR \- test data for table format
 .P
@@ -952,4 +952,3 @@ T}
 .SH REPORTING BUGS
 .P
 c34031328@mail\.ncku\.edu\.tw
-

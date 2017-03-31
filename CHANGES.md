@@ -14,3 +14,7 @@
 
 * add support for gfm table
 
+0.2.1
+=====
+
+* remove useless test files from npm package

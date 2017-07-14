@@ -53,7 +53,7 @@ Defaults to empty string.
 
 * `--date <date>`  
 The date shown in the manpage header.  
-Defaults to now, must be acceptable to `new Date(string)`.
+Defaults to now, must be acceptable to `new Date(string or timestamp)`.
 
 
 INSTALLATION

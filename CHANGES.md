@@ -18,3 +18,9 @@
 =====
 
 * remove useless test files from npm package
+
+0.3.0
+=====
+
+* accept a timestamp in milliseconds as --date argument
+

@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-require('../'); // force bin/marked to require marked-man
-
 var main = require('marked/bin/marked');
 
 main(process.argv.slice(), function(err, code) {

@@ -4,7 +4,7 @@
 .RS 0
 .IP \(bu 2
 \fBtoggle_status\fP
-.RS 0
+.RS
 .IP \(bu 2
 Toggle the display of the status bar\.
 

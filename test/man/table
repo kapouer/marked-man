@@ -7,7 +7,7 @@ test table copy and paste form www\.
 .P
 https://en\.wikipedia\.org/wiki/Comparison_of_file_systems
 .TS
-tab(|) expand box;
+tab(|) expand nowarn box;
  l l l l.
 T{
 File system
@@ -825,7 +825,7 @@ T}
 .P
 http://www\.troff\.org/faq\.html
 .TS
-tab(|) expand box;
+tab(|) expand nowarn box;
  l l l.
 T{
 Person
@@ -845,7 +845,7 @@ T}
 .TE
 .SH THING TABLE
 .TS
-tab(|) expand box;
+tab(|) expand nowarn box;
  l l.
 T{
 1

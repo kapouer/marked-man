@@ -49,9 +49,9 @@ like it's been marked up with tags or formatting instructions\. While
 .br
 Markdown's syntax has been influenced by several existing text\-to\-HTML
 .br
-filters \-\- including Setext \fIhttp://docutils\.sourceforge\.net/mirror/setext\.html\fR, atx \fIhttp://www\.aaronsw\.com/2002/atx/\fR, Textile \fIhttp://textism\.com/tools/textile/\fR, reStructuredText \fIhttp://docutils\.sourceforge\.net/rst\.html\fR,
+filters \-\- including [Setext] 1 \fIhttp://docutils\.sourceforge\.net/mirror/setext\.html\fR, [atx] 2 \fIhttp://www\.aaronsw\.com/2002/atx/\fR, [Textile] 3 \fIhttp://textism\.com/tools/textile/\fR, [reStructuredText] 4 \fIhttp://docutils\.sourceforge\.net/rst\.html\fR,
 .br
-Grutatext \fIhttp://www\.triptico\.com/software/grutatxt\.html\fR, and EtText \fIhttp://ettext\.taint\.org/doc/\fR \-\- the single biggest source of
+[Grutatext] 5 \fIhttp://www\.triptico\.com/software/grutatxt\.html\fR, and [EtText] 6 \fIhttp://ettext\.taint\.org/doc/\fR \-\- the single biggest source of
 .br
 inspiration for Markdown's syntax is the format of plain text email\.
 .P
@@ -274,7 +274,7 @@ Markdown's email\-style blockquoting \fI#blockquote\fR and multi\-paragraph list
 work best \-\- and look better \-\- when you format them with hard breaks\.
 .SS Headers
 .P
-Markdown supports two styles of headers, Setext \fIhttp://docutils\.sourceforge\.net/mirror/setext\.html\fR and atx \fIhttp://www\.aaronsw\.com/2002/atx/\fR\|\.
+Markdown supports two styles of headers, [Setext] 1 \fIhttp://docutils\.sourceforge\.net/mirror/setext\.html\fR and [atx] 2 \fIhttp://www\.aaronsw\.com/2002/atx/\fR\|\.
 .P
 Setext\-style headers are "underlined" using equal signs (for first\-level
 .br
@@ -1098,7 +1098,7 @@ escape it:
 .RE
 .SS Code
 .P
-To indicate a span of code, wrap it with backtick quotes (\fB` \fP)\.
+To indicate a span of code, wrap it with backtick quotes (\fB ` \fP)\.
 .br
 Unlike a pre\-formatted code block, a code span indicates code within a
 .br

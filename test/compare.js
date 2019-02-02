@@ -36,31 +36,30 @@ fs.readdir(ronnDir, function(err, files) {
 	var fails = 0,
 			works = 0,
 			news = 0;
-	var launched = 0;
-	files.forEach(function(path) {
-		launched++;
-		check(path, function(err, status) {
-			if (err) console.error(err);
-			launched--;
-			switch (status) {
-				case -1:
-					fails++;
-				break;
-				case 0:
-					works++;
-				break;
-				case 1:
-					news++;
-				break;
-			}
-			if (!launched) {
-				if (fails > 0) console.error("Failed tests: ", fails);
-				if (works > 0) console.log("Succeeded tests: ", works);
-				if (news > 0) console.log("New tests: ", news);
-				if (fails == 0) console.log("All tests passed");
-				else process.exit(1);
-			}
+	Promise.all(files.map(function(file) {
+		return new Promise(function(resolve, reject) {
+			check(file, function(err, status) {
+				if (err) return reject(err);
+				switch (status) {
+					case -1:
+						fails++;
+					break;
+					case 0:
+						works++;
+					break;
+					case 1:
+						news++;
+					break;
+				}
+				resolve();
+			});
 		});
+	})).then(function() {
+		if (fails > 0) console.error("Failed tests: ", fails);
+		if (works > 0) console.log("Succeeded tests: ", works);
+		if (news > 0) console.log("New tests: ", news);
+		if (fails == 0) console.log("All tests passed");
+		else process.exit(1);
 	});
 });
 
@@ -68,12 +67,12 @@ function writeOrCompare(str, path) {
 	var status = 0;
 	try {
 		var expect = fs.readFileSync(path).toString();
+		var errpath = path + '.err';
 		if (expect != str) {
-			var errpath = path + '.err';
 			console.error("Test failure, result written in", errpath);
-			fs.writeFileSync(errpath, str);
 			status = -1;
 		}
+		fs.writeFileSync(errpath, str);
 	} catch(e) {
 		fs.writeFileSync(path, str);
 		status = 1;

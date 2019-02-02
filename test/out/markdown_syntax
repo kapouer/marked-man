@@ -44,12 +44,12 @@ DDEESSCCRRIIPPTTIIOONN
        document should be publishable as-is, as plain text, without looking
        like it's been marked up with tags or formatting instructions. While
        Markdown's syntax has been influenced by several existing text-to-HTML
-       filters   --   including   Setext  _h_t_t_p_:_/_/_d_o_c_u_t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_m_i_r_‐
-       _r_o_r_/_s_e_t_e_x_t_._h_t_m_l,    atx    _h_t_t_p_:_/_/_w_w_w_._a_a_r_o_n_s_w_._c_o_m_/_2_0_0_2_/_a_t_x_/,    Textile
-       _h_t_t_p_:_/_/_t_e_x_t_i_s_m_._c_o_m_/_t_o_o_l_s_/_t_e_x_t_i_l_e_/,     reStructuredText    _h_t_t_p_:_/_/_d_o_c_u_‐
+       filters  --  including  [Setext] 1 _h_t_t_p_:_/_/_d_o_c_u_t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_m_i_r_‐
+       _r_o_r_/_s_e_t_e_x_t_._h_t_m_l, [atx] 2 _h_t_t_p_:_/_/_w_w_w_._a_a_r_o_n_s_w_._c_o_m_/_2_0_0_2_/_a_t_x_/, [Textile]  3
+       _h_t_t_p_:_/_/_t_e_x_t_i_s_m_._c_o_m_/_t_o_o_l_s_/_t_e_x_t_i_l_e_/,  [reStructuredText]  4  _h_t_t_p_:_/_/_d_o_c_u_‐
        _t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_r_s_t_._h_t_m_l,
-       Grutatext  _h_t_t_p_:_/_/_w_w_w_._t_r_i_p_t_i_c_o_._c_o_m_/_s_o_f_t_w_a_r_e_/_g_r_u_t_a_t_x_t_._h_t_m_l,  and  EtText
-       _h_t_t_p_:_/_/_e_t_t_e_x_t_._t_a_i_n_t_._o_r_g_/_d_o_c_/ -- the single biggest source of
+       [Grutatext] 5 _h_t_t_p_:_/_/_w_w_w_._t_r_i_p_t_i_c_o_._c_o_m_/_s_o_f_t_w_a_r_e_/_g_r_u_t_a_t_x_t_._h_t_m_l, and  [Et‐
+       Text] 6 _h_t_t_p_:_/_/_e_t_t_e_x_t_._t_a_i_n_t_._o_r_g_/_d_o_c_/ -- the single biggest source of
        inspiration for Markdown's syntax is the format of plain text email.
 
        To this end, Markdown's syntax is comprised entirely of punctuation
@@ -191,10 +191,11 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        work best -- and look better -- when you format them with hard breaks.
 
    HHeeaaddeerrss
-       Markdown supports two styles of headers, Setext _h_t_t_p_:_/_/_d_o_c_u_t_i_l_s_._s_o_u_r_c_e_‐
-       _f_o_r_g_e_._n_e_t_/_m_i_r_r_o_r_/_s_e_t_e_x_t_._h_t_m_l and atx _h_t_t_p_:_/_/_w_w_w_._a_a_r_o_n_s_w_._c_o_m_/_2_0_0_2_/_a_t_x_/.
+       Markdown supports  two  styles  of  headers,  [Setext]  1  _h_t_t_p_:_/_/_d_o_c_u_‐
+       _t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_m_i_r_r_o_r_/_s_e_t_e_x_t_._h_t_m_l        and        [atx]       2
+       _h_t_t_p_:_/_/_w_w_w_._a_a_r_o_n_s_w_._c_o_m_/_2_0_0_2_/_a_t_x_/.
 
-       Setext-style   headers   are   "underlined"   using  equal  signs  (for
+       Setext-style  headers  are  "underlined"   using   equal   signs   (for
        first-level
        headers) and dashes (for second-level headers). For example:
 
@@ -259,7 +260,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          >
          > Back to the first level.
 
-       Blockquotes can contain other  Markdown  elements,  including  headers,
+       Blockquotes  can  contain  other  Markdown elements, including headers,
        lists,
        and code blocks:
 
@@ -332,7 +333,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        But if you want to be lazy, you don't have to.
 
        If you do use lazy list numbering, however, you should still start the
-       list  with the number 1. At some point in the future, Markdown may sup‐
+       list with the number 1. At some point in the future, Markdown may  sup‐
        port
        starting ordered lists at an arbitrary number.
 
@@ -555,16 +556,16 @@ SSPPAANN EELLEEMMEENNTTSS
 
        That is:
 
-       · Square brackets containing the link identifier (optionally
+       • Square brackets containing the link identifier (optionally
          indented from the left margin using up to three spaces);
 
-       · followed by a colon;
+       • followed by a colon;
 
-       · followed by one or more spaces (or tabs);
+       • followed by one or more spaces (or tabs);
 
-       · followed by the URL for the link;
+       • followed by the URL for the link;
 
-       · optionally followed by a title attribute for the link, enclosed
+       • optionally followed by a title attribute for the link, enclosed
          in double or single quotes, or enclosed in parentheses.
 
        The following three link definitions are equivalent:
@@ -710,7 +711,7 @@ SSPPAANN EELLEEMMEENNTTSS
          \*this text is surrounded by literal asterisks\*
 
    CCooddee
-       To indicate a span of code, wrap it with backtick quotes (`` ).
+       To indicate a span of code, wrap it with backtick quotes ( `` ).
        Unlike a pre-formatted code block, a code span indicates code within a
        normal paragraph. For example:
 
@@ -777,12 +778,12 @@ SSPPAANN EELLEEMMEENNTTSS
 
        That is:
 
-       · An exclamation mark: !!;
+       • An exclamation mark: !!;
 
-       · followed by a set of square brackets, containing the aalltt
+       • followed by a set of square brackets, containing the aalltt
          attribute text for the image;
 
-       · followed by a set of parentheses, containing the URL or path to
+       • followed by a set of parentheses, containing the URL or path to
          the image, and an optional ttiittllee attribute enclosed in double
          or single quotes.
 
@@ -801,10 +802,10 @@ SSPPAANN EELLEEMMEENNTTSS
 
 MMIISSCCEELLLLAANNEEOOUUSS
    AAuuttoommaattiicc LLiinnkkss
-       Markdown supports a shortcut style for creating "automatic"  links  for
+       Markdown  supports  a shortcut style for creating "automatic" links for
        URLs and email addresses: simply surround the URL or email address with
-       angle brackets. What this means is that if you want to show the  actual
-       text  of  a URL or email address, and also have it be a clickable link,
+       angle  brackets. What this means is that if you want to show the actual
+       text of a URL or email address, and also have it be a  clickable  link,
        you can do this:
 
          <http://example.com/>
@@ -827,7 +828,7 @@ MMIISSCCEELLLLAANNEEOOUUSS
          &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
          &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
 
-       which will render in a browser as a clickable  link  to  "address@exam‐
+       which  will  render  in a browser as a clickable link to "address@exam‐
        ple.com".
 
        (This sort of entity-encoding trick will indeed fool many, if not
@@ -863,7 +864,7 @@ AAUUTTHHOORR
        Markdown was created by John Gruber.
 
        Manual page by Ryan Tomayko. It's pretty much a direct copy of the
-       Markdown   Syntax   Reference  _h_t_t_p_:_/_/_d_a_r_i_n_g_f_i_r_e_b_a_l_l_._n_e_t_/_p_r_o_j_e_c_t_s_/_m_a_r_k_‐
+       Markdown  Syntax   Reference   _h_t_t_p_:_/_/_d_a_r_i_n_g_f_i_r_e_b_a_l_l_._n_e_t_/_p_r_o_j_e_c_t_s_/_m_a_r_k_‐
        _d_o_w_n_/_s_y_n_t_a_x,
        also by John Gruber.
 

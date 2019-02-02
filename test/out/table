@@ -29,11 +29,11 @@ LLAARRGGEE TTAABBLLEE
        │GEC  DOS  filing GEC               1977              OS4000           │
        │system extended                                                       │
        │FAT (8-bit)      Microsoft  (Marc  1977              Microsoft Stand‐ │
-       │                 McDonald)    for                    alone       Disk │
-       │                 NCR                                 BASIC-80  (later │
+       │                 McDonald)    for                    alone  Disk  BA‐ │
+       │                 NCR                                 SIC-80    (later │
        │                                                     Microsoft Stand‐ │
-       │                                                     alone       Disk │
-       │                                                     BASIC-86)        │
+       │                                                     alone  Disk  BA‐ │
+       │                                                     SIC-86)          │
        │DOS 3.x          Apple Computer    1978              Apple DOS        │
        │Pascal           Apple Computer    1978              Apple Pascal     │
        │CBM DOS          Commodore         1978              Commodore BASIC  │
@@ -100,8 +100,8 @@ LLAARRGGEE TTAABBLLEE
        │                                                     OSR2[b]          │
        │QFS              Sun Microsystems  1996              Solaris          │
        │GPFS             IBM               1996              AIX, Linux       │
-       │Be File System   Be    Inc.   (D.  1996              BeOS             │
-       │                 Giampaolo, Cyril                                     │
+       │Be File System   Be  Inc. (D. Gi‐  1996              BeOS             │
+       │                 ampaolo,   Cyril                                     │
        │                 Meurillon)                                           │
        │Minix V2 FS      Andrew S. Tanen‐  1997              MINIX 2.0        │
        │                 baum                                                 │
@@ -177,12 +177,12 @@ LLOONNGG TTEEXXTT
        │                                                 recognize  it,  but  │
        │                                                 beyond the  obvious  │
        │                                                 facts  that you are  │
-       │                                                 a    bachelor,    a  │
-       │                                                 solicitor,        a  │
-       │                                                 freemason,  and  an  │
-       │                                                 asthmatic,  I  know  │
-       │                                                 nothing    whatever  │
-       │                                                 about you.           │
+       │                                                 a bachelor,  a  so‐  │
+       │                                                 licitor,  a freema‐  │
+       │                                                 son, and  an  asth‐  │
+       │                                                 matic, I know noth‐  │
+       │                                                 ing whatever  about  │
+       │                                                 you.                 │
        └──────────────────────────────────────────────────────────────────────┘
 TTHHIINNGG TTAABBLLEE
        ┌──────────────────────────────────────────────────────────────────────┐

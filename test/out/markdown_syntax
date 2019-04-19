@@ -47,9 +47,9 @@ DDEESSCCRRIIPPTTIIOONN
        filters  --  including  [Setext] 1 _h_t_t_p_:_/_/_d_o_c_u_t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_m_i_r_‐
        _r_o_r_/_s_e_t_e_x_t_._h_t_m_l, [atx] 2 _h_t_t_p_:_/_/_w_w_w_._a_a_r_o_n_s_w_._c_o_m_/_2_0_0_2_/_a_t_x_/, [Textile]  3
        _h_t_t_p_:_/_/_t_e_x_t_i_s_m_._c_o_m_/_t_o_o_l_s_/_t_e_x_t_i_l_e_/,  [reStructuredText]  4  _h_t_t_p_:_/_/_d_o_c_u_‐
-       _t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_r_s_t_._h_t_m_l,
-       [Grutatext] 5 _h_t_t_p_:_/_/_w_w_w_._t_r_i_p_t_i_c_o_._c_o_m_/_s_o_f_t_w_a_r_e_/_g_r_u_t_a_t_x_t_._h_t_m_l, and  [Et‐
-       Text] 6 _h_t_t_p_:_/_/_e_t_t_e_x_t_._t_a_i_n_t_._o_r_g_/_d_o_c_/ -- the single biggest source of
+       _t_i_l_s_._s_o_u_r_c_e_f_o_r_g_e_._n_e_t_/_r_s_t_._h_t_m_l,    [Grutatext]    5     _h_t_t_p_:_/_/_w_w_w_._t_r_i_p_‐
+       _t_i_c_o_._c_o_m_/_s_o_f_t_w_a_r_e_/_g_r_u_t_a_t_x_t_._h_t_m_l,     and    [EtText]    6    _h_t_t_p_:_/_/_e_t_‐
+       _t_e_x_t_._t_a_i_n_t_._o_r_g_/_d_o_c_/ -- the single biggest source of
        inspiration for Markdown's syntax is the format of plain text email.
 
        To this end, Markdown's syntax is comprised entirely of punctuation
@@ -475,8 +475,8 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        A code block continues until it reaches a line that is not indented
        (or the end of the article).
 
-       Within a code block, ampersands (&&) and angle brackets (<< and >>)
-       are automatically converted into HTML entities. This makes it very
+       Within  a  code  block, ampersands (&&) and angle brackets (<< and >>) are
+       automatically converted into HTML entities. This makes it very
        easy to include example HTML source code using Markdown -- just paste
        it and indent it, and Markdown will handle the hassle of encoding the
        ampersands and angle brackets. For example, this:
@@ -802,10 +802,10 @@ SSPPAANN EELLEEMMEENNTTSS
 
 MMIISSCCEELLLLAANNEEOOUUSS
    AAuuttoommaattiicc LLiinnkkss
-       Markdown  supports  a shortcut style for creating "automatic" links for
+       Markdown supports a shortcut style for creating "automatic"  links  for
        URLs and email addresses: simply surround the URL or email address with
-       angle  brackets. What this means is that if you want to show the actual
-       text of a URL or email address, and also have it be a  clickable  link,
+       angle brackets. What this means is that if you want to show the  actual
+       text  of  a URL or email address, and also have it be a clickable link,
        you can do this:
 
          <http://example.com/>
@@ -828,7 +828,7 @@ MMIISSCCEELLLLAANNEEOOUUSS
          &#109;">&#x61;&#x64;&#x64;&#x72;&#x65;&#115;&#115;&#64;&#101;&#120;&#x61;
          &#109;&#x70;&#x6C;e&#x2E;&#99;&#111;&#109;</a>
 
-       which  will  render  in a browser as a clickable link to "address@exam‐
+       which will render in a browser as a clickable  link  to  "address@exam‐
        ple.com".
 
        (This sort of entity-encoding trick will indeed fool many, if not
@@ -864,9 +864,8 @@ AAUUTTHHOORR
        Markdown was created by John Gruber.
 
        Manual page by Ryan Tomayko. It's pretty much a direct copy of the
-       Markdown  Syntax   Reference   _h_t_t_p_:_/_/_d_a_r_i_n_g_f_i_r_e_b_a_l_l_._n_e_t_/_p_r_o_j_e_c_t_s_/_m_a_r_k_‐
-       _d_o_w_n_/_s_y_n_t_a_x,
-       also by John Gruber.
+       Markdown   Syntax   Reference  _h_t_t_p_:_/_/_d_a_r_i_n_g_f_i_r_e_b_a_l_l_._n_e_t_/_p_r_o_j_e_c_t_s_/_m_a_r_k_‐
+       _d_o_w_n_/_s_y_n_t_a_x, also by John Gruber.
 
 SSEEEE AALLSSOO
        ronn(5)

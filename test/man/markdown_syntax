@@ -50,7 +50,6 @@ like it's been marked up with tags or formatting instructions\. While
 Markdown's syntax has been influenced by several existing text\-to\-HTML
 .br
 filters \-\- including [Setext] 1 \fIhttp://docutils\.sourceforge\.net/mirror/setext\.html\fR, [atx] 2 \fIhttp://www\.aaronsw\.com/2002/atx/\fR, [Textile] 3 \fIhttp://textism\.com/tools/textile/\fR, [reStructuredText] 4 \fIhttp://docutils\.sourceforge\.net/rst\.html\fR,
-.br
 [Grutatext] 5 \fIhttp://www\.triptico\.com/software/grutatxt\.html\fR, and [EtText] 6 \fIhttp://ettext\.taint\.org/doc/\fR \-\- the single biggest source of
 .br
 inspiration for Markdown's syntax is the format of plain text email\.
@@ -97,7 +96,6 @@ indicate that you're switching from Markdown to HTML; you just use
 the tags\.
 .P
 The only restrictions are that block\-level HTML elements \-\- e\.g\. \fB<div>\fP,
-.br
 \fB<table>\fP, \fB<pre>\fP, \fB<p>\fP, etc\. \-\- must be separated from surrounding
 .br
 content by blank lines, and the start and end tags of the block should
@@ -713,7 +711,6 @@ A code block continues until it reaches a line that is not indented
 (or the end of the article)\.
 .P
 Within a code block, ampersands (\fB&\fP) and angle brackets (\fB<\fP and \fB>\fP)
-.br
 are automatically converted into HTML entities\. This makes it very
 .br
 easy to include example HTML source code using Markdown \-\- just paste
@@ -1352,7 +1349,6 @@ Markdown was created by John Gruber\.
 Manual page by Ryan Tomayko\. It's pretty much a direct copy of the
 .br
 Markdown Syntax Reference \fIhttp://daringfireball\.net/projects/markdown/syntax\fR,
-.br
 also by John Gruber\.
 .SH SEE ALSO
 .P

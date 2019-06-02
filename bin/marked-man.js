@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+"use strict";
+
+require("../lib/marked-man"); // force bin/marked to require marked-man
+
+var main = require("marked/bin/marked");
+
+main(process.argv.slice(), function main(err, code) {
+	if (err) throw err;
+	return process.exit(code || 0);
+});

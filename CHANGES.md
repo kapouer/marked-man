@@ -24,3 +24,8 @@
 
 * accept a timestamp in milliseconds as --date argument
 
+0.7.0
+=====
+
+* renamed `--version` to `--ver` to avoid collision with `marked`
+

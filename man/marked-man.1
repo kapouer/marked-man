@@ -1,56 +1,103 @@
-.TH "MARKED\-MAN" "1" "January 2014" "" ""
+.P
+NPM \fIhttps://nodei\.co/npm/marked\-man\.png?downloads=true\fR \fIhttps://nodei\.co/npm/marked\-man/\fR
+.TH "MARKED\-MAN" "1" "June 2019" "" ""
 .SH "NAME"
 \fBmarked-man\fR \- markdown to roff
 .SH SYNOPSIS
 .P
 .RS 2
-.EX
+.nf
 marked\-man README\.md > doc/marked\-man\.1
-.EE
+.fi
 .RE
 .P
 See marked README \fIhttps://github\.com/chjj/marked\fR for documentation about how to use marked\.
 .P
-Note that \fBmarked\-man \-\-format=html\fR is the same as \fBmarked\fR\|\.
+Note that \fBmarked\-man \-\-format=html\fP is the same as \fBmarked\fP\|\.
 .SH DESCRIPTION
 .P
-\fBmarked\-man\fR wraps \fBmarked\fR to extend it with groff output support\.
+\fBmarked\-man\fP wraps \fBmarked\fP to extend it with groff output support in order to
+create Unix manual pages for use with \fBman\fP\|\.
 .SH OPTIONS
 .P
-\fBmarked\-man\fR adds some options to \fBmarked\fR existing options:
+\fBmarked\-man\fP invokes \fBmarked \-\-gfm \-\-sanitize\fP, and you can pass additional
+options through\.
+.br
+The \fB\-\-breaks\fP option, which retains intra\-paragraph line breaks, can be helpful to match default ronn behavior\.
+.P
+\fBmarked\-man\fP adds some options to \fBmarked\fP\|'s existing options:
 .RS 0
 .IP \(bu 2
-format
-Sets the output format\. Outputs html if different from \fBroff\fR\|\.
-Defaults to \fBroff\fR\|\.
+\fB\-\-format <format>\fP
+.br
+Sets the output format\. Outputs html if different from \fBroff\fP\|\.  
+Defaults to \fBroff\fP\|\.
 .IP \(bu 2
-name
-The name shown in the manpage header, if it isn\'t given in the ronn header like in this README\.
+\fB\-\-name <name>\fP
+.br
+The name shown in the manpage header, if it isn't given in the ronn header like in this README\.
+.br
 Defaults to empty string\.
 .IP \(bu 2
-section
-The section shown in the manpage header, if it isn\'t given in the ronn header like in this README\.
+\fB\-\-section <section>\fP
+.br
+The section number shown in the manpage header, if it isn't given in the ronn header like in this README\.
+.br
 Defaults to empty string\.
 .IP \(bu 2
-version
-The version shown in the manpage header\.
+\fB\-\-ver <version>\fP
+.br
+The version shown in the manpage footer\.
+.br
 Defaults to empty string\.
 .IP \(bu 2
-manual
-The MANUAL string shown in the manpage header\.
+\fB\-\-manual <manual>\fP
+.br
+The manual\-group name shown in the manpage header\.
+.br
 Defaults to empty string\.
 .IP \(bu 2
-date
+\fB\-\-date <date>\fP
+.br
 The date shown in the manpage header\.
-Defaults to now, must be acceptable by new Date(string)\.
+.br
+Defaults to now, must be acceptable to \fBnew Date(string or timestamp)\fP\|\.
 
 .RE
+.SH INSTALLATION
 .P
-\fBmarked\-man\fR invokes \fBmarked \-\-gfm \-\-sanitize\fR\|\.
-The \-\-breaks option can be helpful to match default \fBronn\fR behavior\.
+From the npm registry \fIhttps://npmjs\.com\fR:
+.RS 0
+.IP \(bu 2
+locally (\fB\-\-save\fP, \fB\-\-save\-dev\fP, or \fB\-\-save\-optional\fP add \fBmarked\-man\fP to your \fBpackage\.json\fP file as a runtime, development\-time, or optional runtime dependency, respectively)
+.P
+.RS 2
+.nf
+  npm install marked\-man [\-\-save|\-\-save\-dev|\-\-save\-optional]
+.fi
+.RE
+.IP \(bu 2
+globally (puts \fBmarked\-man\fP in your system's path):
+.P
+.RS 2
+.nf
+  [sudo] npm install marked\-man \-g
+.fi
+.RE
+
+.RE
+.SH EXAMPLE
+.P
+To view this README as a man page, run something like the following:
+.P
+.RS 2
+.nf
+marked\-man \-\-ver v0\.1\.0 \-\-manual 'Man Utilities' README\.md > /tmp/mm$$\.1 && man /tmp/mm$$\.1
+.fi
+.RE
 .SH SEE ALSO
 .P
-Ryan Tomayko \fIhttps://github\.com/rtomayko/ronn\fR
+Ronn \fIhttps://github\.com/rtomayko/ronn\fR
 .SH REPORTING BUGS
 .P
 See marked\-man repository \fIhttps://github\.com/kapouer/marked\-man\fR\|\.

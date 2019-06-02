@@ -43,7 +43,7 @@ Defaults to empty string.
 The section number shown in the manpage header, if it isn't given in the ronn header like in this README.  
 Defaults to empty string.
 
-* `--version <version>`  
+* `--ver <version>`  
 The version shown in the manpage footer.  
 Defaults to empty string.
 
@@ -74,7 +74,7 @@ EXAMPLE
 
 To view this README as a man page, run something like the following:
 
-    marked-man --version v0.1.0 --manual 'Man Utilities' README.md > /tmp/mm$$.1 && man /tmp/mm$$.1
+    marked-man --ver v0.1.0 --manual 'Man Utilities' README.md > /tmp/mm$$.1 && man /tmp/mm$$.1
 
 SEE ALSO
 --------

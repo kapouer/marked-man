@@ -1,12 +1,13 @@
 {
   "name": "marked-man",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "wrapper adding manpage output to 'marked', inspired by 'ronn'",
   "files": [
     "lib",
     "man",
     "bin"
   ],
+  "contributors": [ "Valen. H. <alternativexxxy@gmail.com> (https://github.com/Valen-H/)" ],
   "main": "lib/marked-man.js",
   "bin": {
     "marked-man": "./bin/marked-man"

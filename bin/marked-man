@@ -3,7 +3,7 @@
 
 require("../lib/marked-man"); // force bin/marked to require marked-man
 
-var main = require("marked/bin/marked");
+const main = require("marked/bin/marked");
 
 main(process.argv.slice(), function main(err, code) {
 	if (err) throw err;

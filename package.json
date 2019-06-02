@@ -30,5 +30,8 @@
   "license": "MIT",
   "peerDependencies": {
     "marked": "^0.6.2"
+  },
+  "dependencies": {
+    "marked": "^0.6.2"
   }
 }

@@ -34,21 +34,21 @@ function convert(name, str, cb) {
 fs.readdir(ronnDir, function(err, files) {
 	if (err) throw err;
 	var fails = 0,
-			works = 0,
-			news = 0;
+		works = 0,
+		news = 0;
 	Promise.all(files.map(function(file) {
 		return new Promise(function(resolve, reject) {
 			check(file, function(err, status) {
 				if (err) return reject(err);
 				switch (status) {
-					case -1:
-						fails++;
+				case -1:
+					fails++;
 					break;
-					case 0:
-						works++;
+				case 0:
+					works++;
 					break;
-					case 1:
-						news++;
+				case 1:
+					news++;
 					break;
 				}
 				resolve();

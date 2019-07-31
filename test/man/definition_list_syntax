@@ -20,6 +20,7 @@ start
 new paragraphs
 .IP \(bu 2
 \fB\-\-somearg\fP=<VALUE>:
+.br
 We can do that too\.
 
 .RE

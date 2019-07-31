@@ -4,14 +4,14 @@
 .RS 0
 .IP \(bu 2
 \fB\-S\fP \fItext\fR, \fBsearch\fP \fItext\fR:
+.br
  Performs a substring search of formula names for \fItext\fR\|\.
 .IP \(bu 2
 \fB\-O\fP <text>, \fBother\fP <text>:
+.br
  Does something else\.
 
 .RE
 .P
 Should space text properly\.
-.P
 <!\-\- this is a comment \-\->
-

@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
-require('../'); // force bin/marked to require marked-man
+var marked = require('../');
+
+
+if (process.env.SOURCE_DATE_EPOCH) {
+	marked.defaults.date = new Date(process.env.SOURCE_DATE_EPOCH * 1000).toISOString();
+}
 
 var main = require('marked/bin/marked');
 

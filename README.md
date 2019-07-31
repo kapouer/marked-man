@@ -45,7 +45,9 @@ Defaults to empty string.
 
 * `--version <version>`  
 The version shown in the manpage footer.  
-Defaults to empty string.
+Defaults to empty string.  
+Breaking change in marked-man 0.7.0: this flag is converted to manVersion option,
+to avoid conflict with marked.
 
 * `--manual <manual>`  
 The manual-group name shown in the manpage header.  
@@ -54,6 +56,7 @@ Defaults to empty string.
 * `--date <date>`  
 The date shown in the manpage header.  
 Defaults to now, must be acceptable to `new Date(string or timestamp)`.
+
 
 
 INSTALLATION

@@ -4,7 +4,14 @@ require('../'); // force bin/marked to require marked-man
 
 var main = require('marked/bin/marked');
 
-main(process.argv.slice(), function(err, code) {
-	if (err) throw err;
-	return process.exit(code || 0);
+var argv = process.argv.slice()
+
+if (process.env.SOURCE_DATE_EPOCH) {
+  var epochMs = Number(process.env.SOURCE_DATE_EPOCH) * 1000
+  argv.splice(2, 0, '--date', String(epochMs))
+}
+
+main(argv, function(err, code) {
+  if (err) throw err;
+  return process.exit(code || 0);
 });

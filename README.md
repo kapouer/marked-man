@@ -77,7 +77,7 @@ EXAMPLE
 
 To view this README as a man page, run something like the following:
 
-    marked-man --version v0.1.0 --manual 'Man Utilities' README.md > /tmp/mm$$.1 && man /tmp/mm$$.1
+    marked-man --version v0.1.0 --manual 'Man Utilities' README.md | man /dev/stdin
 
 SEE ALSO
 --------

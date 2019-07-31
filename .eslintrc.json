@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "indent": [2, "tab", {
+      "MemberExpression": 0,
+      "outerIIFEBody": 0
+    }],
+    "linebreak-style": [2, "unix"],
+    "semi": [2, "always"],
+    "no-console": 0,
+    "no-unused-vars": ["error", { "args": "none" }]
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended"
+}

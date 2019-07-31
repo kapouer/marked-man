@@ -1,6 +1,6 @@
 {
   "name": "marked-man",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "wrapper adding manpage output to 'marked', inspired by 'ronn'",
   "files": [
     "lib",
@@ -29,6 +29,6 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "peerDependencies": {
-    "marked": "^0.6.2"
+    "marked": "^0.7.0"
   }
 }

@@ -151,11 +151,11 @@ used to denote HTML entities\. If you want to use them as literal
 .br
 characters, you must escape them as entities, e\.g\. \fB&lt;\fP, and
 .br
-\fB&\fP\|\.
+\fB&amp;\fP\|\.
 .P
 Ampersands in particular are bedeviling for web writers\. If you want to
 .br
-write about 'AT&T', you need to write '\fBAT&T\fP\|'\. You even need to
+write about 'AT&T', you need to write '\fBAT&amp;T\fP\|'\. You even need to
 .br
 escape ampersands within URLs\. Thus, if you want to link to:
 .P
@@ -169,7 +169,7 @@ you need to encode the URL as:
 .P
 .RS 2
 .nf
-http://images\.google\.com/images?num=30&q=larry+bird
+http://images\.google\.com/images?num=30&amp;q=larry+bird
 .fi
 .RE
 .P
@@ -185,13 +185,13 @@ all the necessary escaping for you\. If you use an ampersand as part of
 .br
 an HTML entity, it remains unchanged; otherwise it will be translated
 .br
-into \fB&\fP\|\.
+into \fB&amp;\fP\|\.
 .P
 So, if you want to include a copyright symbol in your article, you can write:
 .P
 .RS 2
 .nf
-\(co
+&copy;
 .fi
 .RE
 .P
@@ -207,7 +207,7 @@ Markdown will translate it to:
 .P
 .RS 2
 .nf
-AT&T
+AT&amp;T
 .fi
 .RE
 .P
@@ -725,7 +725,7 @@ ampersands and angle brackets\. For example, this:
 .RS 2
 .nf
     <div class="footer">
-        \(co 2004 Foo Corporation
+        &copy; 2004 Foo Corporation
     </div>
 .fi
 .RE
@@ -735,7 +735,7 @@ will turn into:
 .RS 2
 .nf
 <pre><code>&lt;div class="footer"&gt;
-    &copy; 2004 Foo Corporation
+    &amp;copy; 2004 Foo Corporation
 &lt;/div&gt;
 </code></pre>
 .fi
@@ -1184,7 +1184,7 @@ You can write this:
 .P
 .RS 2
 .nf
-`&#8212;` is the decimal\-encoded equivalent of `\(em`\.
+`&#8212;` is the decimal\-encoded equivalent of `&mdash;`\.
 .fi
 .RE
 .P
@@ -1192,7 +1192,7 @@ to produce:
 .P
 .RS 2
 .nf
-<p><code>&#8212;</code> is the decimal\-encoded
+<p><code>&amp;#8212;</code> is the decimal\-encoded
 equivalent of <code>&amp;mdash;</code>\.</p>
 .fi
 .RE

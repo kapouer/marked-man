@@ -2,7 +2,7 @@
 .SH "NAME"
 \fBhello\fR \- hello world
 .P
-Your output &lt;i&gt;might&lt;/i&gt; look like this:
+Your output <i>might</i> look like this:
 .P
 .RS 2
 .nf

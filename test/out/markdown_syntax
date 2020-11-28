@@ -115,17 +115,17 @@ DDEESSCCRRIIPPTTIIOONN
        and &&. Left angle brackets are used to start tags; ampersands are
        used to denote HTML entities. If you want to use them as literal
        characters, you must escape them as entities, e.g. &&lltt;;, and
-       &&.
+       &&aammpp;;.
 
        Ampersands in particular are bedeviling for web writers. If you want to
-       write about 'AT&T', you need to write 'AATT&&TT'. You even need to
+       write about 'AT&T', you need to write 'AATT&&aammpp;;TT'. You even need to
        escape ampersands within URLs. Thus, if you want to link to:
 
          http://images.google.com/images?num=30&q=larry+bird
 
        you need to encode the URL as:
 
-         http://images.google.com/images?num=30&q=larry+bird
+         http://images.google.com/images?num=30&amp;q=larry+bird
 
        in your anchor tag hhrreeff attribute. Needless to say, this is easy to
        forget,  and  is probably the single most common source of HTML valida‐
@@ -135,12 +135,12 @@ DDEESSCCRRIIPPTTIIOONN
        Markdown allows you to use these characters naturally, taking care of
        all the necessary escaping for you. If you use an ampersand as part of
        an HTML entity, it remains unchanged; otherwise it will be translated
-       into &&.
+       into &&aammpp;;.
 
        So, if you want to include a copyright symbol in your article, you  can
        write:
 
-         ©
+         &copy;
 
        and Markdown will leave it alone. But if you write:
 
@@ -148,7 +148,7 @@ DDEESSCCRRIIPPTTIIOONN
 
        Markdown will translate it to:
 
-         AT&T
+         AT&amp;T
 
        Similarly, because Markdown supports inline HTML _#_h_t_m_l, if you use
        angle brackets as delimiters for HTML tags, Markdown will treat them as
@@ -482,13 +482,13 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        ampersands and angle brackets. For example, this:
 
              <div class="footer">
-                 © 2004 Foo Corporation
+                 &copy; 2004 Foo Corporation
              </div>
 
        will turn into:
 
          <pre><code>&lt;div class="footer"&gt;
-             &copy; 2004 Foo Corporation
+             &amp;copy; 2004 Foo Corporation
          &lt;/div&gt;
          </code></pre>
 
@@ -756,11 +756,11 @@ SSPPAANN EELLEEMMEENNTTSS
 
        You can write this:
 
-         `&#8212;` is the decimal-encoded equivalent of `—`.
+         `&#8212;` is the decimal-encoded equivalent of `&mdash;`.
 
        to produce:
 
-         <p><code>&#8212;</code> is the decimal-encoded
+         <p><code>&amp;#8212;</code> is the decimal-encoded
          equivalent of <code>&amp;mdash;</code>.</p>
 
    IImmaaggeess

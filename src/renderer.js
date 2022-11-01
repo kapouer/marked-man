@@ -1,9 +1,9 @@
-import { quote, resc, parseHeader } from './utils.js';
+import { resc, parseHeader } from './utils.js';
 
 export function code(code, infostring, escaped) {
-	return '\\fB'
+	return '.EX\n'
 		+ resc(code, true)
-		+ '\\fP';
+		+ '\n.EE\n';
 }
 
 export function blockquote(quote) {
@@ -13,7 +13,7 @@ export function blockquote(quote) {
 }
 
 export function html(html) {
-	return html;
+	return resc(html);
 }
 
 
@@ -61,15 +61,22 @@ export function paragraph(text) {
 		+ '\n';
 }
 export function table(header, body) {
-
+	return [
+		'.TS',
+		'tab(|) expand nowarn box;',
+		header,
+		'_',
+		body,
+		'.TE'
+	].join('\n');
 }
 
 export function tablerow(content) {
-
+	return '|' + content;
 }
 
 export function tablecell(content, flags) {
-
+	return ['T{', content, '}T'].join('\n');
 }
 
 
@@ -86,7 +93,9 @@ export function em(text) {
 }
 
 export function codespan(code) {
-
+	return '\\fB'
+		+ resc(code, true)
+		+ '\\fP';
 }
 
 export function br() {
@@ -100,11 +109,27 @@ export function del(text) {
 }
 
 export function link(href, title, text) {
+	const mailto = href.startsWith('mailto:') || !href.includes('://') && href.includes('@');
+	href = resc(href);
 
+	if (mailto) {
+		return [".MT " + href, text, ".ME", ""].join('\n');
+	} else {
+		return [".UR " + href, text, ".UE", ""].join('\n');
+	}
 }
 
 export function image(href, title, text) {
-
+	href = resc(href);
+	if (href == text) {
+		return '\\fI'
+			+ href
+			+ '\\fR';
+	} else {
+		return '\\fI'
+			+ text
+			+ '\\fR[' + href + ']';
+	}
 }
 
 export function text(text) {

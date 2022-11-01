@@ -34,16 +34,13 @@ export function rentities(str) {
 }
 
 export function parseHeader(str, options) {
-	const match = /^([\w_.[\]~+=@:-]+)\s*(?:\((\d\w*)\))?(?:\s*-+\s*(.*))?/.exec(str);
-	let name, section, text;
-	if (match) {
-		name = match[1];
-		section = match[2];
-		text = match[3];
-	}
+	const { groups: {
+		name = options.name || "",
+		section = options.section || "",
+		last = ""
+	}} = /^(?<name>[\w_.[\]~+=@:-]+)\s*(?:\((?<section>\d\w*)\))?(?:\s*-+\s*(?<last>.*))?/.exec(str) || {};
 
-	if (!name) name = options.name || "";
-	if (!section) section = options.section || "";
+	let text = last;
 	if (!text) {
 		if (name || section) text = "";
 		else text = str;
@@ -52,13 +49,13 @@ export function parseHeader(str, options) {
 
 	return quote(resc(name.toUpperCase()))
 		+ " "
-		+ quote(section)
+		+ quote(section || "")
 		+ " "
 		+ quote(manDate(options.date))
 		+ " "
-		+ quote(options.manVersion)
+		+ quote(options.manVersion || "")
 		+ " "
-		+ quote(options.manual)
+		+ quote(options.manual || "")
 		+ "\n.SH "
 		+ quote("NAME")
 		+ "\n\\fB"

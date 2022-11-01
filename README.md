@@ -8,9 +8,7 @@ SYNOPSIS
 marked-man README.md > doc/marked-man.1
 ```
 
-See [marked README](https://github.com/chjj/marked) for documentation about how to use marked.
-
-Note that `marked-man --format=html` is the same as `marked`.
+See also [marked documentation](https://marked.js.org/).
 
 DESCRIPTION
 -----------
@@ -21,15 +19,11 @@ create Unix manual pages for use with `man`.
 OPTIONS
 -------
 
-`marked-man` invokes `marked --gfm --sanitize`, and you can pass additional
-options through.
+`marked-man` is a `marked` CLI extension, meaning options can be passed directly to marked.
+
 The `--breaks` option, which retains intra-paragraph line breaks, can be helpful to match default ronn behavior.
 
 `marked-man` adds some options to `marked`'s existing options:
-
-* `--format <format>`
-Sets the output format. Outputs html if different from `roff`.
-Defaults to `roff`.
 
 * `--name <name>`
 The name shown in the manpage header, if it isn't given in the ronn header like in this README.
@@ -52,22 +46,17 @@ Defaults to empty string.
 * `--date <date>`
 The date shown in the manpage header.
 Defaults to now, must be acceptable to `new Date(string or timestamp)`.
+If `process.env.SOURCE_DATE_EPOCH` exists, it uses that time instead.
 
 INSTALLATION
 ------------
 
-From the [npm registry](https://npmjs.com):
+See your node package manager manual...
 
-* locally (`--save`, `--save-dev`, or `--save-optional` add `marked-man` to your `package.json` file as a runtime, development-time, or optional runtime dependency, respectively)
-
-```bash
-npm install marked-man [--save|--save-dev|--save-optional]
-```
-
-* globally (puts `marked-man` in your system's path):
+For example:
 
 ```bash
-[sudo] npm install marked-man -g
+npx marked-man simple.md
 ```
 
 EXAMPLE
@@ -76,11 +65,11 @@ EXAMPLE
 To view this README as a man page, run something like the following:
 
 ```bash
-marked-man --version v0.1.0 --manual 'Man Utilities' README.md | man /dev/stdin
+marked-man --man-version v0.1.0 --manual 'Man Utilities' README.md | man /dev/stdin
 ```
 
-EXTENSION
----------
+AS MARKED EXTENSION
+-------------------
 
 ```js
 import markedMan from 'marked-man';
@@ -89,10 +78,11 @@ import marked from 'marked';
 marked.use(markedMan);
 ```
 
-SEE ALSO
---------
+THANKS TO
+---------
 
-[Ronn](https://github.com/rtomayko/ronn)
+[Rronn](https://github.com/rtomayko/ronn)
+[Ronn-NG](https://github.com/apjanke/ronn-ng)
 
 REPORTING BUGS
 --------------

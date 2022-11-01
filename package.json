@@ -30,5 +30,20 @@
   "license": "MIT",
   "peerDependencies": {
     "marked": "^0.7.0"
+  "devDependencies": {
+    "@kapouer/eslint-config": "^1.8.0"
+  },
+  "eslintConfig": {
+    "extends": "@kapouer/eslint-config",
+    "overrides": [
+      {
+        "files": [
+          "src/**.js", "test/**.js"
+        ],
+        "env": {
+          "es6": true, "node": true
+        }
+      }
+    ]
   }
 }

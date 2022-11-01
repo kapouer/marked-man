@@ -24,3 +24,11 @@
 
 * accept a timestamp in milliseconds as --date argument
 
+1.0.0
+=====
+
+* --format option is dropped, use directly marked for html output
+* other options should work the same
+* mostly rewritten
+* depends marked >= 4.2
+* more troff macros are implemented

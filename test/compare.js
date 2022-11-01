@@ -1,29 +1,29 @@
-var fs = require('fs');
-var marked = require('../');
-var Path = require('path');
-var exec = require('child_process').exec;
+const fs = require('node:fs');
+const Path = require('node:path');
+const { exec } = require('node:child_process');
+const marked = require('../');
 
 // params
-var ronnDir = Path.join(__dirname, "md");
-var manDir = Path.join(__dirname, "man");
-var outDir = Path.join(__dirname, "out");
+const ronnDir = Path.join(__dirname, "md");
+const manDir = Path.join(__dirname, "man");
+const outDir = Path.join(__dirname, "out");
 
 function convert(name, str, cb) {
-	var roff = marked.parse(str, {
+	const roff = marked.parse(str, {
 		format: "roff",
 		name: name,
 		date:'1979-01-01',
 		gfm: true,
 		breaks: true
 	});
-	var manPath = Path.join(manDir, name);
-	var status = writeOrCompare(roff, manPath);
+	let manPath = Path.join(manDir, name);
+	const status = writeOrCompare(roff, manPath);
 	if (status < 0) manPath += '.err';
 	exec('man --warnings -E UTF-8 ' + manPath, {env: {
 		LANG:"C",
 		MAN_KEEP_FORMATTING: '1',
 		MANWIDTH: "80"
-	}}, function(err, stdout, stderr) {
+	}}, (err, stdout, stderr) => {
 		if (stderr) console.error(stderr);
 		cb(err, stdout);
 	});
@@ -31,43 +31,43 @@ function convert(name, str, cb) {
 
 
 
-fs.readdir(ronnDir, function(err, files) {
+fs.readdir(ronnDir, (err, files) => {
 	if (err) throw err;
-	var fails = 0,
+	let fails = 0,
 		works = 0,
 		news = 0;
-	Promise.all(files.map(function(file) {
-		return new Promise(function(resolve, reject) {
-			check(file, function(err, status) {
+	Promise.all(files.map((file) => {
+		return new Promise((resolve, reject) => {
+			check(file, (err, status) => {
 				if (err) return reject(err);
 				switch (status) {
-				case -1:
-					fails++;
-					break;
-				case 0:
-					works++;
-					break;
-				case 1:
-					news++;
-					break;
+					case -1:
+						fails++;
+						break;
+					case 0:
+						works++;
+						break;
+					case 1:
+						news++;
+						break;
 				}
 				resolve();
 			});
 		});
-	})).then(function() {
+	})).then(() => {
 		if (fails > 0) console.error("Failed tests: ", fails);
-		if (works > 0) console.log("Succeeded tests: ", works);
-		if (news > 0) console.log("New tests: ", news);
-		if (fails == 0) console.log("All tests passed");
+		if (works > 0) console.info("Succeeded tests: ", works);
+		if (news > 0) console.info("New tests: ", news);
+		if (fails == 0) console.info("All tests passed");
 		else process.exit(1);
 	});
 });
 
 function writeOrCompare(str, path) {
-	var status = 0;
+	let status = 0;
 	try {
-		var expect = fs.readFileSync(path).toString();
-		var errpath = path + '.err';
+		const expect = fs.readFileSync(path).toString();
+		const errpath = path + '.err';
 		if (expect != str) {
 			console.error("Test failure, result written in", errpath);
 			status = -1;
@@ -81,12 +81,12 @@ function writeOrCompare(str, path) {
 }
 
 function check(filename, cb) {
-	var ronnBuf = fs.readFileSync(Path.join(ronnDir, filename));
-	var name = Path.basename(filename, Path.extname(filename));
-	var destPath = Path.join(outDir, name);
-	convert(name, ronnBuf.toString(), function(err, output) {
+	const ronnBuf = fs.readFileSync(Path.join(ronnDir, filename));
+	const name = Path.basename(filename, Path.extname(filename));
+	const destPath = Path.join(outDir, name);
+	convert(name, ronnBuf.toString(), (err, output) => {
 		if (err) return cb(err, 0);
-		var status = writeOrCompare(output, destPath);
+		const status = writeOrCompare(output, destPath);
 		cb(null, status);
 	});
 }

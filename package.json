@@ -1,15 +1,15 @@
 {
   "name": "marked-man",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "wrapper adding manpage output to 'marked', inspired by 'ronn'",
-  "files": [
-    "lib",
-    "man",
-    "bin"
-  ],
-  "main": "lib/marked-man.js",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
   "bin": {
-    "marked-man": "./bin/marked-man"
+    "marked-man": "./bin/marked-man.js"
   },
   "man": [
     "./man/marked-man.1"
@@ -29,7 +29,8 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "peerDependencies": {
-    "marked": "^0.7.0"
+    "marked": "^4.2.0"
+  },
   "devDependencies": {
     "@kapouer/eslint-config": "^1.8.0"
   },

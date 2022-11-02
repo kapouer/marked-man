@@ -1,9 +1,14 @@
 import { resc, parseHeader } from './utils.js';
 
 export function code(code, infostring, escaped) {
-	return '.EX\n'
-		+ resc(code, true)
-		+ '\n.EE\n';
+	return [
+		'.RS 2',
+		'.nf',
+		resc(code, true),
+		'.fi',
+		'.RE',
+		''
+	].join('\n');
 }
 
 export function blockquote(quote) {

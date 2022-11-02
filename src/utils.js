@@ -9,7 +9,10 @@ export function resc(str) {
 		.replace(/-/gm, "\\-")
 		.replace(/^\./gm, "\\|.")
 		.replace(/\./gm, "\\.")
-		.replace(/^'/gm, "\\|'")).replace('&amp;', '&');
+		.replace(/^'/gm, "\\|'")
+	).replace(/&gt;/gm, '>')
+		.replace(/&lt;/gm, '<')
+		.replace(/&amp;/gm, '&');
 }
 
 export function rentities(str) {

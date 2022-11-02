@@ -4,7 +4,7 @@ export function code(code, infostring, escaped) {
 	return [
 		'.RS 2',
 		'.nf',
-		resc(code, true),
+		code,
 		'.fi',
 		'.RE',
 		''
@@ -47,24 +47,35 @@ export function list(body, ordered, start) {
 	const { listLevel = 0 } = this;
 	this.listLevel++;
 
-	const indent = listLevel ? '.RS\n' : '.RS 0\n';
-	return indent
-		+ body
-		+ '\n.RE\n';
+	const indent = listLevel ? '.RS' : '.RS 0';
+	return [
+		indent,
+		body,
+		'.RE',
+		''
+	].join('\n');
 }
 export function listitem(text, task, checked) {
 	let offset = 2;
-	return `.IP \\(bu ${offset}\n${text}`;
+	return [
+		`.IP \\(bu ${offset}`,
+		text.replace(/^\.P\n/, ''),
+		''
+	].join('\n');
 }
 
 export function checkbox(checked) {
 
 }
 export function paragraph(text) {
-	return '.P\n'
-		+ text
-		+ '\n';
+	const ret = [
+		'.P',
+		text
+	];
+	if (text) ret.push('');
+	return ret.join('\n');
 }
+
 export function table(header, body) {
 	return [
 		'.TS',
@@ -72,7 +83,8 @@ export function table(header, body) {
 		header,
 		'_',
 		body,
-		'.TE'
+		'.TE',
+		''
 	].join('\n');
 }
 
@@ -81,7 +93,7 @@ export function tablerow(content) {
 }
 
 export function tablecell(content, flags) {
-	return ['T{', content, '}T'].join('\n');
+	return ['T{', content, '}T', ''].join('\n');
 }
 
 

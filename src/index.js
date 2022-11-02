@@ -13,5 +13,20 @@ export default {
 	gfm: true,
 	breaks: false,
 	renderer,
-	tokenizer
+	tokenizer,
+	extensions: [{
+		name: 'heading',
+		level: 'block',
+		tokenizer(src, tokens) {
+			if (!tokens.length) return;
+			const [{type, depth}] = tokens;
+			if (type != "heading" || depth != 1) {
+				tokens.unshift({
+					type: 'heading',
+					depth: 1,
+					tokens: []
+				});
+			}
+		}
+	}]
 };

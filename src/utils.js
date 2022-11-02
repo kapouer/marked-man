@@ -34,11 +34,13 @@ export function rentities(str) {
 }
 
 export function parseHeader(str, options) {
-	const { groups: {
-		name = options.name || "",
-		section = options.section || "",
-		last = ""
-	}} = /^(?<name>[\w_.[\]~+=@:-]+)\s*(?:\((?<section>\d\w*)\))?(?:\s*-+\s*(?<last>.*))?/.exec(str) || {};
+	const {
+		groups: {
+			name = options.name || "",
+			section = options.section || "",
+			last = ""
+		}
+	} = /^(?<name>[\w_.[\]~+=@:-]+)\s*(?:\((?<section>\d\w*)\))?(?:\s*-+\s*(?<last>.*))?$/.exec(str) || { groups: {} };
 
 	let text = last;
 	if (!text) {
@@ -63,6 +65,7 @@ export function parseHeader(str, options) {
 		+ "\\fR"
 		+ resc(text);
 }
+
 export function manDate(date) {
 	const stamp = parseInt(date);
 	if (!Number.isNaN(stamp) && stamp.toString().length == date.length) date = stamp;

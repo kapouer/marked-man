@@ -21,7 +21,7 @@ export function heading(text, level, raw, slugger) {
 	let macro;
 	if (level == 1) {
 		macro = 'TH';
-		text = parseHeader(text || "", this.options);
+		text = parseHeader(raw || "", this.options);
 	} else if (level == 2) {
 		macro = 'SH';
 	} else {

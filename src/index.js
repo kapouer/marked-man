@@ -2,18 +2,22 @@ import * as renderer from './renderer.js';
 import * as tokenizer from './tokenizer.js';
 
 export default {
-	get date() {
+	// marked-man defaults
+	date: (() => {
 		if (typeof process == "undefined" || !process.env.SOURCE_DATE_EPOCH) {
 			return new Date();
 		} else {
 			return new Date(parseInt(process.env.SOURCE_DATE_EPOCH) * 1000);
 		}
-	},
+	})(),
+	name: null,
+	section: null,
+	manual: null,
 	manVersion: null,
-	gfm: true,
-	breaks: false,
+	// output to roff
 	renderer,
 	tokenizer,
+	// custom fixes
 	extensions: [{
 		name: 'heading',
 		level: 'block',

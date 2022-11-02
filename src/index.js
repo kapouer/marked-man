@@ -1,4 +1,5 @@
 import * as renderer from './renderer.js';
+import * as tokenizer from './tokenizer.js';
 
 export default {
 	get date() {
@@ -11,5 +12,6 @@ export default {
 	manVersion: null,
 	gfm: true,
 	breaks: false,
-	renderer
+	renderer,
+	tokenizer
 };

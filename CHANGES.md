@@ -31,4 +31,4 @@
 * other options should work the same
 * mostly rewritten
 * depends marked >= 4.2
-* more troff macros are implemented
+* more groff macros are implemented

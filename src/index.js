@@ -27,6 +27,7 @@ export default {
 			return new Date(parseInt(process.env.SOURCE_DATE_EPOCH) * 1000);
 		}
 	})(),
+	mangle: false,
 	name: null,
 	section: null,
 	manual: null,

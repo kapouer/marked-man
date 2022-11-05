@@ -27,7 +27,7 @@ async function convert(name, str) {
 		breaks: true
 	});
 	let manPath = Path.join(manDir, name);
-	const status = writeOrCompare(roff, manPath);
+	const status = await writeOrCompare(roff, manPath);
 	if (status < 0) manPath += '.err';
 	const { stdout, stderr } = await execa(`man --warnings --encoding=UTF-8 ${manPath}.1`, {
 		env: {

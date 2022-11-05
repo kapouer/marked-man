@@ -29,14 +29,14 @@ async function convert(name, str) {
 	let manPath = Path.join(manDir, name);
 	const status = writeOrCompare(roff, manPath);
 	if (status < 0) manPath += '.err';
-	const { stdout, stderr } = await execa(`man --warnings -E UTF-8 ${manPath}.1`, {
+	const { stdout, stderr } = await execa(`man --warnings --encoding=UTF-8 ${manPath}.1`, {
 		env: {
-			LANG: "C",
+			LC_ALL: "C.UTF-8",
 			MAN_KEEP_FORMATTING: '1',
 			MANWIDTH: "80"
 		}
 	});
-	if (stderr) console.error(name, '\n', stderr);
+	if (stderr) console.error(manPath, '\n', stderr);
 	return stdout;
 }
 

@@ -79,25 +79,48 @@ export function paragraph(text) {
 
 export function table(header, body) {
 	this.jumps = false;
+	const { tableCols } = this;
+	delete this.tableCols;
 	return [
 		'.TS',
 		'tab(|) expand nowarn box;',
-		header,
-		'_',
-		body,
+		tableCols.join(' ') + '.',
+		dropLastRowSep(header.trim()),
+		'=',
+		dropLastRowSep(body.trim()),
 		'.TE',
 		''
 	].join('\n');
 }
 
 export function tablerow(content) {
-	return '|' + content;
+	if (this.tableCols) this.tableCols.done = true;
+	return dropLastCellSep(content) + '\n_\n';
 }
 
 export function tablecell(content, flags) {
-	return ['T{', content, '}T', ''].join('\n');
+	if (!this.tableCols) this.tableCols = [];
+	if (!this.tableCols.done) {
+		this.tableCols.push(getCellAlign(flags.align));
+	}
+	return ['T{', content, 'T}|'].join('\n');
 }
-
+function dropLastRowSep(str) {
+	return str.replace(/\n_$/, '');
+}
+function dropLastCellSep(str) {
+	return str.replace(/\|$/, '');
+}
+function getCellAlign(align) {
+	switch (align) {
+		case "right":
+			return "r";
+		case "center":
+			return "c";
+		default:
+			return "l";
+	}
+}
 
 export function strong(text) {
 	this.jumps = false;

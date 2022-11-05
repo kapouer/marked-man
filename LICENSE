@@ -1,5 +1,5 @@
 Files:*
-Copyright: 2013 Jérémy Lal <kapouer@melix.org>
+Copyright: 2013-2022 Jérémy Lal <kapouer@melix.org>
 License: MIT
 
 Files: lib/marked-man.js
@@ -8,7 +8,7 @@ Copyright: 2013 Jérémy Lal <kapouer@melix.org>
 License: MIT
 
 Files: test/files/*
-Copyright: 2013 Jérémy Lal <kapouer@melix.org> 
+Copyright: 2013 Jérémy Lal <kapouer@melix.org>
  2009 Ryan Tomayko (http://tomayko.com/about)
 License: MIT
 

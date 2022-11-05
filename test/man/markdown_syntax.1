@@ -2,7 +2,6 @@
 .SH "NAME"
 \fBmarkdown\fR \- humane markup syntax
 .SH SYNOPSIS
-.P
 .RS 2
 .nf
 # Header 1 #
@@ -11,16 +10,16 @@
 #### Header 4 ####
 ##### Header 5 #####
 
-This is a paragraph, which is text surrounded by whitespace\.
+This is a paragraph, which is text surrounded by whitespace.
 Paragraphs can be on one line (or many), and can drone on for
-hours\.
+hours.
 
-[Reference style links][1] and [inline links](http://example\.com)
-[1]: http://example\.com "Title is optional"
+[Reference style links][1] and [inline links](http://example.com)
+[1]: http://example.com "Title is optional"
 
-Inline markup like _italics_,  **bold**, and `code()`\.
+Inline markup like _italics_,  **bold**, and `code()`.
 
-![picture alt](/images/photo\.jpeg "Title is optional")
+![picture alt](/images/photo.jpeg "Title is optional")
 
 > Blockquotes are like quoted text in email replies
 >> And, they can be nested
@@ -32,7 +31,7 @@ Inline markup like _italics_,  **bold**, and `code()`\.
   * You can
   * even
   * nest them
-\- Another one
+- Another one
 + Another one
 .fi
 .RE
@@ -107,10 +106,9 @@ not be indented with tabs or spaces\. Markdown is smart enough not
 to add extra (unwanted) \fB<p>\fP tags around HTML block\-level tags\.
 .P
 For example, to add an HTML table to a Markdown article:
-.P
 .RS 2
 .nf
-This is a regular paragraph\.
+This is a regular paragraph.
 
 <table>
     <tr>
@@ -118,7 +116,7 @@ This is a regular paragraph\.
     </tr>
 </table>
 
-This is another regular paragraph\.
+This is another regular paragraph.
 .fi
 .RE
 .P
@@ -158,18 +156,16 @@ Ampersands in particular are bedeviling for web writers\. If you want to
 write about 'AT&T', you need to write '\fBAT&amp;T\fP\|'\. You even need to
 .br
 escape ampersands within URLs\. Thus, if you want to link to:
-.P
 .RS 2
 .nf
-http://images\.google\.com/images?num=30&q=larry+bird
+http://images.google.com/images?num=30&q=larry+bird
 .fi
 .RE
 .P
 you need to encode the URL as:
-.P
 .RS 2
 .nf
-http://images\.google\.com/images?num=30&amp;q=larry+bird
+http://images.google.com/images?num=30&amp;q=larry+bird
 .fi
 .RE
 .P
@@ -188,7 +184,6 @@ an HTML entity, it remains unchanged; otherwise it will be translated
 into \fB&amp;\fP\|\.
 .P
 So, if you want to include a copyright symbol in your article, you can write:
-.P
 .RS 2
 .nf
 &copy;
@@ -196,7 +191,6 @@ So, if you want to include a copyright symbol in your article, you can write:
 .RE
 .P
 and Markdown will leave it alone\. But if you write:
-.P
 .RS 2
 .nf
 AT&T
@@ -204,7 +198,6 @@ AT&T
 .RE
 .P
 Markdown will translate it to:
-.P
 .RS 2
 .nf
 AT&amp;T
@@ -216,7 +209,6 @@ Similarly, because Markdown supports inline HTML \fI#html\fR, if you use
 angle brackets as delimiters for HTML tags, Markdown will treat them as
 .br
 such\. But if you write:
-.P
 .RS 2
 .nf
 4 < 5
@@ -224,7 +216,6 @@ such\. But if you write:
 .RE
 .P
 Markdown will translate it to:
-.P
 .RS 2
 .nf
 4 &lt; 5
@@ -279,7 +270,6 @@ Markdown supports two styles of headers, [Setext] 1 \fIhttp://docutils\.sourcefo
 Setext\-style headers are "underlined" using equal signs (for first\-level
 .br
 headers) and dashes (for second\-level headers)\. For example:
-.P
 .RS 2
 .nf
 This is an H1
@@ -295,7 +285,6 @@ Any number of underlining \fB=\fP\|'s or \fB\-\fP\|'s will work\.
 Atx\-style headers use 1\-6 hash characters at the start of the line,
 .br
 corresponding to header levels 1\-6\. For example:
-.P
 .RS 2
 .nf
 # This is an H1
@@ -315,7 +304,6 @@ closing hashes don't even need to match the number of hashes
 used to open the header\. (The number of opening hashes
 .br
 determines the header level\.) :
-.P
 .RS 2
 .nf
 # This is an H1 #
@@ -334,57 +322,53 @@ familiar with quoting passages of text in an email message, then you
 know how to create a blockquote in Markdown\. It looks best if you hard
 .br
 wrap the text and put a \fB>\fP before every line:
-.P
 .RS 2
 .nf
-> This is a blockquote with two paragraphs\. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit\. Aliquam hendrerit mi posuere lectus\.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus\.
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 >
-> Donec sit amet nisl\. Aliquam semper ipsum sit amet velit\. Suspendisse
-> id sem consectetuer libero luctus adipiscing\.
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+> id sem consectetuer libero luctus adipiscing.
 .fi
 .RE
 .P
 Markdown allows you to be lazy and only put the \fB>\fP before the first
 .br
 line of a hard\-wrapped paragraph:
-.P
 .RS 2
 .nf
-> This is a blockquote with two paragraphs\. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit\. Aliquam hendrerit mi posuere lectus\.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus\.
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
 
-> Donec sit amet nisl\. Aliquam semper ipsum sit amet velit\. Suspendisse
-id sem consectetuer libero luctus adipiscing\.
+> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.
 .fi
 .RE
 .P
 Blockquotes can be nested (i\.e\. a blockquote\-in\-a\-blockquote) by
 .br
 adding additional levels of \fB>\fP:
-.P
 .RS 2
 .nf
-> This is the first level of quoting\.
+> This is the first level of quoting.
 >
-> > This is nested blockquote\.
+> > This is nested blockquote.
 >
-> Back to the first level\.
+> Back to the first level.
 .fi
 .RE
 .P
 Blockquotes can contain other Markdown elements, including headers, lists,
 .br
 and code blocks:
-.P
 .RS 2
 .nf
-> ## This is a header\.
+> ## This is a header.
 >
-> 1\.   This is the first list item\.
-> 2\.   This is the second list item\.
+> 1.   This is the first list item.
+> 2.   This is the second list item.
 >
 > Here's some example code:
 >
@@ -404,7 +388,6 @@ Markdown supports ordered (numbered) and unordered (bulleted) lists\.
 Unordered lists use asterisks, pluses, and hyphens \-\- interchangably
 .br
 \-\- as list markers:
-.P
 .RS 2
 .nf
 *   Red
@@ -414,7 +397,6 @@ Unordered lists use asterisks, pluses, and hyphens \-\- interchangably
 .RE
 .P
 is equivalent to:
-.P
 .RS 2
 .nf
 +   Red
@@ -424,7 +406,6 @@ is equivalent to:
 .RE
 .P
 and:
-.P
 .RS 2
 .nf
 \-   Red
@@ -434,7 +415,6 @@ and:
 .RE
 .P
 Ordered lists use numbers followed by periods:
-.P
 .RS 2
 .nf
 1\.  Bird
@@ -448,7 +428,6 @@ It's important to note that the actual numbers you use to mark the
 list have no effect on the HTML output Markdown produces\. The HTML
 .br
 Markdown produces from the above list is:
-.P
 .RS 2
 .nf
 <ol>
@@ -460,7 +439,6 @@ Markdown produces from the above list is:
 .RE
 .P
 If you instead wrote the list in Markdown like this:
-.P
 .RS 2
 .nf
 1\.  Bird
@@ -470,7 +448,6 @@ If you instead wrote the list in Markdown like this:
 .RE
 .P
 or even:
-.P
 .RS 2
 .nf
 3\. Bird
@@ -500,7 +477,6 @@ up to three spaces\. List markers must be followed by one or more spaces
 or a tab\.
 .P
 To make lists look nice, you can wrap items with hanging indents:
-.P
 .RS 2
 .nf
 *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit\.
@@ -512,21 +488,19 @@ To make lists look nice, you can wrap items with hanging indents:
 .RE
 .P
 But if you want to be lazy, you don't have to:
-.P
 .RS 2
 .nf
-*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit\.
-Aliquam hendrerit mi posuere lectus\. Vestibulum enim wisi,
-viverra nec, fringilla in, laoreet vitae, risus\.
-*   Donec sit amet nisl\. Aliquam semper ipsum sit amet velit\.
-Suspendisse id sem consectetuer libero luctus adipiscing\.
+*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.
 .fi
 .RE
 .P
 If list items are separated by blank lines, Markdown will wrap the
 .br
 items in \fB<p>\fP tags in the HTML output\. For example, this input:
-.P
 .RS 2
 .nf
 *   Bird
@@ -535,7 +509,6 @@ items in \fB<p>\fP tags in the HTML output\. For example, this input:
 .RE
 .P
 will turn into:
-.P
 .RS 2
 .nf
 <ul>
@@ -546,7 +519,6 @@ will turn into:
 .RE
 .P
 But this:
-.P
 .RS 2
 .nf
 *   Bird
@@ -556,7 +528,6 @@ But this:
 .RE
 .P
 will turn into:
-.P
 .RS 2
 .nf
 <ul>
@@ -571,18 +542,17 @@ List items may consist of multiple paragraphs\. Each subsequent
 paragraph in a list item must be indented by either 4 spaces
 .br
 or one tab:
-.P
 .RS 2
 .nf
-1\.  This is a list item with two paragraphs\. Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit\. Aliquam hendrerit
-    mi posuere lectus\.
+1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
 
     Vestibulum enim wisi, viverra nec, fringilla in, laoreet
-    vitae, risus\. Donec sit amet nisl\. Aliquam semper ipsum
-    sit amet velit\.
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
 
-2\.  Suspendisse id sem consectetuer libero luctus adipiscing\.
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
 .fi
 .RE
 .P
@@ -591,36 +561,33 @@ It looks nice if you indent every line of the subsequent
 paragraphs, but here again, Markdown will allow you to be
 .br
 lazy:
-.P
 .RS 2
 .nf
-*   This is a list item with two paragraphs\.
+*   This is a list item with two paragraphs.
 
-    This is the second paragraph in the list item\. You're
-only required to indent the first line\. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit\.
+    This is the second paragraph in the list item. You're
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.
 
-*   Another item in the same list\.
+*   Another item in the same list.
 .fi
 .RE
 .P
 To put a blockquote within a list item, the blockquote's \fB>\fP
 .br
 delimiters need to be indented:
-.P
 .RS 2
 .nf
 *   A list item with a blockquote:
 
     > This is a blockquote
-    > inside a list item\.
+    > inside a list item.
 .fi
 .RE
 .P
 To put a code block within a list item, the code block needs
 .br
 to be indented \fItwice\fR \-\- 8 spaces or two tabs:
-.P
 .RS 2
 .nf
 *   A list item with a code block:
@@ -632,20 +599,18 @@ to be indented \fItwice\fR \-\- 8 spaces or two tabs:
 It's worth noting that it's possible to trigger an ordered list by
 .br
 accident, by writing something like this:
-.P
 .RS 2
 .nf
-1986\. What a great season\.
+1986. What a great season.
 .fi
 .RE
 .P
 In other words, a \fInumber\-period\-space\fR sequence at the beginning of a
 .br
 line\. To avoid this, you can backslash\-escape the period:
-.P
 .RS 2
 .nf
-1986\\\. What a great season\.
+1986\. What a great season.
 .fi
 .RE
 .SS Code Blocks
@@ -661,22 +626,20 @@ in both \fB<pre>\fP and \fB<code>\fP tags\.
 To produce a code block in Markdown, simply indent every line of the
 .br
 block by at least 4 spaces or 1 tab\. For example, given this input:
-.P
 .RS 2
 .nf
 This is a normal paragraph:
 
-    This is a code block\.
+    This is a code block.
 .fi
 .RE
 .P
 Markdown will generate:
-.P
 .RS 2
 .nf
 <p>This is a normal paragraph:</p>
 
-<pre><code>This is a code block\.
+<pre><code>This is a code block.
 </code></pre>
 .fi
 .RE
@@ -684,7 +647,6 @@ Markdown will generate:
 One level of indentation \-\- 4 spaces or 1 tab \-\- is removed from each
 .br
 line of the code block\. For example, this:
-.P
 .RS 2
 .nf
 Here is an example of AppleScript:
@@ -696,7 +658,6 @@ Here is an example of AppleScript:
 .RE
 .P
 will turn into:
-.P
 .RS 2
 .nf
 <p>Here is an example of AppleScript:</p>
@@ -721,7 +682,6 @@ easy to include example HTML source code using Markdown \-\- just paste
 it and indent it, and Markdown will handle the hassle of encoding the
 .br
 ampersands and angle brackets\. For example, this:
-.P
 .RS 2
 .nf
     <div class="footer">
@@ -731,7 +691,6 @@ ampersands and angle brackets\. For example, this:
 .RE
 .P
 will turn into:
-.P
 .RS 2
 .nf
 <pre><code>&lt;div class="footer"&gt;
@@ -755,7 +714,6 @@ more hyphens, asterisks, or underscores on a line by themselves\. If you
 wish, you may use spaces between the hyphens or asterisks\. Each of the
 .br
 following lines will produce a horizontal rule:
-.P
 .RS 2
 .nf
 * * *
@@ -783,67 +741,61 @@ after the link text's closing square bracket\. Inside the parentheses,
 put the URL where you want the link to point, along with an \fIoptional\fR
 .br
 title for the link, surrounded in quotes\. For example:
-.P
 .RS 2
 .nf
-This is [an example](http://example\.com/ "Title") inline link\.
+This is [an example](http://example.com/ "Title") inline link.
 
-[This link](http://example\.net/) has no title attribute\.
+[This link](http://example.net/) has no title attribute.
 .fi
 .RE
 .P
 Will produce:
-.P
 .RS 2
 .nf
-<p>This is <a href="http://example\.com/" title="Title">
-an example</a> inline link\.</p>
+<p>This is <a href="http://example.com/" title="Title">
+an example</a> inline link.</p>
 
-<p><a href="http://example\.net/">This link</a> has no
-title attribute\.</p>
+<p><a href="http://example.net/">This link</a> has no
+title attribute.</p>
 .fi
 .RE
 .P
 If you're referring to a local resource on the same server, you can
 .br
 use relative paths:
-.P
 .RS 2
 .nf
-See my [About](/about/) page for details\.
+See my [About](/about/) page for details.
 .fi
 .RE
 .P
 Reference\-style links use a second set of square brackets, inside
 .br
 which you place a label of your choosing to identify the link:
-.P
 .RS 2
 .nf
-This is [an example][id] reference\-style link\.
+This is [an example][id] reference-style link.
 .fi
 .RE
 .P
 You can optionally use a space to separate the sets of brackets:
-.P
 .RS 2
 .nf
-This is [an example] [id] reference\-style link\.
+This is [an example] [id] reference-style link.
 .fi
 .RE
 .P
 Then, anywhere in the document, you define your link label like this,
 .br
 on a line by itself:
-.P
 .RS 2
 .nf
-[id]: http://example\.com/  "Optional Title Here"
+[id]: http://example.com/  "Optional Title Here"
 .fi
 .RE
 .P
 That is:
-.RS 0
+.RS
 .IP \(bu 2
 Square brackets containing the link identifier (optionally
 .br
@@ -862,12 +814,11 @@ in double or single quotes, or enclosed in parentheses\.
 .RE
 .P
 The following three link definitions are equivalent:
-.P
 .RS 2
 .nf
-[foo]: http://example\.com/  "Optional Title Here"
-[foo]: http://example\.com/  'Optional Title Here'
-[foo]: http://example\.com/  (Optional Title Here)
+[foo]: http://example.com/  "Optional Title Here"
+[foo]: http://example.com/  'Optional Title Here'
+[foo]: http://example.com/  (Optional Title Here)
 .fi
 .RE
 .P
@@ -876,20 +827,18 @@ The following three link definitions are equivalent:
 single quotes from being used to delimit link titles\.
 .P
 The link URL may, optionally, be surrounded by angle brackets:
-.P
 .RS 2
 .nf
-[id]: <http://example\.com/>  "Optional Title Here"
+[id]: <http://example.com/>  "Optional Title Here"
 .fi
 .RE
 .P
 You can put the title attribute on the next line and use extra spaces
 .br
 or tabs for padding, which tends to look better with longer URLs:
-.P
 .RS 2
 .nf
-[id]: http://example\.com/longish/path/to/resource/here
+[id]: http://example.com/longish/path/to/resource/here
     "Optional Title Here"
 .fi
 .RE
@@ -903,7 +852,6 @@ Link definition names may consist of letters, numbers, spaces, and
 punctuation \-\- but they are \fInot\fR case sensitive\. E\.g\. these two
 .br
 links:
-.P
 .RS 2
 .nf
 [link text][a]
@@ -920,7 +868,6 @@ link, in which case the link text itself is used as the name\.
 Just use an empty set of square brackets \-\- e\.g\., to link the word
 .br
 "Google" to the google\.com web site, you could simply write:
-.P
 .RS 2
 .nf
 [Google][]
@@ -928,28 +875,25 @@ Just use an empty set of square brackets \-\- e\.g\., to link the word
 .RE
 .P
 And then define the link:
-.P
 .RS 2
 .nf
-[Google]: http://google\.com/
+[Google]: http://google.com/
 .fi
 .RE
 .P
 Because link names may contain spaces, this shortcut even works for
 .br
 multiple words in the link text:
-.P
 .RS 2
 .nf
-Visit [Daring Fireball][] for more information\.
+Visit [Daring Fireball][] for more information.
 .fi
 .RE
 .P
 And then define the link:
-.P
 .RS 2
 .nf
-[Daring Fireball]: http://daringfireball\.net/
+[Daring Fireball]: http://daringfireball.net/
 .fi
 .RE
 .P
@@ -962,51 +906,47 @@ used, but if you want, you can put them all at the end of your
 document, sort of like footnotes\.
 .P
 Here's an example of reference links in action:
-.P
 .RS 2
 .nf
 I get 10 times more traffic from [Google] [1] than from
-[Yahoo] [2] or [MSN] [3]\.
+[Yahoo] [2] or [MSN] [3].
 
-  [1]: http://google\.com/        "Google"
-  [2]: http://search\.yahoo\.com/  "Yahoo Search"
-  [3]: http://search\.msn\.com/    "MSN Search"
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
 .fi
 .RE
 .P
 Using the implicit link name shortcut, you could instead write:
-.P
 .RS 2
 .nf
 I get 10 times more traffic from [Google][] than from
-[Yahoo][] or [MSN][]\.
+[Yahoo][] or [MSN][].
 
-  [google]: http://google\.com/        "Google"
-  [yahoo]:  http://search\.yahoo\.com/  "Yahoo Search"
-  [msn]:    http://search\.msn\.com/    "MSN Search"
+  [google]: http://google.com/        "Google"
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+  [msn]:    http://search.msn.com/    "MSN Search"
 .fi
 .RE
 .P
 Both of the above examples will produce the following HTML output:
-.P
 .RS 2
 .nf
-<p>I get 10 times more traffic from <a href="http://google\.com/"
+<p>I get 10 times more traffic from <a href="http://google.com/"
 title="Google">Google</a> than from
-<a href="http://search\.yahoo\.com/" title="Yahoo Search">Yahoo</a>
-or <a href="http://search\.msn\.com/" title="MSN Search">MSN</a>\.</p>
+<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>
+or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
 .fi
 .RE
 .P
 For comparison, here is the same paragraph written using
 .br
 Markdown's inline link style:
-.P
 .RS 2
 .nf
-I get 10 times more traffic from [Google](http://google\.com/ "Google")
-than from [Yahoo](http://search\.yahoo\.com/ "Yahoo Search") or
-[MSN](http://search\.msn\.com/ "MSN Search")\.
+I get 10 times more traffic from [Google](http://google.com/ "Google")
+than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
+[MSN](http://search.msn.com/ "MSN Search").
 .fi
 .RE
 .P
@@ -1042,7 +982,6 @@ emphasis\. Text wrapped with one \fB*\fP or \fB_\fP will be wrapped with an
 HTML \fB<em>\fP tag; double \fB*\fP\|'s or \fB_\fP\|'s will be wrapped with an HTML
 .br
 \fB<strong>\fP tag\. E\.g\., this input:
-.P
 .RS 2
 .nf
 *single asterisks*
@@ -1056,7 +995,6 @@ __double underscores__
 .RE
 .P
 will produce:
-.P
 .RS 2
 .nf
 <em>single asterisks</em>
@@ -1074,7 +1012,6 @@ You can use whichever style you prefer; the lone restriction is that
 the same character must be used to open and close an emphasis span\.
 .P
 Emphasis can be used in the middle of a word:
-.P
 .RS 2
 .nf
 un*frigging*believable
@@ -1090,49 +1027,44 @@ To produce a literal asterisk or underscore at a position where it
 would otherwise be used as an emphasis delimiter, you can backslash
 .br
 escape it:
-.P
 .RS 2
 .nf
-\\*this text is surrounded by literal asterisks\\*
+\*this text is surrounded by literal asterisks\*
 .fi
 .RE
 .SS Code
 .P
-To indicate a span of code, wrap it with backtick quotes (\fB ` \fP)\.
+To indicate a span of code, wrap it with backtick quotes (\fB`\fP)\.
 .br
 Unlike a pre\-formatted code block, a code span indicates code within a
 .br
 normal paragraph\. For example:
-.P
 .RS 2
 .nf
-Use the `printf()` function\.
+Use the `printf()` function.
 .fi
 .RE
 .P
 will produce:
-.P
 .RS 2
 .nf
-<p>Use the <code>printf()</code> function\.</p>
+<p>Use the <code>printf()</code> function.</p>
 .fi
 .RE
 .P
 To include a literal backtick character within a code span, you can use
 .br
 multiple backticks as the opening and closing delimiters:
-.P
 .RS 2
 .nf
-``There is a literal backtick (`) here\.``
+``There is a literal backtick (`) here.``
 .fi
 .RE
 .P
 which will produce this:
-.P
 .RS 2
 .nf
-<p><code>There is a literal backtick (`) here\.</code></p>
+<p><code>There is a literal backtick (`) here.</code></p>
 .fi
 .RE
 .P
@@ -1141,22 +1073,20 @@ The backtick delimiters surrounding a code span may include spaces \-\-
 one after the opening, one before the closing\. This allows you to place
 .br
 literal backtick characters at the beginning or end of a code span:
-.P
 .RS 2
 .nf
 A single backtick in a code span: `` ` ``
 
-A backtick\-delimited string in a code span: `` `foo` ``
+A backtick-delimited string in a code span: `` `foo` ``
 .fi
 .RE
 .P
 will produce:
-.P
 .RS 2
 .nf
 <p>A single backtick in a code span: <code>`</code></p>
 
-<p>A backtick\-delimited string in a code span: <code>`foo`</code></p>
+<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
 .fi
 .RE
 .P
@@ -1165,35 +1095,31 @@ With a code span, ampersands and angle brackets are encoded as HTML
 entities automatically, which makes it easy to include example HTML
 .br
 tags\. Markdown will turn this:
-.P
 .RS 2
 .nf
-Please don't use any `<blink>` tags\.
+Please don't use any `<blink>` tags.
 .fi
 .RE
 .P
 into:
-.P
 .RS 2
 .nf
-<p>Please don't use any <code>&lt;blink&gt;</code> tags\.</p>
+<p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>
 .fi
 .RE
 .P
 You can write this:
-.P
 .RS 2
 .nf
-`&#8212;` is the decimal\-encoded equivalent of `&mdash;`\.
+`&#8212;` is the decimal-encoded equivalent of `&mdash;`.
 .fi
 .RE
 .P
 to produce:
-.P
 .RS 2
 .nf
-<p><code>&amp;#8212;</code> is the decimal\-encoded
-equivalent of <code>&amp;mdash;</code>\.</p>
+<p><code>&amp;#8212;</code> is the decimal-encoded
+equivalent of <code>&amp;mdash;</code>.</p>
 .fi
 .RE
 .SS Images
@@ -1207,17 +1133,16 @@ Markdown uses an image syntax that is intended to resemble the syntax
 for links, allowing for two styles: \fIinline\fR and \fIreference\fR\|\.
 .P
 Inline image syntax looks like this:
-.P
 .RS 2
 .nf
-![Alt text](/path/to/img\.jpg)
+![Alt text](/path/to/img.jpg)
 
-![Alt text](/path/to/img\.jpg "Optional title")
+![Alt text](/path/to/img.jpg "Optional title")
 .fi
 .RE
 .P
 That is:
-.RS 0
+.RS
 .IP \(bu 2
 An exclamation mark: \fB!\fP;
 .IP \(bu 2
@@ -1234,7 +1159,6 @@ or single quotes\.
 .RE
 .P
 Reference\-style image syntax looks like this:
-.P
 .RS 2
 .nf
 ![Alt text][id]
@@ -1244,7 +1168,6 @@ Reference\-style image syntax looks like this:
 Where "id" is the name of a defined image reference\. Image references
 .br
 are defined using syntax identical to link references:
-.P
 .RS 2
 .nf
 [id]: url/to/image  "Optional title attribute"
@@ -1260,18 +1183,16 @@ use regular HTML \fB<img>\fP tags\.
 .SS Automatic Links
 .P
 Markdown supports a shortcut style for creating "automatic" links for URLs and email addresses: simply surround the URL or email address with angle brackets\. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:
-.P
 .RS 2
 .nf
-<http://example\.com/>
+<http://example.com/>
 .fi
 .RE
 .P
 Markdown will turn this into:
-.P
 .RS 2
 .nf
-<a href="http://example\.com/">http://example\.com/</a>
+<a href="http://example.com/">http://example.com/</a>
 .fi
 .RE
 .P
@@ -1282,15 +1203,13 @@ Markdown will also perform a bit of randomized decimal and hex
 entity\-encoding to help obscure your address from address\-harvesting
 .br
 spambots\. For example, Markdown will turn this:
-.P
 .RS 2
 .nf
-<address@example\.com>
+<address@example.com>
 .fi
 .RE
 .P
 into something like this:
-.P
 .RS 2
 .nf
 <a href="&#x6D;&#x61;i&#x6C;&#x74;&#x6F;:&#x61;&#x64;&#x64;&#x72;&#x65;
@@ -1320,7 +1239,6 @@ formatting syntax\. For example, if you wanted to surround a word
 with literal asterisks (instead of an HTML \fB<em>\fP tag), you can use
 .br
 backslashes before the asterisks, like this:
-.P
 .RS 2
 .nf
 \\*literal asterisks\\*
@@ -1328,7 +1246,6 @@ backslashes before the asterisks, like this:
 .RE
 .P
 Markdown provides backslash escapes for the following characters:
-.P
 .RS 2
 .nf
 \\   backslash
@@ -1351,11 +1268,18 @@ Markdown was created by John Gruber\.
 .P
 Manual page by Ryan Tomayko\. It's pretty much a direct copy of the
 .br
-Markdown Syntax Reference \fIhttp://daringfireball\.net/projects/markdown/syntax\fR,
+
+.UR http://daringfireball.net/projects/markdown/syntax
+.I Markdown Syntax Reference
+.UE ,
+
 .br
 also by John Gruber\.
 .SH SEE ALSO
 .P
 ronn(5)
 .br
-http://daringfireball\.net/projects/markdown/
+
+.UR http://daringfireball.net/projects/markdown/
+.I http://daringfireball.net/projects/markdown/
+.UE

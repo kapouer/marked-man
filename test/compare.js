@@ -29,7 +29,7 @@ async function convert(name, str) {
 	let manPath = Path.join(manDir, name);
 	const status = writeOrCompare(roff, manPath);
 	if (status < 0) manPath += '.err';
-	const { stdout, stderr } = await execa('man --warnings -E UTF-8 ' + manPath, {
+	const { stdout, stderr } = await execa(`man --warnings -E UTF-8 ${manPath}.1`, {
 		env: {
 			LANG: "C",
 			MAN_KEEP_FORMATTING: '1',
@@ -68,16 +68,17 @@ async function main() {
 
 async function writeOrCompare(str, path) {
 	let status = 0;
+	const okpath = path + ".1";
 	try {
-		const expect = (await fs.readFile(path)).toString();
-		const errpath = path + '.err';
+		const expect = (await fs.readFile(okpath)).toString();
+		const errpath = path + '.err.1';
 		if (expect != str) {
 			console.error("Test failure, result written in", errpath);
 			status = -1;
 		}
 		await fs.writeFile(errpath, str);
 	} catch(e) {
-		await fs.writeFile(path, str);
+		await fs.writeFile(okpath, str);
 		status = 1;
 	}
 	return status;

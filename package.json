@@ -28,7 +28,7 @@
   ],
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "marked": "^4.2.2"
   },
   "devDependencies": {

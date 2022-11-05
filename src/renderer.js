@@ -1,6 +1,7 @@
 import { resc, parseHeader } from './utils.js';
 
 export function code(code, infostring, escaped) {
+	this.jumps = true;
 	return [
 		'.RS 2',
 		'.nf',
@@ -12,6 +13,7 @@ export function code(code, infostring, escaped) {
 }
 
 export function blockquote(quote) {
+	this.jumps = true;
 	return '.QP\n'
 		+ quote
 		+ '\n.\n';
@@ -23,6 +25,7 @@ export function html(html) {
 
 
 export function heading(text, level, raw, slugger) {
+	this.jumps = true;
 	let macro;
 	if (level == 1) {
 		macro = 'TH';
@@ -40,26 +43,22 @@ export function heading(text, level, raw, slugger) {
 }
 
 export function hr() {
+	this.jumps = true;
 	return '.HR\n';
 }
 
-export function list(body, ordered, start) {
-	const { listLevel = 0 } = this;
-	this.listLevel++;
-
-	const indent = listLevel ? '.RS' : '.RS 0';
+export function list(body, ordered, start, loose) {
 	return [
-		indent,
+		'\n.RS',
 		body,
 		'.RE',
 		''
 	].join('\n');
 }
-export function listitem(text, task, checked) {
-	let offset = 2;
+export function listitem(text, task, checked, loose) {
 	return [
-		`.IP \\(bu ${offset}`,
-		text.replace(/^\.P\n/, ''),
+		`.IP \\(bu 2`,
+		text.trim().replace(/^.P\s/, ''),
 		''
 	].join('\n');
 }
@@ -67,16 +66,19 @@ export function listitem(text, task, checked) {
 export function checkbox(checked) {
 
 }
+
 export function paragraph(text) {
+	this.jumps = true;
 	const ret = [
 		'.P',
-		text
+		text.trim()
 	];
 	if (text) ret.push('');
 	return ret.join('\n');
 }
 
 export function table(header, body) {
+	this.jumps = false;
 	return [
 		'.TS',
 		'tab(|) expand nowarn box;',
@@ -98,24 +100,28 @@ export function tablecell(content, flags) {
 
 
 export function strong(text) {
+	this.jumps = false;
 	return '\\fB'
 		+ text
 		+ '\\fR';
 }
 
 export function em(text) {
+	this.jumps = false;
 	return '\\fI'
 		+ text
 		+ '\\fR';
 }
 
 export function codespan(code) {
+	this.jumps = false;
 	return '\\fB'
 		+ resc(code, true)
 		+ '\\fP';
 }
 
 export function br() {
+	this.jumps = true;
 	return '\n.br\n';
 }
 
@@ -123,17 +129,6 @@ export function del(text) {
 	return "-"
 		+ resc(text)
 		+ "-";
-}
-
-export function link(href, title, text) {
-	const mailto = href.startsWith('mailto:') || !href.includes('://') && href.includes('@');
-	href = resc(href);
-
-	if (mailto) {
-		return [".MT " + href, text, ".ME", ""].join('\n');
-	} else {
-		return [".UR " + href, text, ".UE", ""].join('\n');
-	}
 }
 
 export function image(href, title, text) {
@@ -150,5 +145,9 @@ export function image(href, title, text) {
 }
 
 export function text(text) {
+	if (this.jumps) {
+		text = text.trimStart();
+		this.jumps = false;
+	}
 	return resc(text);
 }

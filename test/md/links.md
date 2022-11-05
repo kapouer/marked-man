@@ -6,6 +6,4 @@ I get 10 times more traffic from [Google][1] than from
   [3]: http://search.msn.com/    "MSN Search"
 
 This is to test proper escape of html chars:
-.MT mailto:&#120;&#120;&#x78;&#120;&#120;&#x40;&#120;&#x78;&#120;&#120;&#x2e;&#x78;&#x78;&#x78;&#x78;&#x2e;&#x78;&#x78;&#120;&#x78;&#46;&#120;&#x78;
-.I &#120;&#120;&#x78;&#120;&#120;&#x40;&#120;&#x78;&#120;&#120;&#x2e;&#x78;&#x78;&#x78;&#x78;&#x2e;&#x78;&#x78;&#120;&#x78;&#46;&#120;&#x78;
-.ME
+<xxxxx@xxxx.xxxx.xxxx.xx>

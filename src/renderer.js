@@ -1,11 +1,11 @@
-import { resc, parseHeader } from './utils.js';
+import { htmlEsc, manEsc, parseHeader } from './utils.js';
 
 export function code(code, infostring, escaped) {
 	this.jumps = true;
 	return [
 		'.RS 2',
 		'.nf',
-		code,
+		manEsc(code),
 		'.fi',
 		'.RE',
 		''
@@ -20,7 +20,7 @@ export function blockquote(quote) {
 }
 
 export function html(html) {
-	return resc(html);
+	return htmlEsc(html);
 }
 
 
@@ -125,21 +125,21 @@ function getCellAlign(align) {
 export function strong(text) {
 	this.jumps = false;
 	return '\\fB'
-		+ text
+		+ manEsc(text)
 		+ '\\fR';
 }
 
 export function em(text) {
 	this.jumps = false;
 	return '\\fI'
-		+ text
+		+ manEsc(text)
 		+ '\\fR';
 }
 
 export function codespan(code) {
 	this.jumps = false;
 	return '\\fB'
-		+ resc(code, true)
+		+ htmlEsc(code, true)
 		+ '\\fP';
 }
 
@@ -150,12 +150,11 @@ export function br() {
 
 export function del(text) {
 	return "-"
-		+ resc(text)
+		+ manEsc(text)
 		+ "-";
 }
 
 export function image(href, title, text) {
-	href = resc(href);
 	if (href == text) {
 		return '\\fI'
 			+ href
@@ -172,5 +171,5 @@ export function text(text) {
 		text = text.trimStart();
 		this.jumps = false;
 	}
-	return resc(text);
+	return htmlEsc(text);
 }

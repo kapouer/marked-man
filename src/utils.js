@@ -2,15 +2,18 @@ export function quote(str) {
 	return '"' + str + '"';
 }
 
-export function resc(str) {
-	if (str == null) return "";
-	return rentities(str
+export function manEsc(str) {
+	return str
 		.replace(/\\/gm, "\\\\")
 		.replace(/-/gm, "\\-")
-		.replace(/^\./gm, "\\|.")
+		.replace(/^\s*\./gm, "\\|.")
 		.replace(/\./gm, "\\.")
-		.replace(/^'/gm, "\\|'")
-	).replace(/&gt;/gm, '>')
+		.replace(/^'/gm, "\\|'");
+}
+
+export function htmlEsc(str) {
+	return rentities(manEsc(str))
+		.replace(/&gt;/gm, '>')
 		.replace(/&lt;/gm, '<')
 		.replace(/&amp;/gm, '&');
 }
@@ -52,7 +55,7 @@ export function parseHeader(str, options) {
 	}
 	if (name && text) text = " - " + text;
 
-	return quote(resc(name.toUpperCase()))
+	return quote(manEsc(name.toUpperCase()))
 		+ " "
 		+ quote(section || "")
 		+ " "
@@ -66,7 +69,7 @@ export function parseHeader(str, options) {
 		+ "\n\\fB"
 		+ name
 		+ "\\fR"
-		+ resc(text);
+		+ manEsc(text);
 }
 
 export function manDate(date) {

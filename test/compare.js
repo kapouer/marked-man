@@ -36,7 +36,7 @@ async function convert(name, str) {
 			MANWIDTH: "80"
 		}
 	});
-	if (stderr) console.error(stderr);
+	if (stderr) console.error(name, '\n', stderr);
 	return stdout;
 }
 

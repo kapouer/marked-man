@@ -1,3 +1,5 @@
+import { htmlEsc, manEsc } from './utils.js';
+
 const empty = {
 	name: 'empty',
 	level: 'inline',
@@ -18,13 +20,20 @@ const link = {
 		}
 	},
 	renderer({ href, title, text, punctuation }) {
-		const mailto = href.startsWith('mailto:') || !href.includes('://') && href.includes('@');
-
-		const ret = [""];
+		if (href.startsWith('#')) {
+			// a local reference, not a link
+			return `\\fI${title || text}\\fR`;
+		}
+		const obj = new URL(href);
+		const ret = [];
+		if (!this.parser.renderer.jumps) ret.push("");
 
 		const content = title || text || '';
 
-		if (mailto) {
+
+
+		if (obj.protocol == "mailto:") {
+			if ("mailto:" + text == href) return text;
 			ret.push(".MT " + href, content ? '.I ' + content : '', ".ME");
 		} else {
 			ret.push(".UR " + href, content ? '.I ' + content : '', ".UE");

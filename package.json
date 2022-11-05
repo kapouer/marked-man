@@ -29,7 +29,7 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "peerDependencies": {
-    "marked": "^4.2.0"
+    "marked": "^4.2.2"
   },
   "devDependencies": {
     "@kapouer/eslint-config": "^1.8.0"

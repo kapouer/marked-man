@@ -878,4 +878,4 @@ also by John Gruber.
 ## SEE ALSO
 
 ronn(5)  
-<http://daringfireball.net/projects/markdown/>
+[Markdown Syntax Reference](http://daringfireball.net/projects/markdown/)

@@ -7,7 +7,6 @@ This is a tight list:
 * `spawn <executable> <additional args>` TODO explain path-alike expansion,
   ability to get a block here.
 
-
 This is a loose list:
 
 * `toggle_status`:

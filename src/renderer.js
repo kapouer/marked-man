@@ -47,7 +47,7 @@ export function hr() {
 	return '.HR\n';
 }
 
-export function list(body, ordered, start, loose) {
+export function list(body) {
 	return [
 		'\n.RS',
 		body,
@@ -55,10 +55,11 @@ export function list(body, ordered, start, loose) {
 		''
 	].join('\n');
 }
-export function listitem(text, task, checked, loose) {
+export function listitem(text) {
+	// first ^.P
 	return [
 		`.IP \\(bu 2`,
-		text.trim().replace(/^.P\s/, ''),
+		text.trim().replace(/^\.P\s/, '').replace(/\.P /, '.br\n'),
 		''
 	].join('\n');
 }

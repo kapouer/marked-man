@@ -1,5 +1,3 @@
-import { htmlEsc, manEsc } from './utils.js';
-
 const empty = {
 	name: 'empty',
 	level: 'inline',

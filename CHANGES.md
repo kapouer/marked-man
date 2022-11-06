@@ -40,5 +40,4 @@
 * --section, if missing from ronn header, is set to 1 by default
 * --manual, if missing, is now omitted to let man display a default value
 * --description can set the description if not set from ronn header format
-* --version, if missing, is read from package.json of target file module,
-or omitted.
+* --version, if missing, is read from package.json of target file module, or omitted.

@@ -19,6 +19,8 @@ create Unix manual pages for use with `man`.
 It follows the `ronn` markdown level-1 header format:
     # name(section) -- short description
 
+which populates the *HEADER* section, and the *NAME* section (if none is already written) of the manpage.
+
 OPTIONS
 -------
 
@@ -29,13 +31,13 @@ The `--breaks` option, which retains intra-paragraph line breaks, is now true by
 `marked-man` adds some options to `marked`'s existing options, to be able to override the header/footer of generated man pages.
 
 * `--name <name>`
-Overrides `name` in ronn header.
+Optional, overrides `name` in ronn header.
 
 * `--section <section>`
-Overrides `section` in ronn header. Defaults to 1.
+Optional, overrides `section` in ronn header. Defaults to 1.
 
 * `--description <description>`
-Overrides `description` in ronn header.
+Optional, overrides `description` in ronn header.
 
 * `--version <version>`
 The version shown in the manpage footer.
@@ -81,10 +83,10 @@ import marked from 'marked';
 marked.use(markedMan);
 ```
 
-THANKS TO
----------
+SEE ALSO
+--------
 
-[Rronn](https://github.com/rtomayko/ronn)
+[Ronn](https://github.com/rtomayko/ronn)
 [Ronn-NG](https://github.com/apjanke/ronn-ng)
 [groff](https://man.cx/groff_man(7))
 

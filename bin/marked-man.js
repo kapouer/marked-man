@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 
 import markedMan from 'marked-man';
 import { marked } from 'marked';

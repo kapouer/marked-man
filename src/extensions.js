@@ -22,7 +22,7 @@ const link = {
 	renderer({ href, title, text, punctuation }) {
 		if (href.startsWith('#')) {
 			// a local reference, not a link
-			return `\\fI${title || text}\\fR`;
+			return `\\fI${title || text || href.slice(1)}\\fR`;
 		}
 		const obj = new URL(href);
 		const ret = [];
@@ -30,10 +30,9 @@ const link = {
 
 		const content = title || text || '';
 
-
+		if (content == href || obj.protocol + content == href) return text;
 
 		if (obj.protocol == "mailto:") {
-			if ("mailto:" + text == href) return text;
 			ret.push(".MT " + href, content ? '.I ' + content : '', ".ME");
 		} else {
 			ret.push(".UR " + href, content ? '.I ' + content : '', ".UE");

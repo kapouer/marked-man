@@ -55,21 +55,25 @@ export function parseHeader(str, options) {
 	}
 	if (name && text) text = " - " + text;
 
-	return quote(manEsc(name.toUpperCase()))
+	let out = quote(manEsc(name.toUpperCase()))
 		+ " "
-		+ quote(section || "")
+		+ quote(section || "1")
 		+ " "
 		+ quote(manDate(options.date))
-		+ " "
-		+ quote(options.manVersion || "")
-		+ " "
-		+ quote(options.manual || "")
-		+ "\n.SH "
-		+ quote("NAME")
-		+ "\n\\fB"
-		+ name
-		+ "\\fR"
-		+ manEsc(text);
+		+ (options.manVersion ? " " + quote(options.manVersion) : "")
+		+ (options.manual ? " " + quote(options.manual) : ""); // use default value
+	if (!options.disableLevel2Name) {
+		out = out
+			+ "\n.SH "
+			+ quote("NAME")
+			+ "\n\\fB"
+			+ name
+			+ "\\fR"
+			+ manEsc(text);
+	} else {
+		delete options.disableLevel2Name;
+	}
+	return out;
 }
 
 export function manDate(date) {

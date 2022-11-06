@@ -7,7 +7,7 @@ import extensions from './extensions.js';
 // https://github.com/markedjs/marked/issues/2639
 const defaultParse = Parser.parse;
 Parser.parse = (tokens, options) => {
-	const [{ type, depth }] = tokens;
+	const [{ type, depth }, sec] = tokens;
 	if (type != "heading" || depth != 1) {
 		tokens.unshift({
 			type: 'heading',
@@ -15,6 +15,8 @@ Parser.parse = (tokens, options) => {
 			tokens: []
 		});
 	}
+	options.disableLevel2Name = sec.type == "heading" && sec.depth == 2 && sec.text && sec.text.toUpperCase() == "NAME";
+
 	return defaultParse.call(Parser, tokens, options);
 };
 

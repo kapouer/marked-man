@@ -5,7 +5,7 @@ SYNOPSIS
 --------
 
 ```bash
-marked-man README.md > doc/marked-man.1
+marked-man README.md > doc/foo.1
 ```
 
 See also [marked documentation](https://marked.js.org/).
@@ -16,6 +16,9 @@ DESCRIPTION
 `marked-man` wraps `marked` to extend it with groff output support in order to
 create Unix manual pages for use with `man`.
 
+It follows the `ronn` markdown level-1 header format:
+    # name(section) -- short description
+
 OPTIONS
 -------
 
@@ -23,29 +26,30 @@ OPTIONS
 
 The `--breaks` option, which retains intra-paragraph line breaks, is now true by default. Use `--no-breaks` to disable it.
 
-`marked-man` adds some options to `marked`'s existing options:
+`marked-man` adds some options to `marked`'s existing options, to be able to override the header/footer of generated man pages.
 
 * `--name <name>`
-The name shown in the manpage header, if it isn't given in the ronn header like in this README.
-Defaults to empty string.
+Overrides `name` in ronn header.
 
 * `--section <section>`
-The section number shown in the manpage header, if it isn't given in the ronn header like in this README.
-Defaults to empty string.
+Overrides `section` in ronn header. Defaults to 1.
+
+* `--description <description>`
+Overrides `description` in ronn header.
 
 * `--version <version>`
 The version shown in the manpage footer.
-Defaults to empty string.
-This flag is converted to manVersion option, to avoid conflict with marked.
+Optional, when omitted, defaults to the target node module version, or empty.
 
 * `--manual <manual>`
 The manual-group name shown in the manpage header.
-Defaults to empty string.
+Optional, when omitted, man displays a value matching the section.
 
 * `--date <date>`
 The date shown in the manpage header.
-Defaults to now, must be acceptable to `new Date(string or timestamp)`.
-If `process.env.SOURCE_DATE_EPOCH` exists, it uses that time instead.
+Optional, defaults to now.
+Must be acceptable to `new Date(string or timestamp)`.
+Honors `SOURCE_DATE_EPOCH` environment variable for reproducible builds.
 
 INSTALLATION
 ------------
@@ -64,7 +68,7 @@ EXAMPLE
 To view this README as a man page, run something like the following:
 
 ```bash
-marked-man --man-version v0.1.0 --manual 'Man Utilities' README.md | man /dev/stdin
+marked-man README.md | man /dev/stdin
 ```
 
 AS MARKED EXTENSION

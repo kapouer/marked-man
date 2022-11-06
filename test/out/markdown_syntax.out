@@ -44,15 +44,17 @@ DDEESSCCRRIIPPTTIIOONN
        document should be publishable as-is, as plain text, without looking
        like it's been marked up with tags or formatting instructions. While
        Markdown's syntax has been influenced by several existing text-to-HTML
-       filters           --           including           [Setext]           _1
-       ⟨http://docutils.sourceforge.net/mirror/setext.html⟩,      [atx]      _2
-       ⟨http://www.aaronsw.com/2002/atx/⟩,             [Textile]             _3
-       ⟨http://textism.com/tools/textile/⟩,        [reStructuredText]        _4
-       ⟨http://docutils.sourceforge.net/rst.html⟩,
+       filters                --                including               _S_e_t_e_x_t
+       ⟨http://docutils.sourceforge.net/mirror/setext.html⟩,
 
-       [Grutatext]   _5  ⟨http://www.triptico.com/software/grutatxt.html⟩,  and
-       [EtText] _6 ⟨http://ettext.taint.org/doc/⟩ -- the single biggest  source
-       of
+       _a_t_x ⟨http://www.aaronsw.com/2002/atx/⟩,
+
+       _T_e_x_t_i_l_e ⟨http://textism.com/tools/textile/⟩,
+
+       _r_e_S_t_r_u_c_t_u_r_e_d_T_e_x_t ⟨http://docutils.sourceforge.net/rst.html⟩,
+
+       _G_r_u_t_a_t_e_x_t ⟨http://www.triptico.com/software/grutatxt.html⟩, and  _E_t_T_e_x_t
+       ⟨http://ettext.taint.org/doc/⟩ -- the single biggest source of
        inspiration for Markdown's syntax is the format of plain text email.
 
        To this end, Markdown's syntax is comprised entirely of punctuation

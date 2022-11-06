@@ -1,5 +1,6 @@
 import { Parser } from 'marked';
-
+import { readPackageUpSync } from 'read-pkg-up';
+import Path from 'path';
 import * as renderer from './renderer.js';
 import * as tokenizer from './tokenizer.js';
 import extensions from './extensions.js';
@@ -34,7 +35,19 @@ export default {
 	name: null,
 	section: null,
 	manual: null,
-	manVersion: null,
+	set manVersion(val) {
+		this.userDefinedVersion = val;
+	},
+	get manVersion() {
+		if (this.userDefinedVersion) {
+			return this.userDefinedVersion;
+		} else if (this.fileArg) {
+			const pkg = readPackageUpSync(Path.dirname(this.fileArg));
+			return pkg ? pkg.packageJson.version : null;
+		} else {
+			return null;
+		}
+	},
 	// output to roff
 	renderer,
 	tokenizer,

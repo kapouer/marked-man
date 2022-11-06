@@ -3,13 +3,19 @@
 import markedMan from 'marked-man';
 import { marked } from 'marked';
 
-process.argv.forEach((arg, i) => {
+const { argv } = process;
+argv.forEach((arg, i) => {
 	if (arg.startsWith("--version")) {
-		process.argv[i] = arg.replace(/^--version/, "--man-version");
+		argv[i] = arg.replace(/^--version/, "--man-version");
 	}
 });
+
+let fileArg = argv.slice(-1)[0];
+if (fileArg == argv[0] || fileArg.startsWith('-')) {
+	fileArg = null;
+}
+markedMan.fileArg = fileArg;
 
 marked.use(markedMan);
 
 import('marked/bin/marked');
-

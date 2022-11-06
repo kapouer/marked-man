@@ -101,6 +101,6 @@ async function check(filename) {
 	const name = Path.basename(filename, Path.extname(filename));
 	const [statusMan, output] = await convert(name, ronnBuf.toString());
 	if (statusMan != 0) return statusMan;
-	const [statusOut] = await writeOrCompare(output, outDir, name);
+	const [statusOut] = await writeOrCompare(output, outDir, name + ".out");
 	return statusOut;
 }

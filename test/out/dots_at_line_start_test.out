@@ -1,4 +1,4 @@
-DOTS_AT_LINE_START_TEST()                            DOTS_AT_LINE_START_TEST()
+DOTS_AT_LINE_START_TEST(1)  General Commands Manual DOTS_AT_LINE_START_TEST(1)
 
 NNAAMMEE
        ddoottss__aatt__lliinnee__ssttaarrtt__tteesstt
@@ -8,4 +8,4 @@ NNAAMMEE
 
        .. let's see what happens.
 
-                                 January 1979        DOTS_AT_LINE_START_TEST()
+                                 January 1979       DOTS_AT_LINE_START_TEST(1)

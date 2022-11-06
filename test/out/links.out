@@ -1,4 +1,4 @@
-LINKS()                                                                LINKS()
+LINKS(1)                    General Commands Manual                   LINKS(1)
 
 NNAAMMEE
        lliinnkkss
@@ -12,4 +12,4 @@ NNAAMMEE
 
        Non-repeating http link https://example.com/test
 
-                                 January 1979                          LINKS()
+                                 January 1979                         LINKS(1)

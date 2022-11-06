@@ -1,4 +1,4 @@
-UNDERLINE_SPACING_TEST()                              UNDERLINE_SPACING_TEST()
+UNDERLINE_SPACING_TEST(1)   General Commands Manual  UNDERLINE_SPACING_TEST(1)
 
 NNAAMMEE
        uunnddeerrlliinnee__ssppaacciinngg__tteesstt
@@ -11,4 +11,4 @@ NNAAMMEE
 
        Should space text properly.  <!-- this is a comment -->
 
-                                 January 1979         UNDERLINE_SPACING_TEST()
+                                 January 1979        UNDERLINE_SPACING_TEST(1)

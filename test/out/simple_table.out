@@ -1,4 +1,4 @@
-SIMPLE_TABLE()                                                  SIMPLE_TABLE()
+SIMPLE_TABLE(1)             General Commands Manual            SIMPLE_TABLE(1)
 
 NNAAMMEE
        ssiimmppllee__ttaabbllee
@@ -11,4 +11,4 @@ NNAAMMEE
        │      D                           E                           F       │
        └──────────────────────────────────────────────────────────────────────┘
 
-                                 January 1979                   SIMPLE_TABLE()
+                                 January 1979                  SIMPLE_TABLE(1)

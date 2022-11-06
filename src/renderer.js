@@ -49,7 +49,7 @@ export function hr() {
 
 export function list(body) {
 	return [
-		'\n.RS',
+		'\n.RS 1',
 		body,
 		'.RE',
 		''

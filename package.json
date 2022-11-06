@@ -1,6 +1,6 @@
 {
   "name": "marked-man",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "wrapper adding manpage output to 'marked', inspired by 'ronn'",
   "type": "module",
   "main": "./src/index.js",

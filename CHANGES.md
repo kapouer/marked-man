@@ -33,3 +33,10 @@
 ## 1.1.0
 
 * --breaks is now the default
+
+## 1.2.0
+
+* the level-2 NAME section is not generated if it already exists
+* --section, if missing from ronn header, is set to 1 by default
+* --manual, if missing, is now omitted to let man display a default value
+* --description can set the description if not set from ronn header format

@@ -28,6 +28,7 @@ export default {
 		}
 	})(),
 	mangle: false,
+	breaks: true,
 	name: null,
 	section: null,
 	manual: null,

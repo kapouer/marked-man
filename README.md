@@ -21,7 +21,7 @@ OPTIONS
 
 `marked-man` is a `marked` CLI extension, meaning options can be passed directly to marked.
 
-The `--breaks` option, which retains intra-paragraph line breaks, can be helpful to match default ronn behavior.
+The `--breaks` option, which retains intra-paragraph line breaks, is now true by default. Use `--no-breaks` to disable it.
 
 `marked-man` adds some options to `marked`'s existing options:
 

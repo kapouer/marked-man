@@ -1,31 +1,27 @@
-0.1.4
-=====
+# CHANGES
+
+## 0.1.4
 
 * depends on marked 0.3.2
 * use .nf/.fi instead of .EX/.EE to format blockquotes
 
-0.1.6
-=====
+## 0.1.6
 
 * ensure tests pass
 
-0.2.0
-=====
+## 0.2.0
 
 * add support for gfm table
 
-0.2.1
-=====
+## 0.2.1
 
 * remove useless test files from npm package
 
-0.3.0
-=====
+## 0.3.0
 
 * accept a timestamp in milliseconds as --date argument
 
-1.0.0
-=====
+## 1.0.0
 
 * node >= 12
 * --format option is dropped, use directly marked for html output
@@ -33,3 +29,7 @@
 * mostly rewritten
 * depends marked >= 4.2
 * more groff macros are implemented
+
+## 1.1.0
+
+* --breaks is now the default

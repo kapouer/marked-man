@@ -5,5 +5,8 @@ I get 10 times more traffic from [Google][1] than from
   [2]: http://search.yahoo.com/  "Yahoo Search"
   [3]: http://search.msn.com/    "MSN Search"
 
-This is to test proper escape of html chars:
+This is to test proper escape of html chars and non-repeating link:
 <xxxxx@xxxx.xxxx.xxxx.xx>
+
+Non-repeating http link <https://example.com/test>
+

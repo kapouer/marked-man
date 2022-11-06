@@ -9,4 +9,3 @@ This is to test proper escape of html chars and non-repeating link:
 <xxxxx@xxxx.xxxx.xxxx.xx>
 
 Non-repeating http link <https://example.com/test>
-

@@ -11,6 +11,9 @@
   "bin": {
     "marked-man": "./bin/marked-man.js"
   },
+  "files": [
+    "src/"
+  ],
   "man": [
     "./man/marked-man.1"
   ],

@@ -12,6 +12,7 @@
     "marked-man": "./bin/marked-man.js"
   },
   "files": [
+    "bin/",
     "src/"
   ],
   "man": [

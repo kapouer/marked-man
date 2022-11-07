@@ -22,7 +22,7 @@ const link = {
 			// a local reference, not a link
 			return `\\fI${title || text || href.slice(1)}\\fR`;
 		}
-		const obj = new URL(href);
+		const obj = new URL(href, "file://./");
 		const ret = [];
 		if (!this.parser.renderer.jumps) ret.push("");
 

@@ -19,3 +19,5 @@ Non-repeating http link <https://example.com/test>
 
 Also
 [Google](http://google.com/ "Google")
+
+and [local links should not crash](./table.md)

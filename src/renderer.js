@@ -14,9 +14,16 @@ export function code(code, infostring, escaped) {
 
 export function blockquote(quote) {
 	this.jumps = true;
-	return '.QP\n'
-		+ quote
-		+ '\n.\n';
+	return [
+		'.TS',
+		'tab(|) nowarn;',
+		'cx.',
+		'T{',
+		quote,
+		'T}',
+		'.TE',
+		''
+	].join('\n');
 }
 
 export function html(html) {

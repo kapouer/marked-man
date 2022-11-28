@@ -11,7 +11,7 @@ argv.forEach((arg, i) => {
 });
 
 let fileArg = argv.slice(-1)[0];
-if (fileArg == argv[0] || fileArg.startsWith('-')) {
+if (fileArg == argv[1] || fileArg.startsWith('-')) {
 	fileArg = null;
 }
 markedMan.fileArg = fileArg;

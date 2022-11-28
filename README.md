@@ -6,6 +6,8 @@ SYNOPSIS
 
 ```bash
 marked-man README.md > doc/foo.1
+# works too with stdin
+cat README.md | marked-man --version 1.0 | man /dev/stdin
 ```
 
 See also [marked documentation](https://marked.js.org/).

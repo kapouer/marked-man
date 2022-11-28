@@ -41,3 +41,9 @@
 * --manual, if missing, is now omitted to let man display a default value
 * --description can set the description if not set from ronn header format
 * --version, if missing, is read from package.json of target file module, or omitted.
+
+## 1.3.0
+
+* fix crash when md has only one token
+* better support for stdin, e.g. `cat file.md | marked-man | man /dev/stdin`
+* fix blockquote, use a table

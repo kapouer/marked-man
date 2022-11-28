@@ -16,7 +16,7 @@ Parser.parse = (tokens, options) => {
 			tokens: []
 		});
 	}
-	options.disableLevel2Name = sec.type == "heading" && sec.depth == 2 && sec.text && sec.text.toUpperCase() == "NAME";
+	options.disableLevel2Name = sec && sec.type == "heading" && sec.depth == 2 && sec.text && sec.text.toUpperCase() == "NAME";
 
 	return defaultParse.call(Parser, tokens, options);
 };

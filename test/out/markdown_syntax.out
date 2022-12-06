@@ -400,7 +400,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        accident, by writing something like this:
          1986. What a great season.
 
-       In other words, a _n_u_m_b_e_r_\_-_p_e_r_i_o_d_\_-_s_p_a_c_e sequence at the beginning of a
+       In other words, a _n_u_m_b_e_r_-_p_e_r_i_o_d_-_s_p_a_c_e sequence at the beginning of a
        line. To avoid this, you can backslash-escape the period:
          1986\. What a great season.
 

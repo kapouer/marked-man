@@ -133,14 +133,14 @@ function getCellAlign(align) {
 export function strong(text) {
 	this.jumps = false;
 	return '\\fB'
-		+ manEsc(text)
+		+ text
 		+ '\\fR';
 }
 
 export function em(text) {
 	this.jumps = false;
 	return '\\fI'
-		+ manEsc(text)
+		+ text
 		+ '\\fR';
 }
 
@@ -158,7 +158,7 @@ export function br() {
 
 export function del(text) {
 	return "-"
-		+ manEsc(text)
+		+ text
 		+ "-";
 }
 

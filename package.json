@@ -33,11 +33,11 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "dependencies": {
-    "marked": "^4.2.2",
+    "marked": "^4.2.12",
     "read-pkg-up": "^9.1.0"
   },
   "devDependencies": {
-    "@kapouer/eslint-config": "^1.8.0"
+    "@kapouer/eslint-config": "^1.9.0"
   },
   "eslintConfig": {
     "extends": "@kapouer/eslint-config",

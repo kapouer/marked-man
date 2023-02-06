@@ -80,6 +80,8 @@ export function manDate(date) {
 	const stamp = parseInt(date);
 	if (!Number.isNaN(stamp) && stamp.toString().length == date.length) date = stamp;
 	date = new Date(date);
-	return date.toLocaleString('en', { month: 'long', year: 'numeric' });
+	return date.toLocaleString('en', {
+		month: 'long', year: 'numeric', timeZone: 'UTC'
+	});
 }
 

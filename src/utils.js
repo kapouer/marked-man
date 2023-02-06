@@ -76,10 +76,20 @@ export function parseHeader(str, options) {
 	return out;
 }
 
-export function manDate(date) {
-	const stamp = parseInt(date);
-	if (!Number.isNaN(stamp) && stamp.toString().length == date.length) date = stamp;
-	date = new Date(date);
+export function manDate(str) {
+	let date;
+	if (typeof str == "string") {
+		const stamp = parseInt(str);
+		if (!Number.isNaN(stamp) && stamp.toString().length == str.length) {
+			date = new Date(stamp);
+		}
+	}
+	if (!date) {
+		date = new Date(str);
+	}
+	if (Number.isNaN(date.getTime())) {
+		throw new Error("Bad date option: " + str);
+	}
 	return date.toLocaleString('en', {
 		month: 'long', year: 'numeric', timeZone: 'UTC'
 	});

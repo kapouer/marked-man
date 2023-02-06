@@ -25,9 +25,9 @@ export default {
 	// marked-man defaults
 	date: (() => {
 		if (typeof process == "undefined" || !process.env.SOURCE_DATE_EPOCH) {
-			return new Date();
+			return Date.now();
 		} else {
-			return new Date(parseInt(process.env.SOURCE_DATE_EPOCH) * 1000);
+			return parseInt(process.env.SOURCE_DATE_EPOCH) * 1000;
 		}
 	})(),
 	mangle: false,

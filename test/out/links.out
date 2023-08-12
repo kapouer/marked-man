@@ -1,24 +1,22 @@
-LINKS(1)                    General Commands Manual                   LINKS(1)
+[4mLINKS[24m(1)                    General Commands Manual                   [4mLINKS[24m(1)
 
-NNAAMMEE
-       lliinnkkss
+[1mNAME[0m
+       [1mlinks[0m
 
-       I get 10 times more traffic from _G_o_o_g_l_e ⟨http://google.com/⟩ than from
-       _Y_a_h_o_o     _S_e_a_r_c_h     ⟨http://search.yahoo.com/⟩     or    _M_S_N    _S_e_a_r_c_h
-       ⟨http://search.msn.com/⟩.
+       I get 10 times more traffic from ]8;;http://google.com/\[4mGoogle[24m]8;;\ than from
+       ]8;;http://search.yahoo.com/\[4mYahoo[24m [4mSearch[24m]8;;\ or ]8;;http://search.msn.com/\[4mMSN[24m [4mSearch[24m]8;;\.
 
        This is to test proper escape of html chars and non-repeating link:
        xxxxx@xxxx.xxxx.xxxx.xx
 
-       I get 10 times more traffic from _G_o_o_g_l_e ⟨http://google.com/⟩ than from
-       _Y_a_h_o_o    _S_e_a_r_c_h    ⟨http://search.yahoo.com/⟩     or     _M_S_N     _S_e_a_r_c_h
-       ⟨http://search.msn.com/⟩.
+       I get 10 times more traffic from ]8;;http://google.com/\[4mGoogle[24m]8;;\ than from
+       ]8;;http://search.yahoo.com/\[4mYahoo[24m [4mSearch[24m]8;;\ or ]8;;http://search.msn.com/\[4mMSN[24m [4mSearch[24m]8;;\.
 
        Non-repeating http link https://example.com/test
 
        Also
-       _G_o_o_g_l_e ⟨http://google.com/⟩
+       ]8;;http://google.com/\[4mGoogle[24m]8;;\
 
-       and _l_o_c_a_l _l_i_n_k_s _s_h_o_u_l_d _n_o_t _c_r_a_s_h ⟨./table.md⟩
+       and ]8;;./table.md\[4mlocal[24m [4mlinks[24m [4mshould[24m [4mnot[24m [4mcrash[24m]8;;\
 
-                                 January 1979                         LINKS(1)
+                                 January 1979                         [4mLINKS[24m(1)

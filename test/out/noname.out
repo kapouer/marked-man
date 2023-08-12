@@ -1,9 +1,9 @@
-TEST(1)                     General Commands Manual                    TEST(1)
+[4mTEST[24m(1)                     General Commands Manual                    [4mTEST[24m(1)
 
-NNAAMMEE
+[1mNAME[0m
        test - a nice test
 
-SSYYNNOOPPSSYYSS
+[1mSYNOPSYS[0m
        test is a test
 
-                                 January 1979                          TEST(1)
+                                 January 1979                          [4mTEST[24m(1)

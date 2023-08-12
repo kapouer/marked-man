@@ -1,11 +1,11 @@
-DOTS_AT_LINE_START_TEST(1)  General Commands Manual DOTS_AT_LINE_START_TEST(1)
+[4mDOTS_AT_LINE_START_TEST[24m(1)  General Commands Manual [4mDOTS_AT_LINE_START_TEST[24m(1)
 
-NNAAMMEE
-       ddoottss__aatt__lliinnee__ssttaarrtt__tteesstt
+[1mNAME[0m
+       [1mdots_at_line_start_test[0m
 
-       There's a weird issue where dots at the beginning of a line
+       There’s a weird issue where dots at the beginning of a line
        generate troff warnings due to escaping.
 
-       .. let's see what happens.
+       .. let’s see what happens.
 
-                                 January 1979       DOTS_AT_LINE_START_TEST(1)
+                                 January 1979       [4mDOTS_AT_LINE_START_TEST[24m(1)

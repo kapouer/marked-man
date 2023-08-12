@@ -1,14 +1,14 @@
-ESCAPES(1)                  General Commands Manual                 ESCAPES(1)
+[4mESCAPES[24m(1)                  General Commands Manual                 [4mESCAPES[24m(1)
 
-NNAAMMEE
-       eessccaappeess
+[1mNAME[0m
+       [1mescapes[0m
 
        backslashes before the asterisks, like this:
          \*literal asterisks\*
 
        Markdown provides backslash escapes for the following characters:
          \   backslash
-         `   backtick
+         ‘   backtick
          *   asterisk
          _   underscore
          {}  curly braces
@@ -20,4 +20,4 @@ NNAAMMEE
          .   dot
          !   exclamation mark
 
-                                 January 1979                       ESCAPES(1)
+                                 January 1979                       [4mESCAPES[24m(1)

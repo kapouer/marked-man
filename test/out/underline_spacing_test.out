@@ -1,14 +1,14 @@
-UNDERLINE_SPACING_TEST(1)   General Commands Manual  UNDERLINE_SPACING_TEST(1)
+[4mUNDERLINE_SPACING_TEST[24m(1)   General Commands Manual  [4mUNDERLINE_SPACING_TEST[24m(1)
 
-NNAAMMEE
-       uunnddeerrlliinnee__ssppaacciinngg__tteesstt
+[1mNAME[0m
+       [1munderline_spacing_test[0m
 
-        • --SS _t_e_x_t, sseeaarrcchh _t_e_x_t:
-          Performs a substring search of formula names for _t_e_x_t.
+        • [1m-S [4m[22mtext[24m, [1msearch [4m[22mtext[24m:
+          Performs a substring search of formula names for [4mtext[24m.
 
-        • --OO <text>, ootthheerr <text>:
+        • [1m-O [22m<text>, [1mother [22m<text>:
           Does something else.
 
        Should space text properly.  <!-- this is a comment -->
 
-                                 January 1979        UNDERLINE_SPACING_TEST(1)
+                                 January 1979        [4mUNDERLINE_SPACING_TEST[24m(1)

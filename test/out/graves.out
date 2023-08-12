@@ -1,9 +1,9 @@
-TEST(1)                     General Commands Manual                    TEST(1)
+[4mTEST[24m(1)                     General Commands Manual                    [4mTEST[24m(1)
 
-NNAAMMEE
-       tteesstt
+[1mNAME[0m
+       [1mtest[0m
 
-tthhiiss ttiittllee wwiillll rreennddeerr ssttrraannggeellyy
+[1mthis title will render strangely[0m
        This is the body text.
 
-                                 January 1979                          TEST(1)
+                                 January 1979                          [4mTEST[24m(1)

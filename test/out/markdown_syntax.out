@@ -1,9 +1,9 @@
-MARKDOWN(5)                   File Formats Manual                  MARKDOWN(5)
+[4mMARKDOWN[24m(5)                   File Formats Manual                  [4mMARKDOWN[24m(5)
 
-NNAAMMEE
-       mmaarrkkddoowwnn - humane markup syntax
+[1mNAME[0m
+       [1mmarkdown [22m- humane markup syntax
 
-SSYYNNOOPPSSIISS
+[1mSYNOPSIS[0m
          # Header 1 #
          ## Header 2 ##
          ### Header 3 ###             (Hashes on right are optional)
@@ -17,7 +17,7 @@ SSYYNNOOPPSSIISS
          [Reference style links][1] and [inline links](http://example.com)
          [1]: http://example.com "Title is optional"
 
-         Inline markup like _italics_,  **bold**, and `code()`.
+         Inline markup like _italics_,  **bold**, and ‘code()‘.
 
          ![picture alt](/images/photo.jpeg "Title is optional")
 
@@ -34,59 +34,57 @@ SSYYNNOOPPSSIISS
          - Another one
          + Another one
 
-DDEESSCCRRIIPPTTIIOONN
-   PPhhiilloossoopphhyy
+[1mDESCRIPTION[0m
+   [1mPhilosophy[0m
        Markdown is intended to be as easy-to-read and easy-to-write as is fea‐
        sible.
 
-       Readability, however, is emphasized above all else. A  Markdown-format‐
+       Readability,  however, is emphasized above all else. A Markdown-format‐
        ted
        document should be publishable as-is, as plain text, without looking
-       like it's been marked up with tags or formatting instructions. While
-       Markdown's syntax has been influenced by several existing text-to-HTML
-       filters                --                including               _S_e_t_e_x_t
-       ⟨http://docutils.sourceforge.net/mirror/setext.html⟩,
+       like it’s been marked up with tags or formatting instructions. While
+       Markdown’s syntax has been influenced by several existing text-to-HTML
+       filters -- including ]8;;http://docutils.sourceforge.net/mirror/setext.html\[4mSetext[24m]8;;\,
 
-       _a_t_x ⟨http://www.aaronsw.com/2002/atx/⟩,
+       ]8;;http://www.aaronsw.com/2002/atx/\[4matx[24m]8;;\,
 
-       _T_e_x_t_i_l_e ⟨http://textism.com/tools/textile/⟩,
+       ]8;;http://textism.com/tools/textile/\[4mTextile[24m]8;;\,
 
-       _r_e_S_t_r_u_c_t_u_r_e_d_T_e_x_t ⟨http://docutils.sourceforge.net/rst.html⟩,
+       ]8;;http://docutils.sourceforge.net/rst.html\[4mreStructuredText[24m]8;;\,
 
-       _G_r_u_t_a_t_e_x_t ⟨http://www.triptico.com/software/grutatxt.html⟩, and  _E_t_T_e_x_t
-       ⟨http://ettext.taint.org/doc/⟩ -- the single biggest source of
-       inspiration for Markdown's syntax is the format of plain text email.
+       ]8;;http://www.triptico.com/software/grutatxt.html\[4mGrutatext[24m]8;;\, and ]8;;http://ettext.taint.org/doc/\[4mEtText[24m]8;;\ -- the single biggest source of
+       inspiration for Markdown’s syntax is the format of plain text email.
 
-       To this end, Markdown's syntax is comprised entirely of punctuation
+       To this end, Markdown’s syntax is comprised entirely of punctuation
        characters, which punctuation characters have been carefully chosen so
        as to look like what they mean. E.g., asterisks around a word actually
        look like *emphasis*. Markdown lists look like, well, lists. Even
-       blockquotes look like quoted passages of text, assuming you've ever
+       blockquotes look like quoted passages of text, assuming you’ve ever
        used email.
 
-   IInnlliinnee HHTTMMLL
-       Markdown's syntax is intended for one purpose: to be used as a
-       format for _w_r_i_t_i_n_g for the web.
+   [1mInline HTML[0m
+       Markdown’s syntax is intended for one purpose: to be used as a
+       format for [4mwriting[24m for the web.
 
        Markdown is not a replacement for HTML, or even close to it. Its
        syntax is very small, corresponding only to a very small subset of
-       HTML tags. The idea is _n_o_t to create a syntax that makes it easier
+       HTML tags. The idea is [4mnot[24m to create a syntax that makes it easier
        to insert HTML tags. In my opinion, HTML tags are already easy to
        insert. The idea for Markdown is to make it easy to read, write, and
-       edit prose. HTML is a _p_u_b_l_i_s_h_i_n_g format; Markdown is a _w_r_i_t_i_n_g
-       format. Thus, Markdown's formatting syntax only addresses issues that
+       edit prose. HTML is a [4mpublishing[24m format; Markdown is a [4mwriting[0m
+       format. Thus, Markdown’s formatting syntax only addresses issues that
        can be conveyed in plain text.
 
-       For any markup that is not covered by Markdown's syntax, you simply
-       use HTML itself. There's no need to preface it or delimit it to
-       indicate that you're switching from Markdown to HTML; you just use
+       For any markup that is not covered by Markdown’s syntax, you simply
+       use HTML itself. There’s no need to preface it or delimit it to
+       indicate that you’re switching from Markdown to HTML; you just use
        the tags.
 
-       The only restrictions are that block-level HTML elements -- e.g. <<ddiivv>>,
-       <<ttaabbllee>>, <<pprree>>, <<pp>>, etc. -- must be separated from surrounding
+       The only restrictions are that block-level HTML elements -- e.g. [1m<div>[22m,
+       [1m<table>[22m, [1m<pre>[22m, [1m<p>[22m, etc. -- must be separated from surrounding
        content by blank lines, and the start and end tags of the block should
        not be indented with tabs or spaces. Markdown is smart enough not
-       to add extra (unwanted) <<pp>> tags around HTML block-level tags.
+       to add extra (unwanted) [1m<p> [22mtags around HTML block-level tags.
 
        For example, to add an HTML table to a Markdown article:
          This is a regular paragraph.
@@ -99,47 +97,47 @@ DDEESSCCRRIIPPTTIIOONN
 
          This is another regular paragraph.
 
-       Note   that   Markdown   formatting  syntax  is  not  processed  within
+       Note  that  Markdown  formatting  syntax  is   not   processed   within
        block-level
-       HTML tags. E.g., you can't use Markdown-style **eemmpphhaassiiss** inside an
+       HTML tags. E.g., you can’t use Markdown-style [1m*emphasis* [22minside an
        HTML block.
 
-       Span-level HTML tags -- e.g. <<ssppaann>>, <<cciittee>>, or <<ddeell>> -- can be
+       Span-level HTML tags -- e.g. [1m<span>[22m, [1m<cite>[22m, or [1m<del> [22m-- can be
        used anywhere in a Markdown paragraph, list item, or header. If you
-       want, you can even use HTML tags instead of Markdown  formatting;  e.g.
+       want,  you  can even use HTML tags instead of Markdown formatting; e.g.
        if
-       you'd prefer to use HTML <<aa>> or <<iimmgg>> tags instead of Markdown's
+       you’d prefer to use HTML [1m<a> [22mor [1m<img> [22mtags instead of Markdown’s
        link or image syntax, go right ahead.
 
-       Unlike block-level HTML tags, Markdown syntax _i_s processed within
+       Unlike block-level HTML tags, Markdown syntax [4mis[24m processed within
        span-level tags.
 
-   AAuuttoommaattiicc EEssccaappiinngg ffoorr SSppeecciiaall CChhaarraacctteerrss
-       In HTML, there are two characters that demand special treatment: <<
-       and &&. Left angle brackets are used to start tags; ampersands are
+   [1mAutomatic Escaping for Special Characters[0m
+       In HTML, there are two characters that demand special treatment: [1m<[0m
+       and [1m&[22m. Left angle brackets are used to start tags; ampersands are
        used to denote HTML entities. If you want to use them as literal
-       characters, you must escape them as entities, e.g. &&lltt;;, and
-       &&aammpp;;.
+       characters, you must escape them as entities, e.g. [1m&lt;[22m, and
+       [1m&amp;[22m.
 
        Ampersands in particular are bedeviling for web writers. If you want to
-       write about 'AT&T', you need to write 'AATT&&aammpp;;TT'. You even need to
+       write about ’AT&T’, you need to write ’[1mAT&amp;T[22m’. You even need to
        escape ampersands within URLs. Thus, if you want to link to:
          http://images.google.com/images?num=30&q=larry+bird
 
        you need to encode the URL as:
          http://images.google.com/images?num=30&amp;q=larry+bird
 
-       in your anchor tag hhrreeff attribute. Needless to say, this is easy to
-       forget,  and  is probably the single most common source of HTML valida‐
+       in your anchor tag [1mhref [22mattribute. Needless to say, this is easy to
+       forget, and is probably the single most common source of  HTML  valida‐
        tion
        errors in otherwise well-marked-up web sites.
 
        Markdown allows you to use these characters naturally, taking care of
        all the necessary escaping for you. If you use an ampersand as part of
        an HTML entity, it remains unchanged; otherwise it will be translated
-       into &&aammpp;;.
+       into [1m&amp;[22m.
 
-       So, if you want to include a copyright symbol in your article, you  can
+       So,  if you want to include a copyright symbol in your article, you can
        write:
          &copy;
 
@@ -149,7 +147,7 @@ DDEESSCCRRIIPPTTIIOONN
        Markdown will translate it to:
          AT&amp;T
 
-       Similarly, because Markdown supports _i_n_l_i_n_e _H_T_M_L if you use
+       Similarly, because Markdown supports [4minline[24m [4mHTML[24m if you use
        angle brackets as delimiters for HTML tags, Markdown will treat them as
        such. But if you write:
          4 < 5
@@ -158,40 +156,38 @@ DDEESSCCRRIIPPTTIIOONN
          4 &lt; 5
 
        However, inside Markdown code spans and blocks, angle brackets and
-       ampersands are _a_l_w_a_y_s encoded automatically. This makes it easy to use
+       ampersands are [4malways[24m encoded automatically. This makes it easy to use
        Markdown to write about HTML code. (As opposed to raw HTML, which is a
-       terrible format for writing about HTML syntax, because every single <<
-       and && in your example code needs to be escaped.)
+       terrible format for writing about HTML syntax, because every single [1m<[0m
+       and [1m& [22min your example code needs to be escaped.)
 
-BBLLOOCCKK EELLEEMMEENNTTSS
-   PPaarraaggrraapphhss aanndd LLiinnee BBrreeaakkss
+[1mBLOCK ELEMENTS[0m
+   [1mParagraphs and Line Breaks[0m
        A paragraph is simply one or more consecutive lines of text, separated
        by one or more blank lines. (A blank line is any line that looks like a
-       blank  line  -- a line containing nothing but spaces or tabs is consid‐
+       blank line -- a line containing nothing but spaces or tabs  is  consid‐
        ered
        blank.) Normal paragraphs should not be indented with spaces or tabs.
 
        The implication of the "one or more consecutive lines of text" rule is
        that Markdown supports "hard-wrapped" text paragraphs. This differs
-       significantly from most other text-to-HTML formatters  (including  Mov‐
+       significantly  from  most other text-to-HTML formatters (including Mov‐
        able
-       Type's "Convert Line Breaks" option) which translate every line break
-       character in a paragraph into a <<bbrr //>> tag.
+       Type’s "Convert Line Breaks" option) which translate every line break
+       character in a paragraph into a [1m<br /> [22mtag.
 
-       When you _d_o want to insert a <<bbrr //>> break tag using Markdown, you
+       When you [4mdo[24m want to insert a [1m<br /> [22mbreak tag using Markdown, you
        end a line with two or more spaces, then type return.
 
-       Yes, this takes a tad more effort to create a <<bbrr //>>, but a simplistic
-       "every line break is a <<bbrr //>>" rule wouldn't work for Markdown.
-       Markdown's email-style _b_l_o_c_k_q_u_o_t_i_n_g and multi-paragraph _l_i_s_t _i_t_e_m_s
+       Yes, this takes a tad more effort to create a [1m<br />[22m, but a simplistic
+       "every line break is a [1m<br />[22m" rule wouldn’t work for Markdown.
+       Markdown’s email-style [4mblockquoting[24m and multi-paragraph [4mlist[24m [4mitems[0m
        work best -- and look better -- when you format them with hard breaks.
 
-   HHeeaaddeerrss
-       Markdown    supports    two    styles    of    headers,    [Setext]   _1
-       ⟨http://docutils.sourceforge.net/mirror/setext.html⟩   and   [atx]    _2
-       ⟨http://www.aaronsw.com/2002/atx/⟩.
+   [1mHeaders[0m
+       Markdown supports two styles of headers, [Setext] ]8;;http://docutils.sourceforge.net/mirror/setext.html\[4m1[24m]8;;\ and [atx] ]8;;http://www.aaronsw.com/2002/atx/\[4m2[24m]8;;\.
 
-       Setext-style   headers   are   "underlined"   using  equal  signs  (for
+       Setext-style  headers  are  "underlined"   using   equal   signs   (for
        first-level
        headers) and dashes (for second-level headers). For example:
          This is an H1
@@ -200,7 +196,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          This is an H2
          -------------
 
-       Any number of underlining =='s or --'s will work.
+       Any number of underlining [1m=[22m’s or [1m-[22m’s will work.
 
        Atx-style headers use 1-6 hash characters at the start of the line,
        corresponding to header levels 1-6. For example:
@@ -212,7 +208,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
 
        Optionally, you may "close" atx-style headers. This is purely
        cosmetic -- you can use this if you think it looks better. The
-       closing hashes don't even need to match the number of hashes
+       closing hashes don’t even need to match the number of hashes
        used to open the header. (The number of opening hashes
        determines the header level.) :
          # This is an H1 #
@@ -221,11 +217,11 @@ BBLLOOCCKK EELLEEMMEENNTTSS
 
          ### This is an H3 ######
 
-   BBlloocckkqquuootteess
-       Markdown uses email-style >> characters for blockquoting. If you're
+   [1mBlockquotes[0m
+       Markdown uses email-style [1m> [22mcharacters for blockquoting. If you’re
        familiar with quoting passages of text in an email message, then you
        know how to create a blockquote in Markdown. It looks best if you hard
-       wrap the text and put a >> before every line:
+       wrap the text and put a [1m> [22mbefore every line:
          > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
          > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
          > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
@@ -233,7 +229,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
          > id sem consectetuer libero luctus adipiscing.
 
-       Markdown allows you to be lazy and only put the >> before the first
+       Markdown allows you to be lazy and only put the [1m> [22mbefore the first
        line of a hard-wrapped paragraph:
          > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
          consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
@@ -243,14 +239,14 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          id sem consectetuer libero luctus adipiscing.
 
        Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
-       adding additional levels of >>:
+       adding additional levels of [1m>[22m:
          > This is the first level of quoting.
          >
          > > This is nested blockquote.
          >
          > Back to the first level.
 
-       Blockquotes can contain other  Markdown  elements,  including  headers,
+       Blockquotes  can  contain  other  Markdown elements, including headers,
        lists,
        and code blocks:
          > ## This is a header.
@@ -258,7 +254,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          > 1.   This is the first list item.
          > 2.   This is the second list item.
          >
-         > Here's some example code:
+         > Here’s some example code:
          >
          >     return shell_exec("echo $input | $markdown_script");
 
@@ -266,7 +262,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        example, with BBEdit, you can make a selection and choose Increase
        Quote Level from the Text menu.
 
-   LLiissttss
+   [1mLists[0m
        Markdown supports ordered (numbered) and unordered (bulleted) lists.
 
        Unordered lists use asterisks, pluses, and hyphens -- interchangably
@@ -290,7 +286,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          2.  McHale
          3.  Parish
 
-       It's important to note that the actual numbers you use to mark the
+       It’s important to note that the actual numbers you use to mark the
        list have no effect on the HTML output Markdown produces. The HTML
        Markdown produces from the above list is:
          <ol>
@@ -309,13 +305,13 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          1. McHale
          8. Parish
 
-       you'd get the exact same HTML output. The point is, if you want to,
+       you’d get the exact same HTML output. The point is, if you want to,
        you can use ordinal numbers in your ordered Markdown lists, so that
        the numbers in your source match the numbers in your published HTML.
-       But if you want to be lazy, you don't have to.
+       But if you want to be lazy, you don’t have to.
 
        If you do use lazy list numbering, however, you should still start the
-       list  with the number 1. At some point in the future, Markdown may sup‐
+       list with the number 1. At some point in the future, Markdown may  sup‐
        port
        starting ordered lists at an arbitrary number.
 
@@ -330,7 +326,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
              Suspendisse id sem consectetuer libero luctus adipiscing.
 
-       But if you want to be lazy, you don't have to:
+       But if you want to be lazy, you don’t have to:
          *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
          Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
          viverra nec, fringilla in, laoreet vitae, risus.
@@ -338,7 +334,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
          Suspendisse id sem consectetuer libero luctus adipiscing.
 
        If list items are separated by blank lines, Markdown will wrap the
-       items in <<pp>> tags in the HTML output. For example, this input:
+       items in [1m<p> [22mtags in the HTML output. For example, this input:
          *   Bird
          *   Magic
 
@@ -377,13 +373,13 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        lazy:
          *   This is a list item with two paragraphs.
 
-             This is the second paragraph in the list item. You're
+             This is the second paragraph in the list item. You’re
          only required to indent the first line. Lorem ipsum dolor
          sit amet, consectetuer adipiscing elit.
 
          *   Another item in the same list.
 
-       To put a blockquote within a list item, the blockquote's >>
+       To put a blockquote within a list item, the blockquote’s [1m>[0m
        delimiters need to be indented:
          *   A list item with a blockquote:
 
@@ -391,24 +387,24 @@ BBLLOOCCKK EELLEEMMEENNTTSS
              > inside a list item.
 
        To put a code block within a list item, the code block needs
-       to be indented _t_w_i_c_e -- 8 spaces or two tabs:
+       to be indented [4mtwice[24m -- 8 spaces or two tabs:
          *   A list item with a code block:
 
                  <code goes here>
 
-       It's worth noting that it's possible to trigger an ordered list by
+       It’s worth noting that it’s possible to trigger an ordered list by
        accident, by writing something like this:
          1986. What a great season.
 
-       In other words, a _n_u_m_b_e_r_-_p_e_r_i_o_d_-_s_p_a_c_e sequence at the beginning of a
+       In other words, a [4mnumber-period-space[24m sequence at the beginning of a
        line. To avoid this, you can backslash-escape the period:
          1986\. What a great season.
 
-   CCooddee BBlloocckkss
+   [1mCode Blocks[0m
        Pre-formatted code blocks are used for writing about programming or
        markup source code. Rather than forming normal paragraphs, the lines
        of a code block are interpreted literally. Markdown wraps a code block
-       in both <<pprree>> and <<ccooddee>> tags.
+       in both [1m<pre> [22mand [1m<code> [22mtags.
 
        To produce a code block in Markdown, simply indent every line of the
        block by at least 4 spaces or 1 tab. For example, given this input:
@@ -441,7 +437,7 @@ BBLLOOCCKK EELLEEMMEENNTTSS
        A code block continues until it reaches a line that is not indented
        (or the end of the article).
 
-       Within a code block, ampersands (&&) and angle brackets (<< and >>)
+       Within a code block, ampersands ([1m&[22m) and angle brackets ([1m< [22mand [1m>[22m)
        are automatically converted into HTML entities. This makes it very
        easy to include example HTML source code using Markdown -- just paste
        it and indent it, and Markdown will handle the hassle of encoding the
@@ -458,10 +454,10 @@ BBLLOOCCKK EELLEEMMEENNTTSS
 
        Regular Markdown syntax is not processed within code blocks. E.g.,
        asterisks are just literal asterisks within a code block. This means
-       it's also easy to use Markdown to write about Markdown's own syntax.
+       it’s also easy to use Markdown to write about Markdown’s own syntax.
 
-   HHoorriizzoonnttaall RRuulleess
-       You can produce a horizontal rule tag (<<hhrr //>>) by placing three or
+   [1mHorizontal Rules[0m
+       You can produce a horizontal rule tag ([1m<hr />[22m) by placing three or
        more hyphens, asterisks, or underscores on a line by themselves. If you
        wish, you may use spaces between the hyphens or asterisks. Each of the
        following lines will produce a horizontal rule:
@@ -475,15 +471,15 @@ BBLLOOCCKK EELLEEMMEENNTTSS
 
          ---------------------------------------
 
-SSPPAANN EELLEEMMEENNTTSS
-   LLiinnkkss
-       Markdown supports two style of links: _i_n_l_i_n_e and _r_e_f_e_r_e_n_c_e.
+[1mSPAN ELEMENTS[0m
+   [1mLinks[0m
+       Markdown supports two style of links: [4minline[24m and [4mreference[24m.
 
        In both styles, the link text is delimited by [square brackets].
 
        To create an inline link, use a set of regular parentheses immediately
-       after the link text's closing square bracket. Inside the parentheses,
-       put the URL where you want the link to point, along with an _o_p_t_i_o_n_a_l
+       after the link text’s closing square bracket. Inside the parentheses,
+       put the URL where you want the link to point, along with an [4moptional[0m
        title for the link, surrounded in quotes. For example:
          This is [an example](http://example.com/ "Title") inline link.
 
@@ -496,7 +492,7 @@ SSPPAANN EELLEEMMEENNTTSS
          <p><a href="http://example.net/">This link</a> has no
          title attribute.</p>
 
-       If you're referring to a local resource on the same server, you can
+       If you’re referring to a local resource on the same server, you can
        use relative paths:
          See my [About](/about/) page for details.
 
@@ -527,10 +523,10 @@ SSPPAANN EELLEEMMEENNTTSS
 
        The following three link definitions are equivalent:
          [foo]: http://example.com/  "Optional Title Here"
-         [foo]: http://example.com/  'Optional Title Here'
+         [foo]: http://example.com/  ’Optional Title Here’
          [foo]: http://example.com/  (Optional Title Here)
 
-       NNoottee:: There is a known bug in Markdown.pl 1.0.1 which prevents
+       [1mNote: [22mThere is a known bug in Markdown.pl 1.0.1 which prevents
        single quotes from being used to delimit link titles.
 
        The link URL may, optionally, be surrounded by angle brackets:
@@ -545,14 +541,14 @@ SSPPAANN EELLEEMMEENNTTSS
        processing, and are stripped from your document in the HTML output.
 
        Link definition names may consist of letters, numbers, spaces, and
-       punctuation -- but they are _n_o_t case sensitive. E.g. these two
+       punctuation -- but they are [4mnot[24m case sensitive. E.g. these two
        links:
          [link text][a]
          [link text][A]
 
        are equivalent.
 
-       The _i_m_p_l_i_c_i_t _l_i_n_k _n_a_m_e shortcut allows you to omit the name of the
+       The [4mimplicit[24m [4mlink[24m [4mname[24m shortcut allows you to omit the name of the
        link, in which case the link text itself is used as the name.
        Just use an empty set of square brackets -- e.g., to link the word
        "Google" to the google.com web site, you could simply write:
@@ -569,11 +565,11 @@ SSPPAANN EELLEEMMEENNTTSS
          [Daring Fireball]: http://daringfireball.net/
 
        Link definitions can be placed anywhere in your Markdown document. I
-       tend to put them immediately after each paragraph in which they're
+       tend to put them immediately after each paragraph in which they’re
        used, but if you want, you can put them all at the end of your
        document, sort of like footnotes.
 
-       Here's an example of reference links in action:
+       Here’s an example of reference links in action:
          I get 10 times more traffic from [Google] [1] than from
          [Yahoo] [2] or [MSN] [3].
 
@@ -596,30 +592,30 @@ SSPPAANN EELLEEMMEENNTTSS
          or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
 
        For comparison, here is the same paragraph written using
-       Markdown's inline link style:
+       Markdown’s inline link style:
          I get 10 times more traffic from [Google](http://google.com/ "Google")
          than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
          [MSN](http://search.msn.com/ "MSN Search").
 
-       The point of reference-style links is not that they're easier to
+       The point of reference-style links is not that they’re easier to
        write. The point is that with reference-style links, your document
        source is vastly more readable. Compare the above examples: using
        reference-style links, the paragraph itself is only 81 characters
-       long; with inline-style links, it's 176 characters; and as raw HTML,
-       it's 234 characters. In the raw HTML, there's more markup than there
+       long; with inline-style links, it’s 176 characters; and as raw HTML,
+       it’s 234 characters. In the raw HTML, there’s more markup than there
        is text.
 
-       With Markdown's reference-style links, a source document much more
+       With Markdown’s reference-style links, a source document much more
        closely resembles the final output, as rendered in a browser. By
        allowing you to move the markup-related metadata out of the paragraph,
        you can add links without interrupting the narrative flow of your
        prose.
 
-   EEmmpphhaassiiss
-       Markdown treats asterisks (**) and underscores (__) as indicators of
-       emphasis. Text wrapped with one ** or __ will be wrapped with an
-       HTML <<eemm>> tag; double **'s or __'s will be wrapped with an HTML
-       <<ssttrroonngg>> tag. E.g., this input:
+   [1mEmphasis[0m
+       Markdown treats asterisks ([1m*[22m) and underscores ([1m_[22m) as indicators of
+       emphasis. Text wrapped with one [1m* [22mor [1m_ [22mwill be wrapped with an
+       HTML [1m<em> [22mtag; double [1m*[22m’s or [1m_[22m’s will be wrapped with an HTML
+       [1m<strong> [22mtag. E.g., this input:
          *single asterisks*
 
          _single underscores_
@@ -643,7 +639,7 @@ SSPPAANN EELLEEMMEENNTTSS
        Emphasis can be used in the middle of a word:
          un*frigging*believable
 
-       But if you surround an ** or __ with spaces, it'll be treated as a
+       But if you surround an [1m* [22mor [1m_ [22mwith spaces, it’ll be treated as a
        literal asterisk or underscore.
 
        To produce a literal asterisk or underscore at a position where it
@@ -651,55 +647,55 @@ SSPPAANN EELLEEMMEENNTTSS
        escape it:
          \*this text is surrounded by literal asterisks\*
 
-   CCooddee
-       To indicate a span of code, wrap it with backtick quotes (``).
+   [1mCode[0m
+       To indicate a span of code, wrap it with backtick quotes ([1m‘[22m).
        Unlike a pre-formatted code block, a code span indicates code within a
        normal paragraph. For example:
-         Use the `printf()` function.
+         Use the ‘printf()‘ function.
 
        will produce:
          <p>Use the <code>printf()</code> function.</p>
 
        To include a literal backtick character within a code span, you can use
        multiple backticks as the opening and closing delimiters:
-         ``There is a literal backtick (`) here.``
+         ‘‘There is a literal backtick (‘) here.‘‘
 
        which will produce this:
-         <p><code>There is a literal backtick (`) here.</code></p>
+         <p><code>There is a literal backtick (‘) here.</code></p>
 
        The backtick delimiters surrounding a code span may include spaces --
        one after the opening, one before the closing. This allows you to place
        literal backtick characters at the beginning or end of a code span:
-         A single backtick in a code span: `` ` ``
+         A single backtick in a code span: ‘‘ ‘ ‘‘
 
-         A backtick-delimited string in a code span: `` `foo` ``
+         A backtick-delimited string in a code span: ‘‘ ‘foo‘ ‘‘
 
        will produce:
-         <p>A single backtick in a code span: <code>`</code></p>
+         <p>A single backtick in a code span: <code>‘</code></p>
 
-         <p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+         <p>A backtick-delimited string in a code span: <code>‘foo‘</code></p>
 
        With a code span, ampersands and angle brackets are encoded as HTML
        entities automatically, which makes it easy to include example HTML
        tags. Markdown will turn this:
-         Please don't use any `<blink>` tags.
+         Please don’t use any ‘<blink>‘ tags.
 
        into:
-         <p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>
+         <p>Please don’t use any <code>&lt;blink&gt;</code> tags.</p>
 
        You can write this:
-         `&#8212;` is the decimal-encoded equivalent of `&mdash;`.
+         ‘&#8212;‘ is the decimal-encoded equivalent of ‘&mdash;‘.
 
        to produce:
          <p><code>&amp;#8212;</code> is the decimal-encoded
          equivalent of <code>&amp;mdash;</code>.</p>
 
-   IImmaaggeess
-       Admittedly, it's fairly difficult to devise a "natural" syntax for
+   [1mImages[0m
+       Admittedly, it’s fairly difficult to devise a "natural" syntax for
        placing images into a plain text document format.
 
        Markdown uses an image syntax that is intended to resemble the syntax
-       for links, allowing for two styles: _i_n_l_i_n_e and _r_e_f_e_r_e_n_c_e.
+       for links, allowing for two styles: [4minline[24m and [4mreference[24m.
 
        Inline image syntax looks like this:
          ![Alt text](/path/to/img.jpg)
@@ -708,13 +704,13 @@ SSPPAANN EELLEEMMEENNTTSS
 
        That is:
 
-        • An exclamation mark: !!;
+        • An exclamation mark: [1m![22m;
 
-        • followed by a set of square brackets, containing the aalltt
+        • followed by a set of square brackets, containing the [1malt[0m
           attribute text for the image;
 
         • followed by a set of parentheses, containing the URL or path to
-          the image, and an optional ttiittllee attribute enclosed in double
+          the image, and an optional [1mtitle [22mattribute enclosed in double
           or single quotes.
 
        Reference-style image syntax looks like this:
@@ -726,11 +722,11 @@ SSPPAANN EELLEEMMEENNTTSS
 
        As of this writing, Markdown has no syntax for specifying the
        dimensions of an image; if this is important to you, you can simply
-       use regular HTML <<iimmgg>> tags.
+       use regular HTML [1m<img> [22mtags.
 
-MMIISSCCEELLLLAANNEEOOUUSS
-   AAuuttoommaattiicc LLiinnkkss
-       Markdown supports a shortcut style for creating "automatic"  links  for
+[1mMISCELLANEOUS[0m
+   [1mAutomatic Links[0m
+       Markdown  supports  a shortcut style for creating "automatic" links for
        URLs and email addresses: simply surround the URL or email address with
        angle brackets. What this means is that if you want to show the  actual
        text  of  a URL or email address, and also have it be a clickable link,
@@ -756,21 +752,21 @@ MMIISSCCEELLLLAANNEEOOUUSS
        ple.com.
 
        (This sort of entity-encoding trick will indeed fool many, if not
-       most, address-harvesting bots, but it definitely won't fool all of
-       them. It's better than nothing, but an address published in this way
+       most, address-harvesting bots, but it definitely won’t fool all of
+       them. It’s better than nothing, but an address published in this way
        will probably eventually start receiving spam.)
 
-   BBaacckkssllaasshh EEssccaappeess
+   [1mBackslash Escapes[0m
        Markdown allows you to use backslash escapes to generate literal
-       characters which would otherwise have special meaning in Markdown's
+       characters which would otherwise have special meaning in Markdown’s
        formatting syntax. For example, if you wanted to surround a word
-       with literal asterisks (instead of an HTML <<eemm>> tag), you can use
+       with literal asterisks (instead of an HTML [1m<em> [22mtag), you can use
        backslashes before the asterisks, like this:
          \*literal asterisks\*
 
        Markdown provides backslash escapes for the following characters:
          \   backslash
-         `   backtick
+         ‘   backtick
          *   asterisk
          _   underscore
          {}  curly braces
@@ -782,18 +778,16 @@ MMIISSCCEELLLLAANNEEOOUUSS
          .   dot
          !   exclamation mark
 
-AAUUTTHHOORR
+[1mAUTHOR[0m
        Markdown was created by John Gruber.
 
-       Manual page by Ryan Tomayko. It's pretty much a direct copy of the
-       _M_a_r_k_d_o_w_n                        _S_y_n_t_a_x                        _R_e_f_e_r_e_n_c_e
-       ⟨http://daringfireball.net/projects/markdown/syntax⟩,
+       Manual page by Ryan Tomayko. It’s pretty much a direct copy of the
+       ]8;;http://daringfireball.net/projects/markdown/syntax\[4mMarkdown[24m [4mSyntax[24m [4mReference[24m]8;;\,
 
        also by John Gruber.
 
-SSEEEE AALLSSOO
+[1mSEE ALSO[0m
        ronn(5)
-       _M_a_r_k_d_o_w_n                        _S_y_n_t_a_x                        _R_e_f_e_r_e_n_c_e
-       ⟨http://daringfireball.net/projects/markdown/⟩
+       ]8;;http://daringfireball.net/projects/markdown/\[4mMarkdown[24m [4mSyntax[24m [4mReference[24m]8;;\
 
-                                 January 1979                      MARKDOWN(5)
+                                 January 1979                      [4mMARKDOWN[24m(5)

@@ -1,11 +1,11 @@
-ELLIPSES(7)            Miscellaneous Information Manual            ELLIPSES(7)
+[4mELLIPSES[24m(7)            Miscellaneous Information Manual            [4mELLIPSES[24m(7)
 
-NNAAMMEE
-       eelllliippsseess - testing ellipses
+[1mNAME[0m
+       [1mellipses [22m- testing ellipses
 
        Ellipses should be replaced...
 
-       ...also, they shouldn't interfere with regular dots at the beginning
+       ...also, they shouldn’t interfere with regular dots at the beginning
        of a line.
 
-                                 January 1979                      ELLIPSES(7)
+                                 January 1979                      [4mELLIPSES[24m(7)

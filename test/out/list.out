@@ -1,23 +1,23 @@
-A(1)                        General Commands Manual                       A(1)
+[4mA[24m(1)                        General Commands Manual                       [4mA[24m(1)
 
-NNAAMMEE
-       aa
+[1mNAME[0m
+       [1ma[0m
 
        This is a tight list:
 
-        • ttooggggllee__ssttaattuuss: test
+        • [1mtoggle_status[22m: test
 
-        • ssppaawwnn <<eexxeeccuuttaabbllee>> <<aaddddiittiioonnaall aarrggss>>
+        • [1mspawn <executable> <additional args>[0m
           TODO explain path-alike expansion,
           ability to get a block here.
 
        This is a loose list:
 
-        • ttooggggllee__ssttaattuuss:
+        • [1mtoggle_status[22m:
           test
 
-        • ssppaawwnn <<eexxeeccuuttaabbllee>> <<aaddddiittiioonnaall aarrggss>>:
+        • [1mspawn <executable> <additional args>[22m:
           TODO explain path-alike expansion,
           ability to get a block here.
 
-                                 January 1979                             A(1)
+                                 January 1979                             [4mA[24m(1)

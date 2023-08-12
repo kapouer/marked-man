@@ -1,11 +1,11 @@
-REGRESSIONS(7)         Miscellaneous Information Manual         REGRESSIONS(7)
+[4mREGRESSIONS[24m(7)         Miscellaneous Information Manual         [4mREGRESSIONS[24m(7)
 
-NNAAMMEE
-       rreeggrreessssiioonnss - issues
+[1mNAME[0m
+       [1mregressions [22m- issues
 
-iinnlliinneess
-       This should be  _(_a bb_) ok.
+[1minlines[0m
+       This should be  [4m(a[24m [1mb[4m[22m)[24m ok.
 
-       This should not double escape ppkkgg--jjss--ttoooollss.
+       This should not double escape [1mpkg-js-tools[22m.
 
-                                 January 1979                   REGRESSIONS(7)
+                                 January 1979                   [4mREGRESSIONS[24m(7)

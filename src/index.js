@@ -52,5 +52,6 @@ export default {
 	renderer,
 	tokenizer,
 	// custom fixes
-	extensions
+	extensions,
+	headerIds: false // since marked 5
 };

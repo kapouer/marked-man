@@ -3,9 +3,9 @@
 [1mNAME[0m
        [1mdots_at_line_start_test[0m
 
-       There’s a weird issue where dots at the beginning of a line
+       There's a weird issue where dots at the beginning of a line
        generate troff warnings due to escaping.
 
-       .. let’s see what happens.
+       .. let's see what happens.
 
                                  January 1979       [4mDOTS_AT_LINE_START_TEST[24m(1)

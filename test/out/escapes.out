@@ -8,7 +8,7 @@
 
        Markdown provides backslash escapes for the following characters:
          \   backslash
-         ‘   backtick
+         `   backtick
          *   asterisk
          _   underscore
          {}  curly braces

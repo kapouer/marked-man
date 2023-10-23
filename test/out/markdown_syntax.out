@@ -17,7 +17,7 @@
          [Reference style links][1] and [inline links](http://example.com)
          [1]: http://example.com "Title is optional"
 
-         Inline markup like _italics_,  **bold**, and ‘code()‘.
+         Inline markup like _italics_,  **bold**, and `code()`.
 
          ![picture alt](/images/photo.jpeg "Title is optional")
 
@@ -42,8 +42,8 @@
        Readability,  however, is emphasized above all else. A Markdown-format‐
        ted
        document should be publishable as-is, as plain text, without looking
-       like it’s been marked up with tags or formatting instructions. While
-       Markdown’s syntax has been influenced by several existing text-to-HTML
+       like it's been marked up with tags or formatting instructions. While
+       Markdown's syntax has been influenced by several existing text-to-HTML
        filters -- including ]8;;http://docutils.sourceforge.net/mirror/setext.html\[4mSetext[24m]8;;\,
 
        ]8;;http://www.aaronsw.com/2002/atx/\[4matx[24m]8;;\,
@@ -53,17 +53,17 @@
        ]8;;http://docutils.sourceforge.net/rst.html\[4mreStructuredText[24m]8;;\,
 
        ]8;;http://www.triptico.com/software/grutatxt.html\[4mGrutatext[24m]8;;\, and ]8;;http://ettext.taint.org/doc/\[4mEtText[24m]8;;\ -- the single biggest source of
-       inspiration for Markdown’s syntax is the format of plain text email.
+       inspiration for Markdown's syntax is the format of plain text email.
 
-       To this end, Markdown’s syntax is comprised entirely of punctuation
+       To this end, Markdown's syntax is comprised entirely of punctuation
        characters, which punctuation characters have been carefully chosen so
        as to look like what they mean. E.g., asterisks around a word actually
        look like *emphasis*. Markdown lists look like, well, lists. Even
-       blockquotes look like quoted passages of text, assuming you’ve ever
+       blockquotes look like quoted passages of text, assuming you've ever
        used email.
 
    [1mInline HTML[0m
-       Markdown’s syntax is intended for one purpose: to be used as a
+       Markdown's syntax is intended for one purpose: to be used as a
        format for [4mwriting[24m for the web.
 
        Markdown is not a replacement for HTML, or even close to it. Its
@@ -72,12 +72,12 @@
        to insert HTML tags. In my opinion, HTML tags are already easy to
        insert. The idea for Markdown is to make it easy to read, write, and
        edit prose. HTML is a [4mpublishing[24m format; Markdown is a [4mwriting[0m
-       format. Thus, Markdown’s formatting syntax only addresses issues that
+       format. Thus, Markdown's formatting syntax only addresses issues that
        can be conveyed in plain text.
 
-       For any markup that is not covered by Markdown’s syntax, you simply
-       use HTML itself. There’s no need to preface it or delimit it to
-       indicate that you’re switching from Markdown to HTML; you just use
+       For any markup that is not covered by Markdown's syntax, you simply
+       use HTML itself. There's no need to preface it or delimit it to
+       indicate that you're switching from Markdown to HTML; you just use
        the tags.
 
        The only restrictions are that block-level HTML elements -- e.g. [1m<div>[22m,
@@ -99,14 +99,14 @@
 
        Note  that  Markdown  formatting  syntax  is   not   processed   within
        block-level
-       HTML tags. E.g., you can’t use Markdown-style [1m*emphasis* [22minside an
+       HTML tags. E.g., you can't use Markdown-style [1m*emphasis* [22minside an
        HTML block.
 
        Span-level HTML tags -- e.g. [1m<span>[22m, [1m<cite>[22m, or [1m<del> [22m-- can be
        used anywhere in a Markdown paragraph, list item, or header. If you
        want,  you  can even use HTML tags instead of Markdown formatting; e.g.
        if
-       you’d prefer to use HTML [1m<a> [22mor [1m<img> [22mtags instead of Markdown’s
+       you'd prefer to use HTML [1m<a> [22mor [1m<img> [22mtags instead of Markdown's
        link or image syntax, go right ahead.
 
        Unlike block-level HTML tags, Markdown syntax [4mis[24m processed within
@@ -120,7 +120,7 @@
        [1m&amp;[22m.
 
        Ampersands in particular are bedeviling for web writers. If you want to
-       write about ’AT&T’, you need to write ’[1mAT&amp;T[22m’. You even need to
+       write about 'AT&T', you need to write '[1mAT&amp;T[22m'. You even need to
        escape ampersands within URLs. Thus, if you want to link to:
          http://images.google.com/images?num=30&q=larry+bird
 
@@ -173,15 +173,15 @@
        that Markdown supports "hard-wrapped" text paragraphs. This differs
        significantly  from  most other text-to-HTML formatters (including Mov‐
        able
-       Type’s "Convert Line Breaks" option) which translate every line break
+       Type's "Convert Line Breaks" option) which translate every line break
        character in a paragraph into a [1m<br /> [22mtag.
 
        When you [4mdo[24m want to insert a [1m<br /> [22mbreak tag using Markdown, you
        end a line with two or more spaces, then type return.
 
        Yes, this takes a tad more effort to create a [1m<br />[22m, but a simplistic
-       "every line break is a [1m<br />[22m" rule wouldn’t work for Markdown.
-       Markdown’s email-style [4mblockquoting[24m and multi-paragraph [4mlist[24m [4mitems[0m
+       "every line break is a [1m<br />[22m" rule wouldn't work for Markdown.
+       Markdown's email-style [4mblockquoting[24m and multi-paragraph [4mlist[24m [4mitems[0m
        work best -- and look better -- when you format them with hard breaks.
 
    [1mHeaders[0m
@@ -196,7 +196,7 @@
          This is an H2
          -------------
 
-       Any number of underlining [1m=[22m’s or [1m-[22m’s will work.
+       Any number of underlining [1m=[22m's or [1m-[22m's will work.
 
        Atx-style headers use 1-6 hash characters at the start of the line,
        corresponding to header levels 1-6. For example:
@@ -208,7 +208,7 @@
 
        Optionally, you may "close" atx-style headers. This is purely
        cosmetic -- you can use this if you think it looks better. The
-       closing hashes don’t even need to match the number of hashes
+       closing hashes don't even need to match the number of hashes
        used to open the header. (The number of opening hashes
        determines the header level.) :
          # This is an H1 #
@@ -218,7 +218,7 @@
          ### This is an H3 ######
 
    [1mBlockquotes[0m
-       Markdown uses email-style [1m> [22mcharacters for blockquoting. If you’re
+       Markdown uses email-style [1m> [22mcharacters for blockquoting. If you're
        familiar with quoting passages of text in an email message, then you
        know how to create a blockquote in Markdown. It looks best if you hard
        wrap the text and put a [1m> [22mbefore every line:
@@ -254,7 +254,7 @@
          > 1.   This is the first list item.
          > 2.   This is the second list item.
          >
-         > Here’s some example code:
+         > Here's some example code:
          >
          >     return shell_exec("echo $input | $markdown_script");
 
@@ -286,7 +286,7 @@
          2.  McHale
          3.  Parish
 
-       It’s important to note that the actual numbers you use to mark the
+       It's important to note that the actual numbers you use to mark the
        list have no effect on the HTML output Markdown produces. The HTML
        Markdown produces from the above list is:
          <ol>
@@ -305,10 +305,10 @@
          1. McHale
          8. Parish
 
-       you’d get the exact same HTML output. The point is, if you want to,
+       you'd get the exact same HTML output. The point is, if you want to,
        you can use ordinal numbers in your ordered Markdown lists, so that
        the numbers in your source match the numbers in your published HTML.
-       But if you want to be lazy, you don’t have to.
+       But if you want to be lazy, you don't have to.
 
        If you do use lazy list numbering, however, you should still start the
        list with the number 1. At some point in the future, Markdown may  sup‐
@@ -326,7 +326,7 @@
          *   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
              Suspendisse id sem consectetuer libero luctus adipiscing.
 
-       But if you want to be lazy, you don’t have to:
+       But if you want to be lazy, you don't have to:
          *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
          Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
          viverra nec, fringilla in, laoreet vitae, risus.
@@ -373,13 +373,13 @@
        lazy:
          *   This is a list item with two paragraphs.
 
-             This is the second paragraph in the list item. You’re
+             This is the second paragraph in the list item. You're
          only required to indent the first line. Lorem ipsum dolor
          sit amet, consectetuer adipiscing elit.
 
          *   Another item in the same list.
 
-       To put a blockquote within a list item, the blockquote’s [1m>[0m
+       To put a blockquote within a list item, the blockquote's [1m>[0m
        delimiters need to be indented:
          *   A list item with a blockquote:
 
@@ -392,7 +392,7 @@
 
                  <code goes here>
 
-       It’s worth noting that it’s possible to trigger an ordered list by
+       It's worth noting that it's possible to trigger an ordered list by
        accident, by writing something like this:
          1986. What a great season.
 
@@ -454,7 +454,7 @@
 
        Regular Markdown syntax is not processed within code blocks. E.g.,
        asterisks are just literal asterisks within a code block. This means
-       it’s also easy to use Markdown to write about Markdown’s own syntax.
+       it's also easy to use Markdown to write about Markdown's own syntax.
 
    [1mHorizontal Rules[0m
        You can produce a horizontal rule tag ([1m<hr />[22m) by placing three or
@@ -478,7 +478,7 @@
        In both styles, the link text is delimited by [square brackets].
 
        To create an inline link, use a set of regular parentheses immediately
-       after the link text’s closing square bracket. Inside the parentheses,
+       after the link text's closing square bracket. Inside the parentheses,
        put the URL where you want the link to point, along with an [4moptional[0m
        title for the link, surrounded in quotes. For example:
          This is [an example](http://example.com/ "Title") inline link.
@@ -492,7 +492,7 @@
          <p><a href="http://example.net/">This link</a> has no
          title attribute.</p>
 
-       If you’re referring to a local resource on the same server, you can
+       If you're referring to a local resource on the same server, you can
        use relative paths:
          See my [About](/about/) page for details.
 
@@ -523,7 +523,7 @@
 
        The following three link definitions are equivalent:
          [foo]: http://example.com/  "Optional Title Here"
-         [foo]: http://example.com/  ’Optional Title Here’
+         [foo]: http://example.com/  'Optional Title Here'
          [foo]: http://example.com/  (Optional Title Here)
 
        [1mNote: [22mThere is a known bug in Markdown.pl 1.0.1 which prevents
@@ -565,11 +565,11 @@
          [Daring Fireball]: http://daringfireball.net/
 
        Link definitions can be placed anywhere in your Markdown document. I
-       tend to put them immediately after each paragraph in which they’re
+       tend to put them immediately after each paragraph in which they're
        used, but if you want, you can put them all at the end of your
        document, sort of like footnotes.
 
-       Here’s an example of reference links in action:
+       Here's an example of reference links in action:
          I get 10 times more traffic from [Google] [1] than from
          [Yahoo] [2] or [MSN] [3].
 
@@ -592,20 +592,20 @@
          or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
 
        For comparison, here is the same paragraph written using
-       Markdown’s inline link style:
+       Markdown's inline link style:
          I get 10 times more traffic from [Google](http://google.com/ "Google")
          than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
          [MSN](http://search.msn.com/ "MSN Search").
 
-       The point of reference-style links is not that they’re easier to
+       The point of reference-style links is not that they're easier to
        write. The point is that with reference-style links, your document
        source is vastly more readable. Compare the above examples: using
        reference-style links, the paragraph itself is only 81 characters
-       long; with inline-style links, it’s 176 characters; and as raw HTML,
-       it’s 234 characters. In the raw HTML, there’s more markup than there
+       long; with inline-style links, it's 176 characters; and as raw HTML,
+       it's 234 characters. In the raw HTML, there's more markup than there
        is text.
 
-       With Markdown’s reference-style links, a source document much more
+       With Markdown's reference-style links, a source document much more
        closely resembles the final output, as rendered in a browser. By
        allowing you to move the markup-related metadata out of the paragraph,
        you can add links without interrupting the narrative flow of your
@@ -614,7 +614,7 @@
    [1mEmphasis[0m
        Markdown treats asterisks ([1m*[22m) and underscores ([1m_[22m) as indicators of
        emphasis. Text wrapped with one [1m* [22mor [1m_ [22mwill be wrapped with an
-       HTML [1m<em> [22mtag; double [1m*[22m’s or [1m_[22m’s will be wrapped with an HTML
+       HTML [1m<em> [22mtag; double [1m*[22m's or [1m_[22m's will be wrapped with an HTML
        [1m<strong> [22mtag. E.g., this input:
          *single asterisks*
 
@@ -639,7 +639,7 @@
        Emphasis can be used in the middle of a word:
          un*frigging*believable
 
-       But if you surround an [1m* [22mor [1m_ [22mwith spaces, it’ll be treated as a
+       But if you surround an [1m* [22mor [1m_ [22mwith spaces, it'll be treated as a
        literal asterisk or underscore.
 
        To produce a literal asterisk or underscore at a position where it
@@ -648,50 +648,50 @@
          \*this text is surrounded by literal asterisks\*
 
    [1mCode[0m
-       To indicate a span of code, wrap it with backtick quotes ([1m‘[22m).
+       To indicate a span of code, wrap it with backtick quotes ([1m`[22m).
        Unlike a pre-formatted code block, a code span indicates code within a
        normal paragraph. For example:
-         Use the ‘printf()‘ function.
+         Use the `printf()` function.
 
        will produce:
          <p>Use the <code>printf()</code> function.</p>
 
        To include a literal backtick character within a code span, you can use
        multiple backticks as the opening and closing delimiters:
-         ‘‘There is a literal backtick (‘) here.‘‘
+         ``There is a literal backtick (`) here.``
 
        which will produce this:
-         <p><code>There is a literal backtick (‘) here.</code></p>
+         <p><code>There is a literal backtick (`) here.</code></p>
 
        The backtick delimiters surrounding a code span may include spaces --
        one after the opening, one before the closing. This allows you to place
        literal backtick characters at the beginning or end of a code span:
-         A single backtick in a code span: ‘‘ ‘ ‘‘
+         A single backtick in a code span: `` ` ``
 
-         A backtick-delimited string in a code span: ‘‘ ‘foo‘ ‘‘
+         A backtick-delimited string in a code span: `` `foo` ``
 
        will produce:
-         <p>A single backtick in a code span: <code>‘</code></p>
+         <p>A single backtick in a code span: <code>`</code></p>
 
-         <p>A backtick-delimited string in a code span: <code>‘foo‘</code></p>
+         <p>A backtick-delimited string in a code span: <code>`foo`</code></p>
 
        With a code span, ampersands and angle brackets are encoded as HTML
        entities automatically, which makes it easy to include example HTML
        tags. Markdown will turn this:
-         Please don’t use any ‘<blink>‘ tags.
+         Please don't use any `<blink>` tags.
 
        into:
-         <p>Please don’t use any <code>&lt;blink&gt;</code> tags.</p>
+         <p>Please don't use any <code>&lt;blink&gt;</code> tags.</p>
 
        You can write this:
-         ‘&#8212;‘ is the decimal-encoded equivalent of ‘&mdash;‘.
+         `&#8212;` is the decimal-encoded equivalent of `&mdash;`.
 
        to produce:
          <p><code>&amp;#8212;</code> is the decimal-encoded
          equivalent of <code>&amp;mdash;</code>.</p>
 
    [1mImages[0m
-       Admittedly, it’s fairly difficult to devise a "natural" syntax for
+       Admittedly, it's fairly difficult to devise a "natural" syntax for
        placing images into a plain text document format.
 
        Markdown uses an image syntax that is intended to resemble the syntax
@@ -752,13 +752,13 @@
        ple.com.
 
        (This sort of entity-encoding trick will indeed fool many, if not
-       most, address-harvesting bots, but it definitely won’t fool all of
-       them. It’s better than nothing, but an address published in this way
+       most, address-harvesting bots, but it definitely won't fool all of
+       them. It's better than nothing, but an address published in this way
        will probably eventually start receiving spam.)
 
    [1mBackslash Escapes[0m
        Markdown allows you to use backslash escapes to generate literal
-       characters which would otherwise have special meaning in Markdown’s
+       characters which would otherwise have special meaning in Markdown's
        formatting syntax. For example, if you wanted to surround a word
        with literal asterisks (instead of an HTML [1m<em> [22mtag), you can use
        backslashes before the asterisks, like this:
@@ -766,7 +766,7 @@
 
        Markdown provides backslash escapes for the following characters:
          \   backslash
-         ‘   backtick
+         `   backtick
          *   asterisk
          _   underscore
          {}  curly braces
@@ -781,7 +781,7 @@
 [1mAUTHOR[0m
        Markdown was created by John Gruber.
 
-       Manual page by Ryan Tomayko. It’s pretty much a direct copy of the
+       Manual page by Ryan Tomayko. It's pretty much a direct copy of the
        ]8;;http://daringfireball.net/projects/markdown/syntax\[4mMarkdown[24m [4mSyntax[24m [4mReference[24m]8;;\,
 
        also by John Gruber.

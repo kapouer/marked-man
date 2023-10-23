@@ -18,7 +18,7 @@ const ronnDir = Path.join(__dirname, "md");
 const manDir = Path.join(__dirname, "man");
 const outDir = Path.join(__dirname, "out");
 
-main();
+main(process.argv.slice(2).map(filepath => Path.join('../..', filepath)));
 
 async function convert(name, str) {
 	const roff = marked.parse(str, {
@@ -38,8 +38,8 @@ async function convert(name, str) {
 	return [status, stdout];
 }
 
-async function main() {
-	const files = await fs.readdir(ronnDir);
+async function main(tests) {
+	const files = tests.length > 0 ? tests : await fs.readdir(ronnDir);
 	let fails = 0,
 		works = 0,
 		news = 0;

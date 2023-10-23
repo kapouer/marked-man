@@ -6,8 +6,8 @@ import * as tokenizer from './tokenizer.js';
 import extensions from './extensions.js';
 
 // https://github.com/markedjs/marked/issues/2639
-const defaultParse = Parser.parse;
-Parser.parse = (tokens, options) => {
+const defaultParse = Parser.prototype.parse;
+Parser.prototype.parse = function(tokens) {
 	const [{ type, depth }, sec] = tokens;
 	if (type != "heading" || depth != 1) {
 		tokens.unshift({
@@ -18,7 +18,7 @@ Parser.parse = (tokens, options) => {
 	}
 	options.disableLevel2Name = sec && sec.type == "heading" && sec.depth == 2 && sec.text && sec.text.toUpperCase() == "NAME";
 
-	return defaultParse.call(Parser, tokens, options);
+	return defaultParse.call(this, tokens);
 };
 
 export default {

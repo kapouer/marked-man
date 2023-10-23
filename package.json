@@ -37,7 +37,7 @@
     "read-pkg-up": "^9.1.0"
   },
   "devDependencies": {
-    "@kapouer/eslint-config": "^1.9.0"
+    "@kapouer/eslint-config": "^2.0.0"
   },
   "eslintConfig": {
     "extends": "@kapouer/eslint-config",
@@ -48,7 +48,6 @@
           "test/**.js"
         ],
         "env": {
-          "es6": true,
           "node": true
         }
       }

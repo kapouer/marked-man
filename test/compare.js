@@ -4,8 +4,7 @@ import { promisify } from 'util';
 import { exec } from 'child_process';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = Path.dirname(__filename);
+const curDir = Path.dirname(fileURLToPath(import.meta.url));
 const execa = promisify(exec);
 
 import markedMan from 'marked-man';
@@ -14,9 +13,9 @@ import { marked } from 'marked';
 marked.use(markedMan);
 
 // params
-const ronnDir = Path.join(__dirname, "md");
-const manDir = Path.join(__dirname, "man");
-const outDir = Path.join(__dirname, "out");
+const ronnDir = Path.join(curDir, "md");
+const manDir = Path.join(curDir, "man");
+const outDir = Path.join(curDir, "out");
 
 main(process.argv.slice(2).map(filepath => Path.join('../..', filepath)));
 

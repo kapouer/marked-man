@@ -33,7 +33,7 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "dependencies": {
-    "marked": "^4.2.12",
+    "marked": "^9.1.2",
     "read-pkg-up": "^10.1.0"
   },
   "devDependencies": {

@@ -7,18 +7,20 @@ import extensions from './extensions.js';
 
 // https://github.com/markedjs/marked/issues/2639
 const defaultParse = Parser.prototype.parse;
-Parser.prototype.parse = function(tokens) {
-	const [{ type, depth }, sec] = tokens;
-	if (type != "heading" || depth != 1) {
-		tokens.unshift({
-			type: 'heading',
-			depth: 1,
-			tokens: []
-		});
+Parser.prototype.parse = function (tokens, arg) {
+	if (!this.markedManCheck) {
+		this.markedManCheck = true;
+		const [{ type, depth }, sec] = tokens;
+		if (type != "heading" || depth != 1) {
+			tokens.unshift({
+				type: 'heading',
+				depth: 1,
+				tokens: []
+			});
+		}
+		this.options.disableLevel2Name = sec && sec.type == "heading" && sec.depth == 2 && sec.text && sec.text.toUpperCase() == "NAME";
 	}
-	options.disableLevel2Name = sec && sec.type == "heading" && sec.depth == 2 && sec.text && sec.text.toUpperCase() == "NAME";
-
-	return defaultParse.call(this, tokens);
+	return defaultParse.call(this, tokens, arg);
 };
 
 export default {

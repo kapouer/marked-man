@@ -44,11 +44,12 @@
     "overrides": [
       {
         "files": [
-          "src/**.js",
-          "test/**.js"
+          "bin/*.js",
+          "src/*.js",
+          "test/*.js"
         ],
-        "env": {
-          "node": true
+        "parserOptions": {
+          "sourceType": "module"
         }
       }
     ]

@@ -83,8 +83,10 @@ async function writeOrCompare(str, root, name) {
 	try {
 		const expect = (await fs.readFile(okpath)).toString();
 		if (expect != str) {
-			console.error("Test failure, result written in", errpath);
 			await fs.writeFile(errpath, str);
+			const { stdout } = await execa(`diff -u ${okpath} ${errpath} || true`);
+			console.error("Test failure");
+			console.error(stdout);
 			status = -1;
 		}
 	} catch (e) {

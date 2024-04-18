@@ -79,20 +79,24 @@ async function main(tests) {
 async function writeOrCompare(str, root, name) {
 	const okpath = Path.join(root, name);
 	const errpath = Path.join(root + "-err", name);
+	await fs.writeFile(errpath, str);
 	let status = 0;
 	try {
-		const expect = (await fs.readFile(okpath)).toString();
-		if (expect != str) {
-			await fs.writeFile(errpath, str);
-			const { stdout } = await execa(`diff -u ${okpath} ${errpath} || true`);
-			console.error("Test failure");
-			console.error(stdout);
-			status = -1;
-		}
+		await fs.access(okpath);
 	} catch (e) {
 		console.info("Missing test, result written in", okpath);
 		await fs.writeFile(okpath, str);
 		status = 1;
+	}
+	try {
+		await execa(
+			`diff --unified --ignore-space-change ${okpath} ${errpath}`
+		);
+		await fs.unlink(errpath);
+	} catch (e) {
+		console.error("Test failure");
+		console.error(e.stdout);
+		status = -1;
 	}
 	return [status, status >= 0 ? okpath : errpath];
 }

@@ -1,41 +1,41 @@
-[4mHELLO[24m(1)                    General Commands Manual                   [4mHELLO[24m(1)
+[4mHELLO[24m(1)                    General Commands Manual                    [4mHELLO[24m(1)
 
 [1mNAME[0m
-       [1mhello [22m- hello world
+     [1mhello [22m- hello world
 
-       Your output <i>might</i> look like this:
-         * Chris
-         *
-         * &lt;b&gt;GitHub&lt;/b&gt;
-         * <b>GitHub</b>
+     Your output <i>might</i> look like this:
+       * Chris
+       *
+       * &lt;b&gt;GitHub&lt;/b&gt;
+       * <b>GitHub</b>
 
-       Here's some special entities:
+     Here's some special entities:
 
-        • &bull;       ○
+      • &bull;       ○
 
-        • &nbsp;
+      • &nbsp;
 
-        • &copy;       ©
+      • &copy;       ©
 
-        • &rdquo;      \
+      • &rdquo;      \
 
-        • &mdash;      —
+      • &mdash;      ——
 
-        • &reg;        ®
+      • &reg;        ®
 
-        • &sect;       §
+      • &sect;       §
 
-        • &ge;         ≥
+      • &ge;         ≥
 
-        • &le;         ≤
+      • &le;         ≤
 
-        • &ne;         ≠
+      • &ne;         ≠
 
-        • &equiv;      ≡
+      • &equiv;      ≡
 
-        • &plusmn;     ±
+      • &plusmn;     ±
 
-       Here's a line that uses non-breaking spaces to force the
-       last few words to wrap together.
+     Here's a line that uses non-breaking spaces to force the
+     last few words to wrap together.
 
-                                 January 1979                         [4mHELLO[24m(1)
+                                  January 1979                         [4mHELLO[24m(1)

@@ -1,17 +1,17 @@
-[4mT[24m(1)                        General Commands Manual                       [4mT[24m(1)
+[4mT[24m(1)                        General Commands Manual                        [4mT[24m(1)
 
 [1mNAME[0m
-       [1mt [22m- test
+     [1mt [22m- test
 
 [1mtest[0m
-         A blockquote here.
-         Continuing on second line.
+       A blockquote here.
+       Continuing on second line.
 
-       Hello.
+     Hello.
 
-              Another  block  quote. With a long title. That will break a line
-              eventually later.
-              that continues on second line
-              continuation
+          Another  block quote. With a long title. That will break a line eventually
+          later.
+          that continues on second line
+          continuation
 
-                                 January 1979                             [4mT[24m(1)
+                                  January 1979                             [4mT[24m(1)

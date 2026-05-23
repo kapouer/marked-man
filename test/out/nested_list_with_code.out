@@ -1,28 +1,26 @@
-[4mA[24m(1)                        General Commands Manual                       [4mA[24m(1)
+[4mA[24m(1)                        General Commands Manual                        [4mA[24m(1)
 
 [1mNAME[0m
-       [1ma[0m
+     [1ma[0m
 
-       Tight list:
+     Tight list:
 
-        • [1mtoggle_status[0m
+      • [1mtoggle_status[0m
 
-         • Toggle the display of the status bar1
+       • Toggle the display of the status bar1
 
-         • Toggle the display of the status bar2
+       • Toggle the display of the status bar2
 
-        • [1mspawn  <executable> <additional args> [22mTODO explain path-alike expan‐
-          sion
+      • [1mspawn <executable> <additional args> [22mTODO explain path-alike expansion
 
-       Loose list:
+     Loose list:
 
-        • [1mtoggle_status[0m
+      • [1mtoggle_status[0m
 
-         • Toggle the display of the status bar1
+       • Toggle the display of the status bar1
 
-         • Toggle the display of the status bar2
+       • Toggle the display of the status bar2
 
-        • [1mspawn <executable> <additional args> [22mTODO explain path-alike  expan‐
-          sion
+      • [1mspawn <executable> <additional args> [22mTODO explain path-alike expansion
 
-                                 January 1979                             [4mA[24m(1)
+                                  January 1979                             [4mA[24m(1)

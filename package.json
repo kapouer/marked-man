@@ -1,6 +1,6 @@
 {
   "name": "marked-man",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "wrapper adding manpage output to 'marked', inspired by 'ronn'",
   "type": "module",
   "main": "./src/index.js",
@@ -33,11 +33,11 @@
   "author": "Jérémy Lal <kapouer@melix.org>",
   "license": "MIT",
   "dependencies": {
-    "marked": "^12.0.1",
+    "marked": "^12.0.2",
     "read-pkg-up": "^11.0.0"
   },
   "devDependencies": {
-    "@kapouer/eslint-config": "^2.0.0"
+    "@kapouer/eslint-config": "^2.2.2"
   },
   "eslintConfig": {
     "extends": "@kapouer/eslint-config",

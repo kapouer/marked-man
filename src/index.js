@@ -1,5 +1,5 @@
 import { Parser } from 'marked';
-import { readPackageUpSync } from 'read-pkg-up';
+import { readPackageUpSync } from 'read-package-up';
 import Path from 'path';
 import * as renderer from './renderer.js';
 import * as tokenizer from './tokenizer.js';

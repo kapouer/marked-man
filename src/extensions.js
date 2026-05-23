@@ -20,7 +20,7 @@ const link = {
 	renderer({ href, title, text, punctuation }) {
 		if (href.startsWith('#')) {
 			// a local reference, not a link
-			return `\\fI${title || text || href.slice(1)}\\fR${punctuation||''}`;
+			return `\\fI${title || text || href.slice(1)}\\fR${punctuation || ''}`;
 		}
 		const obj = new URL(href, "file://./");
 		const ret = [];

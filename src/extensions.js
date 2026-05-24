@@ -10,7 +10,7 @@ const link = {
 	name: 'link',
 	level: 'inline',
 	tokenizer(src, tokens) {
-		if (!tokens.length || /^\p{Po}/u.test(src) == false) return;
+		if (!tokens.length) return;
 		const tok = tokens[tokens.length - 1];
 		if (tok.type == "link") {
 			tok.punctuation = src.charAt(0);
@@ -20,6 +20,7 @@ const link = {
 	renderer({ href, title, text, punctuation }) {
 		if (href.startsWith('#')) {
 			// a local reference, not a link
+			if(punctuation==='\n') punctuation = '\n\.br\n';
 			return `\\fI${title || text || href.slice(1)}\\fR${punctuation || ''}`;
 		}
 		const obj = new URL(href, "file://./");
